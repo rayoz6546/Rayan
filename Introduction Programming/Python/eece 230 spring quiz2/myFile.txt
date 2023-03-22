@@ -1,0 +1,3 @@
+Constraint satisfaction problems are set of problems with a
+complete solution The problems consist of a set of variables
+subject to the particular constraints of the problems

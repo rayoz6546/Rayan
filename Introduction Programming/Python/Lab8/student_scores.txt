@@ -1,0 +1,17 @@
+The key answer is QUIZ_KEY  TTFTFTTFFT
+
+Student ID 23145666 answered TTFFFTT have 8 correct and 2 wrong answers, got 60 /100
+Student ID 84564445 answered TTFTFTT have 9 correct and 1 wrong answers, got 80 /100
+Student ID 87497322 answered TTFTFTT have 10 correct and 0 wrong answers, got 100 /100
+Student ID 45863111 answered FTFTTTT have 7 correct and 2 wrong answers, got 50 /100
+Student ID 11223456 answered TFFTFTT have 9 correct and 1 wrong answers, got 80 /100
+Student ID 89437564 answered ___FFTT have 4 correct and 3 wrong answers, got 10 /100
+Student ID 45675476 answered TTFFFTF have 6 correct and 2 wrong answers, got 40 /100
+Student ID 22353256 answered T_FTFTT have 7 correct and 2 wrong answers, got 50 /100
+Student ID 54676001 answered T_FTFFF have 7 correct and 2 wrong answers, got 50 /100
+Student ID 47000345 answered TTFTFTF have 9 correct and 1 wrong answers, got 80 /100
+Student ID 11676701 answered T_FTFTT have 7 correct and 2 wrong answers, got 50 /100
+Student ID 22009345 answered T___FFF have 4 correct and 3 wrong answers, got 10 /100
+
+The net average is: 55.0
+Number of students is: 12

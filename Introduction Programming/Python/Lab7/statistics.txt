@@ -1,0 +1,4 @@
+Statistics	Count	Average
+one digit:	0	0
+two digits:	6	56.0
+three digits:	48	541.5833333333334

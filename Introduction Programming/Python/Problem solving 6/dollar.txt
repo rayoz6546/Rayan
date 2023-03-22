@@ -1,0 +1,10 @@
+Data about dollar fluctuation
+nov1, 1515
+nov15, 1515
+dec1, 1600
+dec15, 1800
+jan1, 2000
+jan15, 2200
+feb1,2400
+feb15, 2500
+mar1, 2000
