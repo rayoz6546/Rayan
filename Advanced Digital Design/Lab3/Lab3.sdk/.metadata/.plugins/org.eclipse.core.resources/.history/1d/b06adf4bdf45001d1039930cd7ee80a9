@@ -1,0 +1,124 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+uint32_t *regmap = (uint32_t *) 0x70000000;
+uint64_t  res = 0, reg; // 64-bit register to hold the value of the multiplication and the result from the multiplier
+uint32_t  A, B; // 32-bit random numbers
+int reset;
+int done;
+uint32_t Rl;
+uint32_t Rh;
+
+// 10 random cases
+for (size_t i = 0; i<10; i++){
+A = rand();
+B = rand();
+regmap[0] = A;
+regmap[1] = B;
+res = (uint64_t) A * (uint64_t) B; // you have to do type casting before multiplying, otherwise, you will end up having incorrect result.
+
+reset = 0;
+regmap[2]=reset;
+reset= 1;
+regmap[2]=reset;
+reset=0;
+regmap[2]=reset;
+
+uint32_t Rl = regmap[1];
+uint32_t Rh = regmap[0];
+done = regmap[2];
+
+reg = (((uint64_t) Rh) << 32) + ((uint64_t) Rl);
+
+printf("%8lx * %8lx = %8lx %8lx (%16llx) done=%i (%s) \n\n", A, B, Rh,
+Rl, res, done, (reg == res ? "correct" : "wrong"));
+}
+
+// edge cases
+A = 0xFFFFFFFF;
+B = 0xFFFFFFFF;
+regmap[0]=A;
+regmap[1]=B;
+res = (uint64_t) A * (uint64_t) B;
+
+reset = 0;
+regmap[2]=reset;
+reset= 1;
+regmap[2]=reset;
+reset=0;
+regmap[2]=reset;
+
+Rl = regmap[1];
+Rh = regmap[0];
+done = regmap[2];
+
+reg = (((uint64_t) Rh) << 32) + ((uint64_t) Rl);
+printf("%8lx * %8lx = %8lx %8lx (%16llx) done=%i (%s) \n\n", A, B, Rh,
+Rl, res, done, (reg == res ? "correct" : "wrong"));
+
+
+A= 0x00000000;
+B= 0xFFFFFFFF;
+regmap[0]=A;
+regmap[1]=B;
+
+res = (uint64_t) A * (uint64_t) B;
+
+reset = 0;
+regmap[2]=reset;
+reset= 1;
+regmap[2]=reset;
+reset=0;
+regmap[2]=reset;
+Rl = regmap[1];
+Rh = regmap[0];
+done = regmap[2];
+
+reg = (((uint64_t) Rh) << 32) + ((uint64_t) Rl);
+printf("%8lx * %8lx = %8lx %8lx (%16llx) done=%i (%s) \n\n", A, B, Rh,
+Rl, res, done, (reg == res ? "correct" : "wrong"));
+
+A= 0x00000002;
+B= 0x00000004;
+regmap[0]=A;
+regmap[1]=B;
+
+res = (uint64_t) A * (uint64_t) B;
+
+reset = 0;
+regmap[2]=reset;
+reset= 1;
+regmap[2]=reset;
+reset=0;
+regmap[2]=reset;
+Rl = regmap[1];
+Rh = regmap[0];
+done = regmap[2];
+
+reg = (((uint64_t) Rh) << 32) + ((uint64_t) Rl);
+printf("%8lx * %8lx = %8lx %8lx (%16llx) done=%i (%s) \n\n", A, B, Rh,
+Rl, res, done, (reg == res ? "correct" : "wrong"));
+
+A= 0x00000000;
+B= 0x00000000;
+regmap[0]=A;
+regmap[1]=B;
+
+res = (uint64_t) A * (uint64_t) B;
+
+reset = 0;
+regmap[2]=reset;
+reset= 1;
+regmap[2]=reset;
+reset=0;
+regmap[2]=reset;
+Rl = regmap[1];
+Rh = regmap[0];
+done = regmap[2];
+
+reg = (((uint64_t) Rh) << 32) + ((uint64_t) Rl);
+printf("%8lx * %8lx = %8lx %8lx (%16llx) done=%i (%s) \n\n", A, B, Rh,
+Rl, res, done, (reg == res ? "correct" : "wrong"));
+return 0;
+}

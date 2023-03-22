@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int printRandoms(int lower, int upper,
+                            int count)
+{
+    int i;
+    int x;
+    for (i = 0; i < count; i++) {
+        int num = (rand() %
+        (upper - lower + 1)) + lower;
+        x=num;
+    }
+    return x;
+}
+
+int main()
+{
+	int *regmap = (int *) 0x70000000; // base address of axi_regmap as set in the Vivado address editor
+
+	for (int i = 0; i<10; i++){
+		regmap[0] = printRandoms(0, 30, 1); //input A
+		regmap[1] = printRandoms(0, 30, 1); //input B
+		regmap[2] = printRandoms(0,1,1); // input k = 0 or 1
+		size_t s = regmap[0]; //output S
+		size_t c = regmap[2]; // output Cout
+		printf("%i + %i = %3zu cout=%d (%s)\n",regmap[0], regmap[1], s,c,(s == regmap[0] + regmap[1]) ? "COR" : "ERR");
+	}
+
+
+	return 0;
+}

@@ -1,0 +1,2888 @@
+12:59:08 **** Build of project Lab_2_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+
+**** Build of configuration Debug for project alu ****
+
+Nothing to build for project alu
+13:00:37 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../Lab_2_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\RAYAN\Lab_2\Lab_2.sdk\Lab_2_bsp\ps7_cortexa9_0\libsrc\standalone_v6_8\src/xil-crt0.S:138: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: alu.elf] Error 1
+13:19:28 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:8:2: error: 'a' undeclared (first use in this function)
+  a="11100000000000001111000000000000";
+  ^
+../src/alu.c:8:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/alu.c:9:2: error: 'b' undeclared (first use in this function)
+  b="10010000000000000111000000100000";
+  ^
+../src/alu.c:10:2: error: 'op' undeclared (first use in this function)
+  op="0000";
+  ^~
+../src/alu.c:11:2: error: 'sh' undeclared (first use in this function)
+  sh="00000";
+  ^~
+../src/alu.c:17:2: warning: implicit declaration of function 'print'; did you mean 'printf'? [-Wimplicit-function-declaration]
+  print("%2zu and %2zu = %3zu (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+  ^~~~~
+  printf
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+13:24:09 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:19:2: warning: implicit declaration of function 'print'; did you mean 'printf'? [-Wimplicit-function-declaration]
+  print("%2zu and %2zu = %3zu (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+  ^~~~~
+  printf
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19428	   1144	  22568	  43140	   a884	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:24:19 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:25:40 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:26:51 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:10:12: warning: integer constant is too large for its type
+  size_t a= 11100000000000001111000000000000;
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/alu.c:10:12: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+../src/alu.c:11:12: warning: integer constant is too large for its type
+  size_t b= 10010000000000000111000000100000;
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/alu.c:11:12: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:31:38 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:10:12: error: 'b' undeclared (first use in this function)
+  size_t a= b"11100000000000001111000000000000";
+            ^
+../src/alu.c:10:12: note: each undeclared identifier is reported only once for each function it appears in
+../src/alu.c:10:13: error: expected ',' or ';' before string constant
+  size_t a= b"11100000000000001111000000000000";
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/alu.c:11:13: error: expected ',' or ';' before string constant
+  size_t b= b"10010000000000000111000000100000";
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/alu.c:12:14: error: expected ',' or ';' before string constant
+  size_t op= b"0000";
+              ^~~~~~
+../src/alu.c:13:14: error: expected ',' or ';' before string constant
+  size_t sh= b"00000";
+              ^~~~~~~
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+13:34:19 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:35:20 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70432	   2580	  23328	  96340	  17854	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:35:34 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:37:12 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:19:11: warning: unknown conversion type character 'b' in format [-Wformat=]
+  printf("%b and %b = %b (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+           ^
+../src/alu.c:19:18: warning: unknown conversion type character 'b' in format [-Wformat=]
+  printf("%b and %b = %b (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+                  ^
+../src/alu.c:19:23: warning: unknown conversion type character 'b' in format [-Wformat=]
+  printf("%b and %b = %b (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+                       ^
+../src/alu.c:19:27: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  printf("%b and %b = %b (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+                          ~^
+                          %d
+../src/alu.c:19:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("%b and %b = %b (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+         ^~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70432	   2580	  23328	  96340	  17854	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:37:59 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:19:11: warning: unknown conversion type character 'b' in format [-Wformat=]
+  printf("%b and %b = %b (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+           ^
+../src/alu.c:19:18: warning: unknown conversion type character 'b' in format [-Wformat=]
+  printf("%b and %b = %b (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+                  ^
+../src/alu.c:19:23: warning: unknown conversion type character 'b' in format [-Wformat=]
+  printf("%b and %b = %b (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+                       ^
+../src/alu.c:19:27: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  printf("%b and %b = %b (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+                          ~^
+                          %d
+../src/alu.c:19:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("%b and %b = %b (%s)\n", a, b, r, (r==a && b) ? "COR":"ERR");
+         ^~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70432	   2580	  23328	  96340	  17854	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:44:47 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:45:05 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:46:11 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:46:21 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:47:54 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:48:07 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:49:05 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+13:49:16 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:19:30 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:31:47 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:31:2: error: unknown type name 'sinze_t'; did you mean 'size_t'?
+  sinze_t b = 10;
+  ^~~~~~~
+  size_t
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+19:31:52 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+19:32:05 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:34:22 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+19:34:37 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:35:49 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:39:49: warning: operation on 'r' may be undefined [-Wsequence-point]
+  printf("%2zu and %2zu = %d (%s)\n", a, b, r, (r=!a && b) ? "COR":"ERR");
+                                               ~~^~~~~~~~~
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+19:36:04 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70440	   2580	  23328	  96348	  1785c	alu.elf
+'Finished building: alu.elf.size'
+' '
+19:36:23 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:40:51 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:50:22 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:21:51: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+    printf("%2zu and %2zu = %d (%s)\n", a, b, r, (r==a & b) ? "COR":"ERR");
+                                                  ~^~~
+../src/alu.c:24:50: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+    printf("%2zu or %2zu = %d (%s)\n", a, b, r, (r==a | b) ? "COR":"ERR");
+                                                 ~^~~
+../src/alu.c:27:51: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+    printf("%2zu xor %2zu = %d (%s)\n", a, b, r, (r==a ^ b) ? "COR":"ERR");
+                                                  ~^~~
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71096	   2580	  23328	  97004	  17aec	alu.elf
+'Finished building: alu.elf.size'
+' '
+19:51:12 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71032	   2580	  23328	  96940	  17aac	alu.elf
+'Finished building: alu.elf.size'
+' '
+19:51:27 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:12:04 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70784	   2580	  23328	  96692	  179b4	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:12:16 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:13:29 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70972	   2580	  23328	  96880	  17a70	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:13:39 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:14:33 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70972	   2580	  23328	  96880	  17a70	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:21:14 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70972	   2580	  23328	  96880	  17a70	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:21:25 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:22:15 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70972	   2580	  23328	  96880	  17a70	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:22:25 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:22:57 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70972	   2580	  23328	  96880	  17a70	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:23:09 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:24:20 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70972	   2580	  23328	  96880	  17a70	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:24:29 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:27:04 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71132	   2580	  23328	  97040	  17b10	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:27:13 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:36:07 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71032	   2580	  23328	  96940	  17aac	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:36:19 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:38:02 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71032	   2580	  23328	  96940	  17aac	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:38:13 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:51:53 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71192	   2580	  23328	  97100	  17b4c	alu.elf
+'Finished building: alu.elf.size'
+' '
+20:52:02 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:52:56 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:02:53 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:84:36: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+    printf("%d < %d (%s)",a,b, (r==a<b)? "COR":"ERR");
+                                   ~^~
+../src/alu.c:87:36: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+    printf("%d > %d (%s)",a,b, (r==a>b)? "COR":"ERR");
+                                   ~^~
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71096	   2580	  23328	  97004	  17aec	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:03:06 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:82:10: warning: unused variable 'r' [-Wunused-variable]
+   size_t r = regmap[0];
+          ^
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71032	   2580	  23328	  96940	  17aac	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:04:12 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71040	   2580	  23328	  96948	  17ab4	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:04:20 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:04:50 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71040	   2580	  23328	  96948	  17ab4	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:05:00 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:07:01 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:90:43: warning: operation on 'a' may be undefined [-Wsequence-point]
+    printf("%d = %d R=%d (%s)\n",a,b, r, (a=b)? "COR":"ERR");
+                                         ~~^~~
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71184	   2580	  23328	  97092	  17b44	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:07:06 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71120	   2580	  23328	  97028	  17b04	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:07:14 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:08:59 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71120	   2580	  23328	  97028	  17b04	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:09:10 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:09:45 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71136	   2580	  23328	  97044	  17b14	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:09:55 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:12:32 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71120	   2580	  23328	  97028	  17b04	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:12:58 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:27:03 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71248	   2580	  23328	  97156	  17b84	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:27:17 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:40:56 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:74:7: error: 'i' undeclared (first use in this function)
+  for (i=1; i<10; i++) {
+       ^
+../src/alu.c:74:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/alu.c:91:47: warning: operation on 'a' may be undefined [-Wsequence-point]
+    printf("%d = %d R=%x (%s)\n",a,b, r, (r==(a=b))? "COR":"ERR");
+                                             ~~^~~
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+21:41:05 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:74:7: error: 'i' undeclared (first use in this function)
+  for (i=1; i<10; i++) {
+       ^
+../src/alu.c:74:7: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+21:41:14 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:74:7: error: 'i' undeclared (first use in this function)
+  for (i=1; i<10; i++) {
+       ^
+../src/alu.c:74:7: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+21:41:56 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71184	   2580	  23328	  97092	  17b44	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:42:06 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:42:46 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71184	   2580	  23328	  97092	  17b44	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:42:58 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:44:30 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71236	   2580	  23328	  97144	  17b78	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:44:41 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:45:39 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71260	   2580	  23328	  97168	  17b90	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:45:48 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:49:48 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71196	   2580	  23328	  97104	  17b50	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:49:58 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:51:18 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71188	   2580	  23328	  97096	  17b48	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:51:30 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:52:10 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71188	   2580	  23328	  97096	  17b48	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:52:20 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:52:55 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71188	   2580	  23328	  97096	  17b48	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:53:03 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:55:27 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:86:27: warning: unknown conversion type character 'b' in format [-Wformat=]
+    printf("%2zu < %2zu R=%b (%s)\n",a,b, r, (r!=0)? "COR":"ERR");
+                           ^
+../src/alu.c:86:31: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'size_t {aka unsigned int}' [-Wformat=]
+    printf("%2zu < %2zu R=%b (%s)\n",a,b, r, (r!=0)? "COR":"ERR");
+                              ~^
+                              %d
+../src/alu.c:86:11: warning: too many arguments for format [-Wformat-extra-args]
+    printf("%2zu < %2zu R=%b (%s)\n",a,b, r, (r!=0)? "COR":"ERR");
+           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/alu.c:89:27: warning: unknown conversion type character 'b' in format [-Wformat=]
+    printf("%2zu > %2zu R=%b (%s)\n",a,b, r, (r!=1)? "COR":"ERR");
+                           ^
+../src/alu.c:89:31: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'size_t {aka unsigned int}' [-Wformat=]
+    printf("%2zu > %2zu R=%b (%s)\n",a,b, r, (r!=1)? "COR":"ERR");
+                              ~^
+                              %d
+../src/alu.c:89:11: warning: too many arguments for format [-Wformat-extra-args]
+    printf("%2zu > %2zu R=%b (%s)\n",a,b, r, (r!=1)? "COR":"ERR");
+           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/alu.c:92:27: warning: unknown conversion type character 'b' in format [-Wformat=]
+    printf("%2zu = %2zu R=%b (%s)\n",a,b, r, (r!=(a==b))? "COR":"ERR");
+                           ^
+../src/alu.c:92:31: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'size_t {aka unsigned int}' [-Wformat=]
+    printf("%2zu = %2zu R=%b (%s)\n",a,b, r, (r!=(a==b))? "COR":"ERR");
+                              ~^
+                              %d
+../src/alu.c:92:11: warning: too many arguments for format [-Wformat-extra-args]
+    printf("%2zu = %2zu R=%b (%s)\n",a,b, r, (r!=(a==b))? "COR":"ERR");
+           ^~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71188	   2580	  23328	  97096	  17b48	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:55:42 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71188	   2580	  23328	  97096	  17b48	alu.elf
+'Finished building: alu.elf.size'
+' '
+21:55:55 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:04:19 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:106:10: warning: too many arguments for format [-Wformat-extra-args]
+   printf("a=%x r=%x shumt=%x", a,r, sh, (r==a>>sh)? "COR":"ERR");
+          ^~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70868	   2580	  23328	  96776	  17a08	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:04:35 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70876	   2580	  23328	  96784	  17a10	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:04:46 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:10:49 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70884	   2580	  23328	  96792	  17a18	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:10:57 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:12:12 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:106:57: error: expected expression before '>' token
+   printf("a=%x r=%x shumt=%2zu (%s)\n", a,r, sh, (r==a>>>sh)? "COR":"ERR");
+                                                         ^
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+22:12:26 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70876	   2580	  23328	  96784	  17a10	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:12:35 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:14:06 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:102:13: error: 'b' undeclared (first use in this function)
+   regmap[1]=b;
+             ^
+../src/alu.c:102:13: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+22:14:12 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70812	   2580	  23328	  96720	  179d0	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:14:21 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:15:43 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70876	   2580	  23328	  96784	  17a10	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:15:52 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:16:27 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70876	   2580	  23328	  96784	  17a10	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:16:36 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:17:00 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70876	   2580	  23328	  96784	  17a10	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:17:08 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:18:33 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70876	   2580	  23328	  96784	  17a10	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:18:40 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:19:32 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:106:10: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+   printf(r);
+          ^
+In file included from c:\xilinx\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../src/alu.c:1:
+c:\xilinx\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:181:5: note: expected 'const char * restrict' but argument is of type 'size_t {aka unsigned int}'
+ int _EXFUN(printf, (const char *__restrict, ...)
+     ^
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70780	   2580	  23328	  96688	  179b0	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:19:46 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:106:10: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   printf("",r);
+          ^~
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70780	   2580	  23328	  96688	  179b0	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:19:55 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70788	   2580	  23328	  96696	  179b8	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:20:02 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:23:04 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70780	   2580	  23328	  96688	  179b0	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:23:25 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:24:02 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71168	   2580	  23328	  97076	  17b34	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:24:14 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:27:13 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71120	   2580	  23328	  97028	  17b04	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:27:21 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:28:47 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71120	   2580	  23328	  97028	  17b04	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:28:56 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:33:01 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71104	   2580	  23328	  97012	  17af4	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:33:09 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:40:26 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:41:51 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71236	   2580	  23328	  97144	  17b78	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:42:00 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:43:20 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70668	   2580	  23328	  96576	  17940	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:43:28 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:44:55 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:46:42: error: expected expression before '>' token
+    printf("a=%x r=%x (%s)\n",a,r, (r==a>>>sh)? "COR":"ERR");
+                                          ^
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+22:45:24 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:46:43: error: expected expression before '>' token
+    printf("a=%x r=%x (%s)\n",a,r, (r==(a>>>sh))? "COR":"ERR");
+                                           ^
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+22:47:24 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c:3:10: fatal error: iostream: No such file or directory
+ #include <iostream>
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+22:53:01 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70764	   2580	  23328	  96672	  179a0	alu.elf
+'Finished building: alu.elf.size'
+' '
+22:56:48 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:48:9: error: redefinition of 'op'
+  size_t op=0b1110;
+         ^~
+../src/alu.c:39:9: note: previous definition of 'op' was here
+  size_t op= 0b1101; //op=1101 (sll), 1110 (srl) or 1111 (sra)
+         ^~
+../src/alu.c:48:9: warning: unused variable 'op' [-Wunused-variable]
+  size_t op=0b1110;
+         ^~
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+22:58:13 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:48:9: error: redefinition of 'a'
+  size_t a = 0xFEDCBA98;
+         ^
+../src/alu.c:37:9: note: previous definition of 'a' was here
+  size_t a = 0xFEDCBA98;
+         ^
+../src/alu.c:49:9: error: redefinition of 'op'
+  size_t op=0b1110;
+         ^~
+../src/alu.c:39:9: note: previous definition of 'op' was here
+  size_t op= 0b1101; //op=1101 (sll), 1110 (srl) or 1111 (sra)
+         ^~
+../src/alu.c:50:9: error: redefinition of 'sh'
+  size_t sh= 0b01110;
+         ^~
+../src/alu.c:40:9: note: previous definition of 'sh' was here
+  size_t sh= 0b01110; // we don't care here
+         ^~
+../src/alu.c:54:9: error: redefinition of 'r'
+  size_t r = regmap[0];
+         ^
+../src/alu.c:45:9: note: previous definition of 'r' was here
+  size_t r = regmap[0];
+         ^
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+23:01:51 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70836	   2580	  23328	  96744	  179e8	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:02:01 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:03:51 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71028	   2580	  23328	  96936	  17aa8	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:03:59 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:08:34 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71092	   2580	  23328	  97000	  17ae8	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:08:51 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:13:34 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71164	   2580	  23328	  97072	  17b30	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:13:44 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:14:23 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71164	   2580	  23328	  97072	  17b30	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:14:32 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:14:56 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71164	   2580	  23328	  97072	  17b30	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:15:07 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:16:06 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71164	   2580	  23328	  97072	  17b30	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:16:21 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:16:49 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71164	   2580	  23328	  97072	  17b30	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:16:57 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:17:15 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:54:87: warning: operation on 'a' may be undefined [-Wsequence-point]
+    printf("a=%x shifted right (arithmetic) by %2zu bits is r=%x (%s)\n",a,sh,r, (r==(a>>=sh))? "COR":"ERR");
+                                                                                     ~~^~~~~~
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71164	   2580	  23328	  97072	  17b30	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:17:41 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:18:38 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71164	   2580	  23328	  97072	  17b30	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:18:51 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:19:10 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71164	   2580	  23328	  97072	  17b30	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:19:18 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:21:53 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71164	   2580	  23328	  97072	  17b30	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:22:02 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:22:26 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71100	   2580	  23328	  97008	  17af0	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:28:27 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71164	   2580	  23328	  97072	  17b30	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:28:36 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:30:03 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71076	   2580	  23328	  96984	  17ad8	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:30:12 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:30:49 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71076	   2580	  23328	  96984	  17ad8	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:30:58 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:35:50 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71136	   2580	  23328	  97044	  17b14	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:35:58 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:36:54 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71120	   2580	  23328	  97028	  17b04	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:37:01 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:38:02 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71120	   2580	  23328	  97028	  17b04	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:38:10 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:41:19 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71584	   2580	  23328	  97492	  17cd4	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:41:30 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:42:45 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:65:6: error: redeclaration of 'i' with no linkage
+  int i;
+      ^
+../src/alu.c:43:6: note: previous declaration of 'i' was here
+  int i;
+      ^
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+23:42:55 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71584	   2580	  23328	  97492	  17cd4	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:43:03 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:45:09 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+../src/alu.c: In function 'main':
+../src/alu.c:43:6: error: redeclaration of 'i' with no linkage
+  int i;
+      ^
+../src/alu.c:14:6: note: previous declaration of 'i' was here
+  int i;
+      ^
+../src/alu.c:88:9: error: conflicting types for 'i'
+  size_t i;
+         ^
+../src/alu.c:43:6: note: previous declaration of 'i' was here
+  int i;
+      ^
+make: *** [src/subdir.mk:23: src/alu.o] Error 1
+23:45:37 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  73008	   2580	  23328	  98916	  18264	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:45:47 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:52:49 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71408	   2580	  23328	  97316	  17c24	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:52:56 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:57:03 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71040	   2580	  23328	  96948	  17ab4	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:57:11 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:58:14 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71408	   2580	  23328	  97316	  17c24	alu.elf
+'Finished building: alu.elf.size'
+' '
+23:58:25 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+11:17:06 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71360	   2580	  23328	  97268	  17bf4	alu.elf
+'Finished building: alu.elf.size'
+' '
+11:17:22 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+11:17:52 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71584	   2580	  23328	  97492	  17cd4	alu.elf
+'Finished building: alu.elf.size'
+' '
+11:18:01 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+11:19:06 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71168	   2580	  23328	  97076	  17b34	alu.elf
+'Finished building: alu.elf.size'
+' '
+11:19:16 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+11:19:49 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71408	   2580	  23328	  97316	  17c24	alu.elf
+'Finished building: alu.elf.size'
+' '
+11:20:02 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+11:23:18 **** Auto Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/alu.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alu.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alu.d" -MT"src/alu.o" -o "src/alu.o" "../src/alu.c"
+'Finished building: ../src/alu.c'
+' '
+'Building target: alu.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab_2_bsp/ps7_cortexa9_0/lib -o "alu.elf"  ./src/alu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: alu.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size alu.elf  |tee "alu.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  73760	   2580	  23328	  99668	  18554	alu.elf
+'Finished building: alu.elf.size'
+' '
+11:23:27 **** Incremental Build of configuration Debug for project alu ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

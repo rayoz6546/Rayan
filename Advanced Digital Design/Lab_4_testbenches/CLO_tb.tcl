@@ -1,0 +1,13 @@
+restart
+
+add_force A -radix bin 01111111111111111111111111111111
+
+run 10 ns
+
+add_force A -radix bin 11101111111111111000000000000000
+
+run 10 ns
+
+add_force A -radix bin 11111111111111111000000000000000
+
+run 10 ns
