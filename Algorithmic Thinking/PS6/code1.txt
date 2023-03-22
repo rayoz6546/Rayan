@@ -1,0 +1,18 @@
+
+class Solution:
+  def cloneGraph(self, node: 'Node') -> 'Node':
+    if not node:
+      return None
+
+    queue = collections.deque([node])
+    map = {node: Node(node.val)}
+
+    while queue:
+      part_ = queue.popleft()
+      for n in part_.neighbors:
+        if n not in map:
+          map[n] = Node(n.val)
+          queue.append(n)
+        map[part_].neighbors.append(map[n])
+
+    return map[node]

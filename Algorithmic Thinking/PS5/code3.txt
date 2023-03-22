@@ -1,0 +1,20 @@
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+
+        my_dict = {x:0 for x in nums}
+        n=len(nums)
+        for i in range(n):
+            my_dict[nums[i]]+=1
+        print(my_dict)
+
+        keys = list(my_dict.keys())
+        values = list(my_dict.values())
+
+        maxValues = []
+        for i in range(k):
+            indexOfMax = values.index(max(values))
+            maxValues.append(keys[indexOfMax])
+            keys[indexOfMax]=-1
+            values[indexOfMax]=-1
+            
+        return maxValues

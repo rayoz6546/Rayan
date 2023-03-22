@@ -1,0 +1,24 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def quicksort(ar):
+    n= len(ar)
+    if n < 2:
+        return ar
+    
+    left = []
+    equal = []
+    right = []
+
+    for i in ar:
+        if i < ar[0]:
+            left.append(i)
+        elif i > ar[0]:
+            right.append(i)
+        else:
+            equal.append(i)
+    sub_array = quicksort(left) + equal + quicksort(right)
+    print(' '.join([str(x) for x in sub_array]))
+    return(sub_array)
+
+n = input().strip().split()
+ar = [int(x) for x in input().strip().split()]
+quicksort(ar)

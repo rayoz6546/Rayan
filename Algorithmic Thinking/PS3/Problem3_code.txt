@@ -1,0 +1,13 @@
+import numpy as np
+class Solution:
+    def findPeakGrid(self, mat: List[List[int]]) -> List[int]:
+        n = len(mat)-1
+
+        for i in range(n):
+            middle = (i+n)//2
+            if max(mat[middle])>max(mat[middle+1]):
+                return [middle,mat[middle].index(max(mat[middle]))]
+            else:
+                return [middle+1,mat[middle+1].index(max(mat[middle+1]))]
+            if max(mat[middle-1])>max(mat[middle]):
+                return [middle-1,mat[middle-1].index(max(mat[middle-1]))]
