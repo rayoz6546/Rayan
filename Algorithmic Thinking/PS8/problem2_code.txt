@@ -1,0 +1,13 @@
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n<=2: 
+            return n
+        list_=[]
+        list_.append(0)
+        list_.append(1)
+        list_.append(2)
+
+        for i in range(3,n+1):
+            list_.append(list_[i-1]+list_[i-2])
+
+        return list_[n]

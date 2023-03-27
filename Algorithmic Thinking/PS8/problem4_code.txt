@@ -1,0 +1,19 @@
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        if not nums: 
+            return 0
+
+        n=len(nums)
+        if n < 3:
+            return max(nums)
+        
+        l = []
+        l.append(0)
+        l.append(nums[0])
+        l.append(nums[1])
+
+        for i in range(2,n):
+
+            l.append(nums[i]+max(l[i-2],l[i-1]))
+
+        return max(l[n-1],l[n])
