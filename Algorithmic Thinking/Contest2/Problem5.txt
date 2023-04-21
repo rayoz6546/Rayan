@@ -1,0 +1,15 @@
+for i in range(int(input())):
+    n = int(input())
+    
+    c1=1
+    c2=2 
+    m = n*n
+    for a in range(n):
+        for b in range(n):
+            if c1 <= m:
+                print(c1," ")
+                c1+=2
+            else:
+                print(c2," ")
+                c2+=2
+        print('\n')

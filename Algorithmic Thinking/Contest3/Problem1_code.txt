@@ -1,0 +1,18 @@
+for line in range(int(input())):
+    l = input()
+    l = l.split(" ")
+    girl = int(l[0])
+    boy = int(l[1])
+    
+    n=girl
+    out=0
+    if girl == 1:
+        print(boy-1)
+    else:
+        for i in range(n):
+            girl-=1 
+            boy-=1
+            if girl == 1:
+                out = boy-1
+                print(out)
+                break
