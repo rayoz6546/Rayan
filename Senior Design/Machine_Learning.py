@@ -8,7 +8,7 @@ import joblib
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
-def svm():
+def train():
     def load_images(folder_path):
         images = []
         for filename in os.listdir(folder_path):
