@@ -1,0 +1,142 @@
+---
+title: "STAT 1261/2260 Homework 4"
+author: "Rayan Hassan"
+date: "2023-10-03"
+output: html_document
+---
+
+```{r}
+library(babynames)
+library(tidyverse)
+library(mdsr)
+library(Hmisc)
+BabynamesDist <- make_babynames_dist()
+BabynamesDist
+```
+
+# Question 1
+
+Estimations: 
+Q1 = 15
+Q2 (median) = 31
+Q3 = 51
+
+# Question 2
+
+Ashley, Jessica and Lisa seem to have the lower interquartile range for age
+
+# Question 3
+
+The names are ordered by age. For instance, the name Dorothy is last because it is used by the oldest people compared to the other names.
+
+# Question 4
+
+Visual cues used:
+- Colors (yellow and red)
+- Horizontal bars
+- Dots (representing the medians)
+- Length (of bars)
+
+# Question 5
+
+```{r}
+babynames1 <- babynames %>%
+  filter(name == "Taylor") %>%
+  group_by(year) %>%
+  summarise(
+    N = n(),        # N is the number of rows for each name and each year
+    total = sum(n), # Note that n is a variable in the babynames data frame
+    boys = sum(ifelse(sex == "M", n, 0)) 
+  )
+babynames1 
+
+new_var <- babynames1 %>%
+  mutate(new_var = abs(0.5 - boys/total))
+new_var
+
+top_years <- new_var %>%
+  arrange(new_var)%>%
+  select(year)%>%
+  head(10)
+top_years
+
+
+
+  
+
+```
+# Question 6
+
+```{r}
+com_male <- BabynamesDist %>%  #com_male stands for "common male"
+  filter(sex == "M") %>%
+  group_by(name) %>% 
+  filter(est_alive_today>0) %>% 
+  summarise(
+    est_num_alive = sum(est_alive_today),
+    q1_age = wtd.quantile(age_today, est_alive_today, probs = 0.25),
+    median_age = wtd.quantile(age_today, est_alive_today, probs = 0.5),
+    q3_age = wtd.quantile(age_today, est_alive_today, probs = 0.75),
+
+  ) %>%
+  filter(est_num_alive>=100000) %>%
+  arrange(median_age)%>%
+  head(25) # Only keep the top 25
+
+
+w_plot <- ggplot(
+  data = com_male, 
+  aes(x = reorder(name, -median_age),  y = median_age)) + 
+  xlab(NULL) + 
+  ylab("Age (in years)") +
+  ggtitle("Youngest Male Names")
+
+w_plot <- w_plot + 
+  geom_linerange(
+    aes(ymin = q1_age, ymax = q3_age),
+    color = "#f3d478", 
+    linewidth = 5, 
+    alpha = 0.8
+    ) +
+  coord_flip()
+
+w_plot + 
+  geom_linerange(aes(ymin = q1_age, ymax = q3_age),color = "#f3d478", 
+                 size = 5, alpha = 0.8) + 
+  geom_point(fill = "#ed3324", colour = "white", size = 3, shape = 21) +
+  geom_point(aes(y=53,x=24),fill = "#ed3324", colour = "white", size = 3, shape = 21) +
+  geom_text(aes(y=58,x=24),label="median",cex=3.8)+
+  coord_flip()
+
+
+```
+
+# Question 7
+
+```{r}
+
+years <- babynames %>%
+  group_by(year)%>%
+  summarise(total_births=sum(n))
+
+
+highest_year <- years %>%
+  filter(total_births == max(total_births))
+highest_year
+```
+
+# Question 8 
+
+```{r}
+data <- babynames %>%
+  filter(year>=1990 & year <=2000, sex=="F")
+
+total_names <- data %>%
+  group_by(name)%>%
+  summarise(total_births=sum(n))
+
+most_popular <- total_names %>%
+  filter(total_births==max(total_births))
+most_popular
+```
+

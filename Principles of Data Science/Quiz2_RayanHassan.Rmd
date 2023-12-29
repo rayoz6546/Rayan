@@ -1,0 +1,107 @@
+---
+title: "Quiz2_RayanHassan"
+author: "Rayan Hassan"
+date: "2023-10-13"
+output: html_document
+---
+
+
+# Problem 1
+
+
+```{r}
+library(nycflights13)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+
+head(flights)
+```
+
+## 1.1
+
+```{r}
+
+airport_counts <- table(flights$origin)
+  
+
+busiest <- max(names(airport_counts))
+
+busiest
+```
+
+## 1.2
+
+```{r}
+flights <- filter(flights, year == 2013, arr_delay >= 0, dep_delay >= 0)
+
+flights <- mutate(flights, total_delay = arr_delay + dep_delay)
+
+
+delay <- flights %>%
+  group_by(month) %>%
+  summarise(mean_total_delay = mean(total_delay))
+
+delay <- arrange(delay, mean_total_delay)
+
+delay
+
+shortest_delay_month <- delay %>%
+  head(1)
+
+
+shortest_delay_month
+```
+## 1.3
+
+```{r}
+
+w <- filter(weather, year == 2013)
+
+wind_speed <- w %>%
+  select(month, wind_speed)
+
+wind_speed <- wind_speed %>%
+  group_by(month) %>%
+  summarise(avg_wind_speed = mean(wind_speed, na.rm = TRUE))
+
+
+wind_speed <- arrange(wind_speed, desc(avg_wind_speed))
+
+wind_speed
+```
+
+## 1.4
+
+```{r}
+
+delay <- delay %>%
+  left_join(wind_speed, by = "month")
+
+delay
+```
+
+
+# Problem 2
+
+## 2.1
+
+```{r}
+JJ <- matrix(head(JohnsonJohnson,12),3,4,byrow=TRUE)
+colnames(JJ)<-c("qrt1","qrt2","qrt3","qrt4")
+Year<-1960:1962
+JJ<-as_tibble(cbind(Year,JJ))
+JJ
+
+JJ_narrow <- JJ %>%
+  pivot_longer(cols = -Year, names_to = "Quarter", values_to = "Earnings")
+
+```
+## 2.2
+
+```{r}
+JJ_narrower <- JJ_narrow %>%
+  unite(YearQrt, Year, Quarter, sep = "-")
+JJ_narrower
+```
+

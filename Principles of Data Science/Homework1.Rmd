@@ -1,0 +1,167 @@
+---
+title: "Homework1"
+author: "Rayan Hassan"
+date: "2023-09-05"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+
+Exercise 1: Objects 
+
+1) 
+```{r}
+obj1 <- seq(-3,21,3)
+obj2 <- c(1,3,5)
+obj3 <- obj2>2.5
+obj4 <- "I love pizza."
+
+show(obj1)
+show(obj2)
+show(obj3)
+show(obj4)
+
+length(obj1)
+length(obj2)
+length(obj3)
+length(obj4)
+```
+2)
+```{r,error=TRUE}
+obj1 * (-1)
+obj1[2:6]
+obj1[-2]
+obj1 + obj2
+obj1 * obj3
+obj2 + obj3
+
+sum(obj2)
+sum(obj3)
+
+obj1 + obj4
+
+
+```
+Exercise 2: Vectors
+
+```{r}
+a <- c(0, 1)
+b <- c(TRUE, FALSE)
+c <- c("happy", "sad")
+
+a+b
+a*b
+d <- c(a,b);d
+e <- c(a,c);e
+g <- c(b,c);g
+w <- c(a,b,c); w
+```
+
+Exercise 3: Errors
+
+
+result1: error is the "10.3", it should have been floor(10.3)
+
+result2: error is the "<--", it should have been "<-"
+
+3result: error is the "3" in the beginning, wrong naming of variable
+
+result4: error is not closing the ""
+
+result5: no error but no need to store result in a new variable we can just write data()
+
+
+Exercise 4: Matrices
+
+1)
+```{r}
+c <- seq(24,2,-2)
+M1 <- matrix(c,3,4)
+
+M2 <- matrix(c,3,4, byrow=TRUE)
+
+show(M1)
+show(M2)
+```
+
+2)
+```{r}
+M1[3,1]
+```
+
+3)
+```{r}
+M1[2,]
+```
+
+4)
+```{r}
+M2[,3]
+```
+
+Exercise 5: Calculate the following using R
+
+
+1) 
+```{r}
+a <- log10(1)
+b <- log(1)
+a-b
+```
+2) 
+```{r}
+x <- sin(pi/3)
+y <- cos(pi/3)
+z <- x+y
+show(z)
+```
+3) 
+```{r}
+round(z)
+```
+4) 
+```{r}
+round(z,2)
+```
+5) 
+```{r}
+2022%%9
+```
+
+Exercise 6: Data Frames
+
+1) 
+```{r}
+df <- data.frame(Name = c("Jacob","James","Jeremy","Jimmy","John"),
+                 Year = c(1,2,3,4,3),
+                 GPA = c(3.41,3.53,3.32,3.67,4.00),
+                 Height = c(1.78,1.85,1.72,1.82,1.68) 
+                 )
+print(df)
+```
+
+2)
+```{r}
+df$GPA
+```
+
+3) 
+```{r}
+df[3,]
+```
+
+4) 
+```{r}
+df[df$GPA < 3.6,1]
+```
+
+5) 
+```{r}
+s <- df[df$Year==3,3]
+s
+
+mean(s)
+
+```
+
