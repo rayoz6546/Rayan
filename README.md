@@ -8,6 +8,6 @@ Facial Recognition Lock System with Anti-Theft -------> Senior Design
 
 Train Control System -------> Project Management
 
-Effetcs of Several Factors on Deaths by Heart Failure --------> Principle of Data Science (Final Project)
+Effetcs of Several Factors on Deaths by Heart Failure --------> Principle of Data Science (Final Paper)
 
 "Bop-It" inspired game: "Dispose-It" -------> Junior Design (Design Project 2)
