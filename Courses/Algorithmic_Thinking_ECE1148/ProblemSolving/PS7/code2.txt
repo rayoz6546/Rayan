@@ -1,0 +1,63 @@
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'componentsInGraph' function below.
+#
+# The function is expected to return an INTEGER_ARRAY.
+# The function accepts 2D_INTEGER_ARRAY gb as parameter.
+
+
+        
+
+
+
+def componentsInGraph(c):
+    graph = {}
+    for left,right in c:
+        if left not in graph: 
+            graph[left] = {right}
+        else: 
+            graph[left].add(right)
+            
+        if right not in graph: 
+            graph[right] = {left}
+        else: 
+            graph[right].add(left)
+
+    visited_nodes = set() 
+    cluster_index = 0 
+    nbreOfNodes = [] 
+    for node in graph:
+        if node not in visited_nodes:
+            nbreOfNodes.append(0)
+            stack = [node]
+            while stack:
+                n = stack.pop()
+                if n not in visited_nodes:
+                    nbreOfNodes[cluster_index] += 1
+                    visited_nodes.add(n)
+                    stack.extend(graph[n].difference(visited_nodes))
+            cluster_index += 1
+    return [min(nbreOfNodes), max(nbreOfNodes)]
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    gb = []
+
+    for _ in range(n):
+        gb.append(list(map(int, input().rstrip().split())))
+
+    result = componentsInGraph(gb)
+
+    fptr.write(' '.join(map(str, result)))
+    fptr.write('\n')
+
+    fptr.close()

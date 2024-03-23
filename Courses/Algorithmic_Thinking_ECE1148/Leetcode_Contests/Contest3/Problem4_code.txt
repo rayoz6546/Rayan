@@ -1,0 +1,31 @@
+for line in range(int(input())):
+    n = int(input())
+    u = str(input())
+    if n <=2:
+        print(u)
+        
+    else:
+        d = {x:0 for x in u}
+        for i in range(n):
+            if u[i] in d:
+                d[u[i]]+=1
+
+        s = ""
+        for i in range(n-1):
+            s = s + u[i]
+            if u[i]==u[i+1]:
+                if d[u[i]]%5==0 and d[u[i]]!=5:
+                    w = int(d[u[i]]/5)
+                    s+=u[i]*(w-1)
+                else:
+                    i+=d[u[i]]
+                if i == n:
+                    s = s[:len(s)-1]
+                    break
+                    
+            else:
+                i+=1
+                
+        s+=u[n-1]
+                
+        print(s)

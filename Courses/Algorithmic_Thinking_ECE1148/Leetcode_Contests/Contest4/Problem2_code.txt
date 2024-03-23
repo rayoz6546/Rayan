@@ -1,0 +1,14 @@
+class Solution:
+    def maximumCostSubstring(self, s: str, chars: str, vals: List[int]) -> int:
+        char_vals = dict(zip(chars, vals))
+        max_cost = 0
+        cost_current = 0
+        for c in s:
+            if c in char_vals:
+                cost_current += char_vals[c]
+            else:
+                cost_current += ord(c) - ord('a') + 1
+            max_cost = max(max_cost, cost_current)
+            if cost_current < 0:
+                cost_current = 0
+        return max_cost

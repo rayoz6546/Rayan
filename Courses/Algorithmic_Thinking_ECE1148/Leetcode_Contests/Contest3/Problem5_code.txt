@@ -1,0 +1,21 @@
+for line in range(int(input())):
+    l = input()
+    l=l.split(" ")
+    a = int(l[0])
+    b = int(l[1])
+    c = int(l[2])
+    
+    if a >= c or b>=a or b<=c:
+        print(-1)
+
+    else:
+        x=0
+        while (x<math.pow(2,30)):
+            a_ = a^x 
+            b_ = b^x  
+            c_ = c^x  
+        
+            if a_<b_ and b_ < c_:
+                print(x)
+                break
+            x+=1 

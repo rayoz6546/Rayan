@@ -1,0 +1,23 @@
+class Solution:
+    def kthLargestValue(self, matrix: List[List[int]], k: int) -> int:
+        m  = len(matrix) 
+        n = len(matrix[0])
+        for i in range(m):
+            for j in range(n):
+                if j:
+                    matrix[i][j] ^= matrix[i][j-1]
+        my_d = {}
+        c = 0   #counter
+        for i in range(n):
+            for j in range(m):
+                if j:
+                    matrix[j][i] ^= matrix[j-1][i]
+                my_d[matrix[j][i]] = my_d.get(matrix[j][i], 0) + 1
+                c += 1
+                if c > k:
+                    min_value = min(my_d)
+                    my_d[min_value] -= 1
+                    if not my_d[min_value]:
+                        my_d.pop(min_value)
+
+        return min(my_d)

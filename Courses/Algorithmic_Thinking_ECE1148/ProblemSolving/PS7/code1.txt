@@ -1,0 +1,47 @@
+class Graph:
+    
+    def __init__(self, n)->None:
+        self.n = n
+        self.graph = {i:set() for i in range(n)}
+        self.weight = 6
+    
+    def connect(self, a, b):
+        self.graph[a].add(b)
+        self.graph[b].add(a)
+    
+    def distances_(self, start):
+        distances = [-1] * (self.n-1)
+                
+        def bfs(start):
+            q = [(n, self.weight) for n in self.graph[start]]
+            visited_nodes = set([start])
+            
+            while q:
+                node, d = q.pop(0)
+                
+                if node not in visited_nodes:
+                    visited_nodes.add(node)
+                    d_index = node if node <= start else node - 1
+                    if d < distances[d_index] or distances[d_index] == -1:
+                        distances[d_index] = d
+                    for neighbor in self.graph[node]:
+                        w = d + self.weight
+                        q.append((neighbor, w))
+                else:
+                    continue
+        
+        bfs(start)
+        
+        output = ' '.join(map(str, distances))
+        print(output)
+
+
+t = int(input())
+for i in range(t):
+    n,m = [int(value) for value in input().split()]
+    graph = Graph(n)
+    for i in range(m):
+        x,y = [int(x) for x in input().split()]
+        graph.connect(x-1,y-1) 
+    s = int(input())
+    graph.distances_(s-1)

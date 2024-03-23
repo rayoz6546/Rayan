@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=R100 NewDesignator=R7
+Change Net Name : Old Net Name=NetR100_2 New Net Name=NetR7_2
+Added Room: Name=disposeit
