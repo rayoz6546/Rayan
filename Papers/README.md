@@ -1,6 +1,6 @@
 # PAPERS
 
-Please feel free to check out some of my research papers, as well as reports I have written for several projects. 
+Feel free to check out some of my research papers, as well as reports I have written for several projects. 
 
 ## Research Papers
 
@@ -14,7 +14,7 @@ Please feel free to check out some of my research papers, as well as reports I h
   
 * Dispose It Game: Conducted during ECE 1895 (Junior Design)
 
-* Facial Recognition Lock Systen: Conducted during ECE 1896 (Senior Design)
+* Facial Recognition Lock System: Conducted during ECE 1896 (Senior Design)
 
 
 
