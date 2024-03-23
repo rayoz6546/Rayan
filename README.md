@@ -12,3 +12,18 @@ To view my most important projects, please check out "Papers", where I have arra
 * "Bop-It" inspired game: "Dispose-It" --------> "Dispose It.pdf"
   
 * Review on Wearable System for Positioning Ultrasound Scanner (published on MDPI) --------> "Research_Paper_CUHK.pdf"
+
+To view more details about each project (codes, procedures, etc.) please click on the corresponding folders:
+
+* Train Control System --------> Project Management
+
+* Facial Recognition Lock System with Anti-Theft --------> Senior Design
+
+* Effetcs of Several Factors on Deaths by Heart Failure --------> Principle of Data Science
+
+* "Bop-It" inspired game: "Dispose-It" --------> Junior Design/Design Project 2
+  
+Please note that there was no final report for the Project Management course (Train Control System project), however details about codes, test plans, UI design and more can be found in the corresponding folder. Make sure to click on "Track/Wayside Controller", as this is the part I was responsible for.
+
+
+
