@@ -8,7 +8,7 @@ This project was conducted during STAT1261 (Principles of Data Science), where I
     
 ## Database Management System
 
-This is part of my professional experience at College Louise Wegmann (Beirut, Lebanon) as a Freelance Software Developer. This is just a snippet of what I worked on. I am not able to provide all of the codes (for server and website), documents, and deliverables due to confidentiality and professional secrecy reasons. Additionally, the project involved sensitive information about students' records which cannot be disclosed publically. The provided material only includes some diagrams and chunks of code (SQL).
+This is part of my professional experience at College Louise Wegmann (Beirut, Lebanon) as a Freelance Software Developer. This is just a snippet of what I worked on. I am not able to provide all of the codes (for server and website), documents, and deliverables due to confidentiality and professional secrecy reasons. Additionally, the project involved sensitive information about students' records which cannot be disclosed publically. The provided material only includes some diagrams and chunks of code (SQL). Note that some of the texts are written in French since this is a French High School. 
 
 ## Dispose It 
 
