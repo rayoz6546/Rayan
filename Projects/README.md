@@ -8,7 +8,7 @@ This project was conducted during STAT1261 (Principles of Data Science), where I
     
 ## Database Management System
 
-This is part of my professional experience at College Louise Wegmann (Beirut, Lebanon) as a Freelance Software Developer. This is just a snippet of what I worked on. I am not able to provide all of the codes (for server and website), documents, and deliverables due to confidentiality and professional secrecy reasons. The provided material only includes some SQL diagrams and chunks of code.
+This is part of my professional experience at College Louise Wegmann (Beirut, Lebanon) as a Freelance Software Developer. This is just a snippet of what I worked on. I am not able to provide all of the codes (for server and website), documents, and deliverables due to confidentiality and professional secrecy reasons. Additionally, the project involved sensitive information about students' records which cannot be disclosed publically. The provided material only includes some SQL diagrams and chunks of code.
 
 ## Dispose It
 
@@ -26,7 +26,7 @@ This project was conducted during a Summer Undergraduate Research Program where 
 
 This project was conducted during ECE1140 (Project Management). I worked in a team of 6 on a train control system, and was responsible for the Wayside/Track Controller (Software). I controlled traffic lights, railway crossings, switch positions, and detected power & circuit failures. All the supporting documents and code (only my own work is shown) are provided. Some libraries used are PyQt for UI design, and unittest for Unit Testing, both in Python. Video Demo provided!
 
-### Please note that as mentioned above, most of these projects were conducted in teams. Therefore, the material (specifically code) provided for most of them consists of only my own work. Attempts to try and run the codes will not be successful as other parts of the systems are needed.  
+### Please note that as mentioned above, most of these projects were conducted in teams. Therefore, the material (specifically code) provided for most of them consists of only my own work, in order to respect my teammates privacy. Attempts to try and run the codes will not be successful as other parts of the systems are needed.  
 
 
 
