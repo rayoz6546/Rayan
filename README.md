@@ -11,4 +11,4 @@ To view my most important projects, please check out "Papers", where I have arra
 
 * "Bop-It" inspired game: "Dispose-It" --------> "Dispose It.pdf"
   
-* Research Paper with Chinese University of Hong Kong (published on MDPI) --------> "Research_Paper_CUHK"
+* Review on Wearable System for Positioning Ultrasound Scanner (published on MDPI) --------> "Research_Paper_CUHK.pdf"
