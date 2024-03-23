@@ -1,6 +1,6 @@
 # Rayan
 
-Welcome to my Github page where I show you some of the best courses and projects I have conducted throughout my academic journey! Code, video demos, and other deliverables are provided.
+Welcome to my Github page where I show you some of the best courses and projects I have taken throughout my academic journey! Code, video demos, and other deliverables are provided.
 
 * Courses: To view some of the most important courses I have taken, related to Data Science, Machine Learning, Computer Systems, and Hardware Designs
   
