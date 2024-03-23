@@ -12,6 +12,6 @@ To view my published paper (on MDPI), and more papers written for different proj
   
   ## Projects
   
-To view demos and details about projects included in my resume (and more!)
+To view demos and details about projects and professional experiences included in my resume (and more!)
 
 
