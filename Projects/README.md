@@ -2,6 +2,10 @@
 
 These are some of the most important projects I have had. Some were conducted at the University of Pittburgh, and others were professional experiences. Video Demos and more are provided!
 
+## Big Data in Medicine
+
+This project was conducted in 2018-2019, as part of the French Baccalaureate. In a group of 4, we researched several aspects of Big Data in Medicine, such as Predictive Analysis, Assisted Medicine, and Machine Learning used in diagnostics and Ultrasound scanning. I was responsible for the Telemedicine part, which involved the use of Artificial Intelligence to detect diseases based on ultrasound images, and Robotics employed to assist and/or replace humans in surgeries using Machine Learning. Along with the research part, we had to deliver a Final Production and present in front of a jury. For the Final Production, we worked on the specific case of the Melanoma cancer. We collected data about symptoms (physical and genetic) and devised a Machine Learning algorithm to predict wether a person has it based on their genetic ancestry and physical symptoms. As we were only in high school back then and had limited knowledge about Machine Learning and AI, we received help from faculty members and produced a simplified version of the algorithm to satisfy our requirements. Note that the project was written entirely in French (documents, report, etc.), however the gist of it all could be understood through the subtitles (cognites) and figures. 
+
 ## Data Science Project
 
 This project was conducted during STAT1261 (Principles of Data Science), where I studied the effects of several factors on deaths by heart failures alongside 2 teammates. We used multiple Data Visualization and Wrangling techniques in R, and trained several Machine Learning algorithms to find the optimal accuracy.
