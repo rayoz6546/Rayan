@@ -1,17 +1,5 @@
-# Rayan
+# Volunteer
 
-Welcome to my Github page where I show you some of the best courses and projects I have worked on throughout my academic journey. Codes, video demos, and other deliverables are provided!
+This experience was held in 2016-2017, where we raised around 300$ with 3 colleagues for the Lebanese association "L'Ecoute" that takes care of deaf and mute children in Lebanon. We organized cupcake sales and put up flyers all around the city of Beirut to give it more recognition and encourage donations. Additionally, we sold customized bracelets.
 
-## Courses
-
-To view some of the most important courses I have taken related to Data Science, Machine Learning, Computer Systems, and Hardware Designs
-
- ## Papers
- 
-To view my published paper (on MDPI), and more papers written for different projects I worked on
-  
-  ## Projects
-  
-To view demos and details about projects and professional experiences included in my resume (and more!)
-
-
+## Please note that all the documents are written in French, as this was part of a school project at my high school "College Louise Wegmann" (a French school).
