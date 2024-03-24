@@ -8,7 +8,7 @@ This project was conducted in 2018, as part of the French Baccalaureate. In a gr
 
 ## Data Science Project
 
-This project was conducted during STAT1261 (Principles of Data Science), where I studied the effects of several factors on deaths by heart failures alongside 2 teammates. We used multiple Data Visualization and Wrangling techniques in R, and trained several Machine Learning algorithms to find the optimal accuracy.
+This project was conducted during STAT1261 (Principles of Data Science), where I studied the effects of several factors on deaths by heart failures alongside 2 teammates. We used multiple Data Visualization and Wrangling techniques in R, and trained several Machine Learning algorithms (Naive Bayes, Regression, Decision Tree, and Random Forest) to find the optimal accuracy. Concepts like parameter tuning were used. 
     
 ## Database Management System
 
@@ -28,7 +28,7 @@ This project was conducted during a Summer Undergraduate Research Program where 
 
 ## Train Control System 
 
-This project was conducted during ECE1140 (Project Management). I worked in a team of 6 on a train control system, and was responsible for the Wayside/Track Controller (Software). I controlled traffic lights, railway crossings, switch positions, and detected power & circuit failures. All the supporting documents and code (only my own work is shown) are provided. Some libraries used are PyQt for UI design, and unittest for Unit Testing, both in Python. Video Demo Provided!
+This project was conducted during ECE1140 (Project Management). I worked in a team of 6 on a train control system, and was responsible for the Wayside/Track Controller (Software). I controlled traffic lights, railway crossings, switch positions, and detected power & circuit failures. All the supporting documents and code (only my own work is shown) are provided. Some libraries used were PyQt for UI design, and unittest for Unit Testing, both in Python. Video Demo Provided!
 
 ### Please note that as mentioned above, most of these projects were conducted in teams. Therefore, the material (specifically code) provided for most of them consists of only my own work. This decision was made out of respect for my teammates' intellectual property and contributions. Attempts to try and run the codes will hence not be successful as other parts of the systems are needed.  
 
