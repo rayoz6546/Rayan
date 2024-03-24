@@ -16,6 +16,6 @@ To view demos and details about projects and professional experiences included i
 
   ## Volunteer
 
-  To view one of my volunteer works cited on my LinkedIn page
+  To read more about one of my volunteer works cited on my LinkedIn page
 
 
