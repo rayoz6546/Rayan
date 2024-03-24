@@ -1,6 +1,6 @@
 #  PROJECTS
 
-These are some of the most important projects I have had. Some were conducted at the University of Pittburgh, and others were professional experiences. Video Demos and more are provided!
+These are some of the most important projects I have had. Some were conducted as part of my academic journey, and others were professional experiences. Video Demos and more are provided!
 
 ## Big Data in Medicine
 
