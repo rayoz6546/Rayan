@@ -1,6 +1,6 @@
 # Rayan
 
-Welcome to my Github page where I show you some of the best courses and projects I have worked on throughout my academic journey. Codes, video demos, and other deliverables are provided!
+Welcome to my Github page where I show you some of the best courses and projects I have worked on throughout my academic and professional journey. Codes, video demos, and more are provided!
 
 ## Courses
 
