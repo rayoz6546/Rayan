@@ -12,11 +12,11 @@ Feel free to check out some of my research papers, as well as reports I have wri
 
 ## Project Reports
 
-* Data Science Project: Conducted during STAT1261 (Principles of Data Science). This report studies the effects of several factors such as age, sex, smoking, diabetes, and blood platelets on deaths by heart failures. Several techniques in R are used to analyze and visualize the dataset (from Kaggle). Various Machine Learning were trained to find the best optimal accuracy.
+* Data Science Project: Conducted during STAT1261 (Principles of Data Science). This report studies the effects of several factors such as age, sex, smoking, diabetes, and blood platelets on deaths by heart failures. Several techniques in R are used to analyze and visualize the dataset (from Kaggle). Various Machine Learning models were trained to find the best optimal accuracy.
   
-* Dispose It Game: Conducted during ECE1895 (Junior Design). This report documents every aspects of the "Bop-It" inspired game called "Dispose-It". In a team of 3, we build this device that prompts several items that the user has to dispose of correctly: either by "Trashing It", "Recycling It", or "Composting It". The paper explains details about the design and creation of the Software, Hardware (my part), and enclosre unit. 
+* Dispose It Game: Conducted during ECE1895 (Junior Design). This report documents every aspect of the "Bop-It" inspired game called "Dispose-It". In a team of 3, we built this device that prompts several items that the user has to dispose of correctly: either by "Trashing It", "Recycling It", or "Composting It". The paper explains details about the design and creation of the Software and Hardware (my part) units, as well as the enclosure. 
 
-* Facial Recognition Lock System: Conducted during ECE1896 (Senior Design). This report documents every detail in the creation and testing of our facial recognition lock system. The device is able to recognize verified users and invalidate strangers with accuracies around 90%.
+* Facial Recognition Lock System: Conducted during ECE1896 (Senior Design). This report documents every detail in the creation and testing of our facial recognition lock system. The device is able to recognize verified users and invalidate strangers with accuracies around 90%. 
 
 ### Note that most of these papers are part of big projects, which you can also find under the "projects" folder on my GitHub page. There, you can find more details including codes, video demos, and supporting documents!
 
