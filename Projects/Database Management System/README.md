@@ -1,4 +1,4 @@
-# Tools and Concepts used (not all shown here)
+# Tools and Concepts used
 
 * SQL (SQLite)
 * Python
@@ -11,3 +11,5 @@
 * Website Developement
 * Communication
 * Self-Learning
+
+## The tools and concepts listed here are not just specific to the material shared in this folder, but rather refer to my Freelance Software Developer experience in general. 
