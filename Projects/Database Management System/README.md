@@ -1,6 +1,8 @@
 # Tools and Concepts used (not all shown here)
 
 * SQL (SQLite)
+* Python
+* Flask
 * HTML
 * CSS
 * JavaScript
