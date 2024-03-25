@@ -7,4 +7,9 @@
 * Data Tidying (gather, spread, seperate, unite)
 * Sampling and Bootstrap
 * Supervised Learning (Regression, Naive Bayes, Decision Tree, Random Forest)
+* Parameter Tuning
+* Optimization (Accuracy)
+* Teamwork
+* Communication
+* Presentations
 
