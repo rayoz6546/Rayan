@@ -1,10 +1,11 @@
-# Tools and Concepts used 
+# Tools and Concepts used (not all shown here)
 
-* R
-* RStudio 
-* Data Visualization (Histogram, Boxplot, QQ-Plots, Bar Charts, etc.)
-* Data Wrangling (filter, select, mutate, sort, summarise, joins, etc.)
-* Data Tidying (gather, spread, seperate, unite)
-* Sampling and Bootstrap
-* Supervised Learning (Regression, Naive Bayes, Decision Tree, Random Forest)
-
+* SQL (SQLite)
+* HTML
+* CSS
+* JavaScript
+* Visual Studio Code
+* Database Management System
+* Website Developement
+* Communication
+* Self-Learning
