@@ -6,7 +6,6 @@
 * Scikit-Learn
 * Keras
 * OpenCV
-* Haar Classifier
 * Raspberry Pi 4
 * PiCamera 
 * Linux
