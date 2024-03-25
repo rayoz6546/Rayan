@@ -12,4 +12,4 @@
 * Communication
 * Self-Learning
 
-## The tools and concepts listed here are not just specific to the material shared in this folder, they refer to my Freelance Software Developer experience in general. 
+## The tools and concepts listed here are not just specific to the material shared in this folder, they refer to my Freelance Software Developer experience as a whole. 
