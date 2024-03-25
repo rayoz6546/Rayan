@@ -6,6 +6,7 @@
 * ATMega238P
 * Hardware Design 
 * Hardware Testing
+* PCB Design
 * Soldering
 * Teamwork
 * Communication 
