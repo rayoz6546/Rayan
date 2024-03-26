@@ -1,3 +1,7 @@
+# Data Science Project
+
+This project was conducted during STAT1261 (Principles of Data Science) in Fall 2023, where I studied the effects of several factors on deaths by heart failures alongside 2 teammates. We used multiple Data Visualization and Wrangling techniques in R, and trained several Machine Learning algorithms (Naive Bayes, Regression, Decision Tree, and Random Forest) to find the optimal accuracy. Concepts like parameter tuning were used. 
+
 # Tools and Concepts used 
 
 * R
