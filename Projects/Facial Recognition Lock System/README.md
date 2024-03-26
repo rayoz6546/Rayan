@@ -1,6 +1,6 @@
 # Facial Recognition Lock System
 
-This project was conducted during ECE1896 (Senior Design) in Fall 2023. I worked with 2 teammates to build a device that can perform facial recognition with high accuracies. I worked on the Computer Vision unit, which envolved building the facial recognition system using a Convolutional Neural Network (CNN) as well as devising an Anti-Spoofing system based on blink detection to prevent fraudulent attempts to break in (by placing a picture of the authorized user in front of the camera). I used libraries such as Tensorflow, Keras, and Scikit-Learn in Python. All the code and supporting materials are provided. Video Demo as well!
+This project was conducted during ECE1896 (Senior Design) in Fall 2023. I worked with 2 teammates to build a device that can perform facial recognition with high accuracies. I worked on the Computer Vision unit, which envolved building the facial recognition system using a Convolutional Neural Network (CNN) as well as devising an Anti-Spoofing system based on blink detection to prevent fraudulent attempts to break in (by placing a picture of the authorized user in front of the camera). All the code and supporting materials are provided. Video Demo as well!
 
 # Tools and Concepts used 
 
