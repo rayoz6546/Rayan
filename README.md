@@ -4,7 +4,7 @@ Welcome to my Github page where I show you some of the best courses and projects
 
 ## Courses
 
-To view some of the most important courses I have taken related to Data Science, Machine Learning, Computer Systems, and Hardware Designs
+To view some of the most important courses I have taken related to Data Science, Machine Learning, Computer Systems, and Hardware Design
 
  ## Papers
  
