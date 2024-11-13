@@ -1,0 +1,7 @@
+Running: xsim.dir/ALU_Shift_behav/xsimk.exe -simmode gui -wdb ALU_Shift_behav.wdb -simrunnum 0 -socket 57993
+Design successfully loaded
+Design Loading Memory Usage: 6248 KB (Peak: 6248 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 2040748 KB (Peak: 2040748 KB)
+Simulation CPU Usage: 15218 ms

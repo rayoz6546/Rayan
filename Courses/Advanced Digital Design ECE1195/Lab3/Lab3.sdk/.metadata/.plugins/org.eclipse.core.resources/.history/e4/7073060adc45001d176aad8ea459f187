@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+uint32_t *regmap = (uint32_t *) 0x70000000; // base address of axi_regmap as set in the Vivado address editor
+uint64_t  res = 0, reg; // 64-bit register to hold the value of the multiplication and the result from the multiplier
+uint32_t  A, B; // 32-bit random numbers
+int reset;
+for (size_t i = 0; i<10; i++){
+A = rand();
+B = rand();
+regmap[0] = A;
+regmap[1] = B;
+res = (uint64_t) A * (uint64_t) B; // you have to do type casting before multiplying, otherwise, you will end up having incorrect result.
+
+reset = 0;
+regmap[2]=reset;
+reset= 1;
+regmap[2]=reset;
+reset=0;
+regmap[2]=reset;
+
+uint32_t Rl = regmap[1];
+uint32_t Rh = regmap[0];
+int done = regmap[2];
+
+reg = (((uint64_t) Rh) << 32) + ((uint64_t) Rl);
+
+// %8lx will print uint32_t in hex in 8 digits, %16llx will print uint64_t in hex in 16 digits.
+printf("%8lx * %8lx = %8lx %8lx (%16llx) done=%i (%s) \n\n", A, B, Rh,
+Rl, res, done, (reg == res ? "correct" : "wrong"));
+
+}
+return 0;
+}

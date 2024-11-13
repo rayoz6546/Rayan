@@ -1,0 +1,609 @@
+16:43:56 **** Build of project CPU_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+
+**** Build of configuration Debug for project CPU ****
+
+Nothing to build for project CPU
+16:45:08 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../CPU_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\RAYAN\Lab_4\Lab_4.sdk\CPU_bsp\ps7_cortexa9_0\libsrc\standalone_v6_8\src/xil-crt0.S:138: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: CPU.elf] Error 1
+16:51:55 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c: In function 'run_program':
+../src/CPU.c:57:1: error: 'execution' undeclared (first use in this function); did you mean '__section'?
+ execution.
+ ^~~~~~~~~
+ __section
+../src/CPU.c:57:1: note: each undeclared identifier is reported only once for each function it appears in
+../src/CPU.c:82:5: warning: 'main' is normally a non-static function [-Wmain]
+ int main(void) {
+     ^~~~
+../src/CPU.c:87:6: error: redefinition of 'run_program'
+ void run_program(uint32_t *program) {
+      ^~~~~~~~~~~
+../src/CPU.c:28:6: note: previous definition of 'run_program' was here
+ void run_program(uint32_t *program) {
+      ^~~~~~~~~~~
+At top level:
+../src/CPU.c:87:6: warning: 'run_program' defined but not used [-Wunused-function]
+ void run_program(uint32_t *program) {
+      ^~~~~~~~~~~
+../src/CPU.c:82:5: warning: 'main' defined but not used [-Wunused-function]
+ int main(void) {
+     ^~~~
+make: *** [src/subdir.mk:23: src/CPU.o] Error 1
+16:52:29 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CPU.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CPU.elf  |tee "CPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71220	   2644	  23328	  97192	  17ba8	CPU.elf
+'Finished building: CPU.elf.size'
+' '
+16:54:33 **** Incremental Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+16:55:58 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c: In function 'main':
+../src/CPU.c:26:1: warning: implicit declaration of function 'run_program' [-Wimplicit-function-declaration]
+ run_program(program1);
+ ^~~~~~~~~~~
+../src/CPU.c: At top level:
+../src/CPU.c:28:6: warning: conflicting types for 'run_program'
+ void run_program(uint32_t *program) {
+      ^~~~~~~~~~~
+../src/CPU.c:26:1: note: previous implicit declaration of 'run_program' was here
+ run_program(program1);
+ ^~~~~~~~~~~
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CPU.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CPU.elf  |tee "CPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71220	   2644	  23328	  97192	  17ba8	CPU.elf
+'Finished building: CPU.elf.size'
+' '
+16:56:47 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c: In function 'run_program':
+../src/CPU.c:63:5: warning: 'main' is normally a non-static function [-Wmain]
+ int main(void) {
+     ^~~~
+At top level:
+../src/CPU.c:63:5: warning: 'main' defined but not used [-Wunused-function]
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../CPU_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\RAYAN\Lab_4\Lab_4.sdk\CPU_bsp\ps7_cortexa9_0\libsrc\standalone_v6_8\src/xil-crt0.S:138: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: CPU.elf] Error 1
+16:57:12 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c: In function 'run_program':
+../src/CPU.c:63:5: warning: 'main' is normally a non-static function [-Wmain]
+ int main(void) {
+     ^~~~
+../src/CPU.c: In function 'main':
+../src/CPU.c:67:1: warning: 'return' with no value, in function returning non-void
+ return;
+ ^~~~~~
+../src/CPU.c:63:5: note: declared here
+ int main(void) {
+     ^~~~
+At top level:
+../src/CPU.c:63:5: warning: 'main' defined but not used [-Wunused-function]
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../CPU_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\RAYAN\Lab_4\Lab_4.sdk\CPU_bsp\ps7_cortexa9_0\libsrc\standalone_v6_8\src/xil-crt0.S:138: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: CPU.elf] Error 1
+16:57:20 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c: In function 'run_program':
+../src/CPU.c:63:5: warning: 'main' is normally a non-static function [-Wmain]
+ int main(void) {
+     ^~~~
+At top level:
+../src/CPU.c:63:5: warning: 'main' defined but not used [-Wunused-function]
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../CPU_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\RAYAN\Lab_4\Lab_4.sdk\CPU_bsp\ps7_cortexa9_0\libsrc\standalone_v6_8\src/xil-crt0.S:138: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: CPU.elf] Error 1
+16:59:06 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c: In function 'run_program':
+../src/CPU.c:57:1: error: 'execution' undeclared (first use in this function); did you mean '__section'?
+ execution.
+ ^~~~~~~~~
+ __section
+../src/CPU.c:57:1: note: each undeclared identifier is reported only once for each function it appears in
+../src/CPU.c: At top level:
+../src/CPU.c:124:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/subdir.mk:23: src/CPU.o] Error 1
+16:59:12 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c:123:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/subdir.mk:23: src/CPU.o] Error 1
+17:02:27 **** Incremental Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c:123:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/subdir.mk:23: src/CPU.o] Error 1
+17:08:42 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c:39:10: error: redefinition of 'program3'
+ uint32_t program3[] = {
+          ^~~~~~~~
+../src/CPU.c:27:10: note: previous definition of 'program3' was here
+ uint32_t program3[] = {
+          ^~~~~~~~
+../src/CPU.c: In function 'main':
+../src/CPU.c:95:13: error: 'program2' undeclared (first use in this function); did you mean 'program6'?
+ run_program(program2);
+             ^~~~~~~~
+             program6
+../src/CPU.c:95:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/CPU.c: At top level:
+../src/CPU.c:197:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/subdir.mk:23: src/CPU.o] Error 1
+17:09:02 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c:197:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/subdir.mk:23: src/CPU.o] Error 1
+17:09:21 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CPU.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CPU.elf  |tee "CPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71284	   2964	  23328	  97576	  17d28	CPU.elf
+'Finished building: CPU.elf.size'
+' '
+17:09:40 **** Incremental Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+17:10:23 **** Incremental Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+17:11:14 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CPU.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CPU.elf  |tee "CPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71452	   2964	  23328	  97744	  17dd0	CPU.elf
+'Finished building: CPU.elf.size'
+' '
+17:11:25 **** Incremental Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+17:21:26 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CPU.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CPU.elf  |tee "CPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71452	   2964	  23328	  97744	  17dd0	CPU.elf
+'Finished building: CPU.elf.size'
+' '
+17:22:23 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CPU.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CPU.elf  |tee "CPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71452	   2964	  23328	  97744	  17dd0	CPU.elf
+'Finished building: CPU.elf.size'
+' '
+17:33:35 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CPU.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CPU.elf  |tee "CPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71452	   2964	  23328	  97744	  17dd0	CPU.elf
+'Finished building: CPU.elf.size'
+' '
+17:34:46 **** Incremental Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+17:35:22 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/CPU.c: In function 'run_program':
+../src/CPU.c:111:35: error: 'LABCPU_ADDR' undeclared (first use in this function); did you mean 'LAB_CPU_ADDR'?
+ uint32_t * cpu_ptr  = (uint32_t *)LABCPU_ADDR;
+                                   ^~~~~~~~~~~
+                                   LAB_CPU_ADDR
+../src/CPU.c:111:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/CPU.o] Error 1
+17:35:44 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CPU.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CPU.elf  |tee "CPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71452	   2964	  23328	  97744	  17dd0	CPU.elf
+'Finished building: CPU.elf.size'
+' '
+17:36:12 **** Incremental Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+17:36:46 **** Auto Build of configuration Debug for project CPU ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CPU.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CPU_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU.d" -MT"src/CPU.o" -o "src/CPU.o" "../src/CPU.c"
+In file included from ../src/CPU.c:3:0:
+../../CPU_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/CPU.c'
+' '
+'Building target: CPU.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CPU_bsp/ps7_cortexa9_0/lib -o "CPU.elf"  ./src/CPU.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CPU.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CPU.elf  |tee "CPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71452	   2964	  23328	  97744	  17dd0	CPU.elf
+'Finished building: CPU.elf.size'
+' '

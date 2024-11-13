@@ -1,0 +1,280 @@
+
+
+================================================================
+== Vivado HLS Report for 'hw_conv'
+================================================================
+* Date:           Mon Dec  5 19:28:31 2022
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        _Lab_6
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.631|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  262661|  262661|  262661|  262661|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |          |     Latency     | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name|   min  |   max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |  262659|  262659|         4|          1|          1|  262657|    yes   |
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	6  / (exitcond1)
+	4  / (!exitcond1)
+4 --> 
+	5  / true
+5 --> 
+	2  / true
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%kbuf_0_0 = alloca i8"   --->   Operation 7 'alloca' 'kbuf_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%kbuf_0_1 = alloca i8"   --->   Operation 8 'alloca' 'kbuf_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%kbuf_1_0_s = alloca i8"   --->   Operation 9 'alloca' 'kbuf_1_0_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%kbuf_1_0 = alloca i8"   --->   Operation 10 'alloca' 'kbuf_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%kbuf_1_1 = alloca i8"   --->   Operation 11 'alloca' 'kbuf_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%kbuf_2_0_s = alloca i8"   --->   Operation 12 'alloca' 'kbuf_2_0_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%kbuf_2_0 = alloca i8"   --->   Operation 13 'alloca' 'kbuf_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%kbuf_2_1 = alloca i8"   --->   Operation 14 'alloca' 'kbuf_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %sin_V_data_V), !map !73"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sin_V_keep_V), !map !77"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sin_V_strb_V), !map !81"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sin_V_user_V), !map !85"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sin_V_last_V), !map !89"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sin_V_id_V), !map !93"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sin_V_dest_V), !map !97"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %sout_V_data_V), !map !101"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sout_V_keep_V), !map !105"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sout_V_strb_V), !map !109"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sout_V_user_V), !map !113"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sout_V_last_V), !map !117"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sout_V_id_V), !map !121"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %sout_V_dest_V), !map !125"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @hw_conv_str) nounwind"   --->   Operation 29 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%lbuf_0 = alloca [509 x i8], align 1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:94]   --->   Operation 30 'alloca' 'lbuf_0' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 509> <RAM>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%lbuf_1 = alloca [509 x i8], align 1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:94]   --->   Operation 31 'alloca' 'lbuf_1' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 509> <RAM>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str18, [1 x i8]* @p_str18, [1 x i8]* @p_str18, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str18, [1 x i8]* @p_str18) nounwind" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:89]   --->   Operation 32 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %sin_V_data_V, i1* %sin_V_keep_V, i1* %sin_V_strb_V, i1* %sin_V_user_V, i1* %sin_V_last_V, i1* %sin_V_id_V, i1* %sin_V_dest_V, [5 x i8]* @p_str29, i32 1, i32 1, [5 x i8]* @p_str310, i32 0, i32 0, [1 x i8]* @p_str18, [1 x i8]* @p_str18, [1 x i8]* @p_str18, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str18, [1 x i8]* @p_str18) nounwind" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:90]   --->   Operation 33 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %sout_V_data_V, i1* %sout_V_keep_V, i1* %sout_V_strb_V, i1* %sout_V_user_V, i1* %sout_V_last_V, i1* %sout_V_id_V, i1* %sout_V_dest_V, [5 x i8]* @p_str29, i32 1, i32 1, [5 x i8]* @p_str310, i32 0, i32 0, [1 x i8]* @p_str18, [1 x i8]* @p_str18, [1 x i8]* @p_str18, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str18, [1 x i8]* @p_str18) nounwind" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:91]   --->   Operation 34 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (1.76ns)   --->   "br label %1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:106]   --->   Operation 35 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 5.33>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%i = phi i19 [ 0, %0 ], [ %i_1, %._crit_edge98 ]"   --->   Operation 36 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%phi_urem = phi i19 [ 0, %0 ], [ %idx_urem, %._crit_edge98 ]"   --->   Operation 37 'phi' 'phi_urem' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%kbuf_2_1_1 = load i8* %kbuf_2_1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 38 'load' 'kbuf_2_1_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (2.43ns)   --->   "%exitcond1 = icmp eq i19 %i, -261631" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:106]   --->   Operation 39 'icmp' 'exitcond1' <Predicate = true> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (2.16ns)   --->   "%i_1 = add i19 %i, 1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:106]   --->   Operation 40 'add' 'i_1' <Predicate = true> <Delay = 2.16> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_1 = zext i19 %phi_urem to i64" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:176]   --->   Operation 41 'zext' 'tmp_1' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%lbuf_0_addr = getelementptr [509 x i8]* %lbuf_0, i64 0, i64 %tmp_1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:176]   --->   Operation 42 'getelementptr' 'lbuf_0_addr' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 43 [2/2] (3.25ns)   --->   "%kbuf_0_2 = load i8* %lbuf_0_addr, align 1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:176]   --->   Operation 43 'load' 'kbuf_0_2' <Predicate = (!exitcond1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 509> <RAM>
+ST_2 : Operation 44 [1/1] (2.43ns)   --->   "%tmp_5 = icmp ugt i19 %i, 508" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:186]   --->   Operation 44 'icmp' 'tmp_5' <Predicate = (!exitcond1)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%lbuf_1_addr = getelementptr [509 x i8]* %lbuf_1, i64 0, i64 %tmp_1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:188]   --->   Operation 45 'getelementptr' 'lbuf_1_addr' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 46 [2/2] (3.25ns)   --->   "%kbuf_1_2 = load i8* %lbuf_1_addr, align 1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:188]   --->   Operation 46 'load' 'kbuf_1_2' <Predicate = (!exitcond1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 509> <RAM>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %i, i32 18)" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:203]   --->   Operation 47 'bitselect' 'tmp' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "br i1 %tmp, label %.preheader.preheader.0, label %2" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:203]   --->   Operation 48 'br' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%empty_7 = call { i8, i1, i1, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i8P.i1P.i1P.i1P.i1P.i1P.i1P(i8* %sin_V_data_V, i1* %sin_V_keep_V, i1* %sin_V_strb_V, i1* %sin_V_user_V, i1* %sin_V_last_V, i1* %sin_V_id_V, i1* %sin_V_dest_V)" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:206]   --->   Operation 49 'read' 'empty_7' <Predicate = (!exitcond1 & !tmp)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i8, i1, i1, i1, i1, i1, i1 } %empty_7, 0" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:206]   --->   Operation 50 'extractvalue' 'tmp_data_V_1' <Predicate = (!exitcond1 & !tmp)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "store i8 %tmp_data_V_1, i8* %kbuf_2_1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:206]   --->   Operation 51 'store' <Predicate = (!exitcond1 & !tmp)> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "br label %.preheader.preheader.0" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:208]   --->   Operation 52 'br' <Predicate = (!exitcond1 & !tmp)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (2.43ns)   --->   "%tmp_3 = icmp ugt i19 %i, 512" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:244]   --->   Operation 53 'icmp' 'tmp_3' <Predicate = (!exitcond1)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "br i1 %tmp_3, label %3, label %._crit_edge98" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:244]   --->   Operation 54 'br' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (2.43ns)   --->   "%tmp_last_V = icmp eq i19 %i, -261632" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:248]   --->   Operation 55 'icmp' 'tmp_last_V' <Predicate = (!exitcond1 & tmp_3)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (2.16ns)   --->   "%next_urem = add i19 %phi_urem, 1"   --->   Operation 56 'add' 'next_urem' <Predicate = (!exitcond1)> <Delay = 2.16> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (2.43ns)   --->   "%tmp_8 = icmp ult i19 %next_urem, 509"   --->   Operation 57 'icmp' 'tmp_8' <Predicate = (!exitcond1)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.73ns)   --->   "%idx_urem = select i1 %tmp_8, i19 %next_urem, i19 0"   --->   Operation 58 'select' 'idx_urem' <Predicate = (!exitcond1)> <Delay = 0.73> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 8.63>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%kbuf_0_0_load = load i8* %kbuf_0_0" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 59 'load' 'kbuf_0_0_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%kbuf_0_1_load_1 = load i8* %kbuf_0_1"   --->   Operation 60 'load' 'kbuf_0_1_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%kbuf_1_0_load = load i8* %kbuf_1_0_s" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:177]   --->   Operation 61 'load' 'kbuf_1_0_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%kbuf_1_0_load_5 = load i8* %kbuf_1_0" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 62 'load' 'kbuf_1_0_load_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%kbuf_1_1_load_1 = load i8* %kbuf_1_1"   --->   Operation 63 'load' 'kbuf_1_1_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%kbuf_2_0_load = load i8* %kbuf_2_0_s" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:193]   --->   Operation 64 'load' 'kbuf_2_0_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%kbuf_2_0_load_6 = load i8* %kbuf_2_0" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 65 'load' 'kbuf_2_0_load_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 262657, i64 262657, i64 262657)"   --->   Operation 66 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "store i8 %kbuf_2_1_1, i8* %kbuf_2_0" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 67 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "store i8 %kbuf_2_0_load_6, i8* %kbuf_2_0_s" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 68 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "store i8 %kbuf_1_1_load_1, i8* %kbuf_1_0"   --->   Operation 69 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "store i8 %kbuf_1_0_load_5, i8* %kbuf_1_0_s" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 70 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "store i8 %kbuf_0_1_load_1, i8* %kbuf_0_0"   --->   Operation 71 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %4, label %_ifconv" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:106]   --->   Operation 72 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%kbuf_0_1_load = load i8* %kbuf_0_1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 73 'load' 'kbuf_0_1_load' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%kbuf_1_1_load = load i8* %kbuf_1_1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 74 'load' 'kbuf_1_1_load' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 75 [1/2] (3.25ns)   --->   "%kbuf_0_2 = load i8* %lbuf_0_addr, align 1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:176]   --->   Operation 75 'load' 'kbuf_0_2' <Predicate = (!exitcond1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 509> <RAM>
+ST_3 : Operation 76 [1/1] (3.25ns)   --->   "store i8 %kbuf_1_0_load, i8* %lbuf_0_addr, align 1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:177]   --->   Operation 76 'store' <Predicate = (!exitcond1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 509> <RAM>
+ST_3 : Operation 77 [1/2] (3.25ns)   --->   "%kbuf_1_2 = load i8* %lbuf_1_addr, align 1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:188]   --->   Operation 77 'load' 'kbuf_1_2' <Predicate = (!exitcond1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 509> <RAM>
+ST_3 : Operation 78 [1/1] (1.24ns)   --->   "%kbuf_1_2_1 = select i1 %tmp_5, i8 %kbuf_1_2, i8 %kbuf_1_1_load" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:186]   --->   Operation 78 'select' 'kbuf_1_2_1' <Predicate = (!exitcond1)> <Delay = 1.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 79 [1/1] (3.25ns)   --->   "store i8 %kbuf_2_0_load, i8* %lbuf_1_addr, align 1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:193]   --->   Operation 79 'store' <Predicate = (!exitcond1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 509> <RAM>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "store i8 %kbuf_1_2_1, i8* %kbuf_1_1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:186]   --->   Operation 80 'store' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "store i8 %kbuf_0_2, i8* %kbuf_0_1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:176]   --->   Operation 81 'store' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%kbuf_2_1_load = load i8* %kbuf_2_1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 82 'load' 'kbuf_2_1_load' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%tmp_16_cast = zext i8 %kbuf_0_0_load to i9" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 83 'zext' 'tmp_16_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_16_0_1_cast = zext i8 %kbuf_0_1_load to i9" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 84 'zext' 'tmp_16_0_1_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_16_0_2_cast = zext i8 %kbuf_0_2 to i9" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 85 'zext' 'tmp_16_0_2_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_16_1_cast = zext i8 %kbuf_1_0_load_5 to i9" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 86 'zext' 'tmp_16_1_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (1.91ns)   --->   "%tmp1 = add i9 %tmp_16_cast, %tmp_16_0_1_cast" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 87 'add' 'tmp1' <Predicate = (!exitcond1)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%tmp1_cast = zext i9 %tmp1 to i10" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 88 'zext' 'tmp1_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (1.91ns)   --->   "%tmp2 = add i9 %tmp_16_1_cast, %tmp_16_0_2_cast" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 89 'add' 'tmp2' <Predicate = (!exitcond1)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%tmp2_cast = zext i9 %tmp2 to i10" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 90 'zext' 'tmp2_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (1.82ns)   --->   "%result_2_1 = add i10 %tmp1_cast, %tmp2_cast" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 91 'add' 'result_2_1' <Predicate = (!exitcond1)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%result_2_1_cast = zext i10 %result_2_1 to i12" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 92 'zext' 'result_2_1_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%p_shl = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %kbuf_1_1_load, i3 0)" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 93 'bitconcatenate' 'p_shl' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i11 %p_shl to i12" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 94 'zext' 'p_shl_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (1.63ns)   --->   "%result_2_1_1 = sub i12 %result_2_1_cast, %p_shl_cast" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 95 'sub' 'result_2_1_1' <Predicate = (!exitcond1)> <Delay = 1.63> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_16_1_2_cast = zext i8 %kbuf_1_2_1 to i9" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 96 'zext' 'tmp_16_1_2_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_16_2_1_cast = zext i8 %kbuf_2_1_1 to i10" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 97 'zext' 'tmp_16_2_1_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%tmp_16_2_2_cast = zext i8 %kbuf_2_1_load to i9" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 98 'zext' 'tmp_16_2_2_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (1.91ns)   --->   "%tmp7 = add i9 %tmp_16_2_2_cast, %tmp_16_1_2_cast" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 99 'add' 'tmp7' <Predicate = (!exitcond1)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%tmp7_cast = zext i9 %tmp7 to i10" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 100 'zext' 'tmp7_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (1.82ns)   --->   "%tmp6 = add i10 %tmp_16_2_1_cast, %tmp7_cast" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 101 'add' 'tmp6' <Predicate = (!exitcond1)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.03>
+ST_4 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_16_2_cast = zext i8 %kbuf_2_0_load_6 to i12" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 102 'zext' 'tmp_16_2_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 103 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp5 = add i12 %tmp_16_2_cast, %result_2_1_1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 103 'add' 'tmp5' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.89> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 104 [1/1] (0.00ns)   --->   "%tmp6_cast = zext i10 %tmp6 to i12" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 104 'zext' 'tmp6_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 105 [1/1] (3.78ns) (root node of TernaryAdder)   --->   "%result_2_2_2 = add i12 %tmp5, %tmp6_cast" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233]   --->   Operation 105 'add' 'result_2_2_2' <Predicate = true> <Delay = 3.78> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.89> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_4 = call i4 @_ssdm_op_PartSelect.i4.i12.i32.i32(i12 %result_2_2_2, i32 8, i32 11)" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:237]   --->   Operation 106 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 107 [1/1] (1.30ns)   --->   "%icmp = icmp sgt i4 %tmp_4, 0" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:237]   --->   Operation 107 'icmp' 'icmp' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 108 [1/1] (0.69ns)   --->   "%p_result = select i1 %icmp, i12 255, i12 %result_2_2_2" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:237]   --->   Operation 108 'select' 'p_result' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 109 [1/1] (0.00ns)   --->   "%tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %p_result, i32 11)" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:238]   --->   Operation 109 'bitselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_7 = trunc i12 %p_result to i8" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:246]   --->   Operation 110 'trunc' 'tmp_7' <Predicate = (tmp_3)> <Delay = 0.00>
+ST_4 : Operation 111 [1/1] (1.24ns)   --->   "%tmp_V = select i1 %tmp_6, i8 0, i8 %tmp_7" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:246]   --->   Operation 111 'select' 'tmp_V' <Predicate = (tmp_3)> <Delay = 1.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 112 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i8P.i1P.i1P.i1P.i1P.i1P.i1P(i8* %sout_V_data_V, i1* %sout_V_keep_V, i1* %sout_V_strb_V, i1* %sout_V_user_V, i1* %sout_V_last_V, i1* %sout_V_id_V, i1* %sout_V_dest_V, i8 %tmp_V, i1 true, i1 undef, i1 undef, i1 %tmp_last_V, i1 undef, i1 undef)" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:249]   --->   Operation 112 'write' <Predicate = (tmp_3)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 113 [1/1] (0.00ns)   --->   "%tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str512)" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:106]   --->   Operation 113 'specregionbegin' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 114 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str18) nounwind" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:109]   --->   Operation 114 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 115 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i8P.i1P.i1P.i1P.i1P.i1P.i1P(i8* %sout_V_data_V, i1* %sout_V_keep_V, i1* %sout_V_strb_V, i1* %sout_V_user_V, i1* %sout_V_last_V, i1* %sout_V_id_V, i1* %sout_V_dest_V, i8 %tmp_V, i1 true, i1 undef, i1 undef, i1 %tmp_last_V, i1 undef, i1 undef)" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:249]   --->   Operation 115 'write' <Predicate = (tmp_3)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_5 : Operation 116 [1/1] (0.00ns)   --->   "br label %._crit_edge98" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:250]   --->   Operation 116 'br' <Predicate = (tmp_3)> <Delay = 0.00>
+ST_5 : Operation 117 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str512, i32 %tmp_2)" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:252]   --->   Operation 117 'specregionend' 'empty_8' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_5 : Operation 118 [1/1] (0.00ns)   --->   "br label %1" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:106]   --->   Operation 118 'br' <Predicate = (!exitcond1)> <Delay = 0.00>
+
+State 6 <SV = 3> <Delay = 0.00>
+ST_6 : Operation 119 [1/1] (0.00ns)   --->   "ret void" [../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:253]   --->   Operation 119 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:106) [45]  (1.77 ns)
+
+ <State 2>: 5.34ns
+The critical path consists of the following:
+	'phi' operation ('phi_urem') with incoming values : ('idx_urem') [46]  (0 ns)
+	'add' operation ('next_urem') [125]  (2.17 ns)
+	'icmp' operation ('tmp_8') [126]  (2.44 ns)
+	'select' operation ('idx_urem') [127]  (0.732 ns)
+
+ <State 3>: 8.63ns
+The critical path consists of the following:
+	'load' operation ('kbuf[0][2]', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:176) on array 'lbuf[0]', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:94 [71]  (3.25 ns)
+	'add' operation ('tmp2', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233) [95]  (1.92 ns)
+	'add' operation ('result_2_1', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233) [97]  (1.82 ns)
+	'sub' operation ('result_2_1_1', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233) [101]  (1.64 ns)
+
+ <State 4>: 7.03ns
+The critical path consists of the following:
+	'add' operation ('tmp5', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233) [106]  (0 ns)
+	'add' operation ('result_2_2_2', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:233) [111]  (3.79 ns)
+	'icmp' operation ('icmp', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:237) [113]  (1.3 ns)
+	'select' operation ('p_result', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:237) [114]  (0.697 ns)
+	'select' operation ('tmp.V', ../../../../OneDrive/Desktop/lab6_template/vhls/convolution.cpp:246) [120]  (1.25 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
