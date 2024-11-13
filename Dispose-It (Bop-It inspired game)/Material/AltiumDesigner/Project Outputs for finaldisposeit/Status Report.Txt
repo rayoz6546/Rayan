@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [finaldisposeit.PrjPcb]
+   Generated File[disposeit.TXT]
+   Generated File[disposeit.LDP]
+   Generated File[disposeit.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 5:51:11 PM On 31/03/2022
