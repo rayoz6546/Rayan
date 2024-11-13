@@ -1,0 +1,58 @@
+---
+title: "Quiz1"
+author: "Rayan Hassan"
+date: "2023-09-22"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+head(mpg)
+```
+# Part 1
+
+```{r}
+g <- ggplot(data=mpg, aes(x=drv,fill=drv))
+g + geom_bar()
+```
+
+# Part 2
+
+```{r}
+g <- ggplot(data=mpg, aes(x=drv, fill= class))
+g+ geom_bar(position="dodge")
+```
+
+# Part 3
+
+```{r}
+g <- ggplot(data=mpg, aes(x=drv, fill= class))
+g+ geom_bar(position="fill")
+
+```
+
+# Part 4
+
+```{r}
+g <- ggplot(data=mpg, aes(y=drv, fill= class))+geom_bar(position="fill")
+g <- g + ylab("")+ ylab("Drive")
+g
+```
+
+# Part 5 
+
+```{r}
+plot <- ggplot(data=mpg, aes(x=hwy, y =after_stat(density))) + 
+  geom_histogram(fill = "steelblue", col = "white", bins= 20) +
+  xlab("Highway MPG") + geom_density(col="orange", linewidth=1)
+
+plot
+```
+
+# Part 6
+
+```{r}
+p <- ggplot(data=mpg) + geom_point(mapping = aes(x=cty,y=displ,color=drv)) + geom_smooth(mapping = aes(x=cty,y=displ)) + ggtitle("City Fuel Efficiency versus Engine Size") + xlab("Engine Displacement (liter)") + ylab("City MPG") + guides(color = guide_legend(title = "Drive"))
+p
+```
+

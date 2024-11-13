@@ -1,0 +1,23 @@
+class Solution:
+  def __init__(self, w: List[int]):
+
+    self.prefix = list(itertools.accumulate(w))
+
+  def pickIndex(self) -> int:
+
+    t = random.randint(0, self.prefix[-1] - 1)
+    left = 0
+    right = len(self.prefix)
+
+    while left < right:
+      middle = (left + right) // 2
+      if self.prefix[middle] <= t:
+          left = middle + 1
+      else:
+          right = middle
+
+    return left
+
+# Your Solution object will be instantiated and called as such:
+# obj = Solution(w)
+# param_1 = obj.pickIndex()

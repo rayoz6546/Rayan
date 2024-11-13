@@ -1,0 +1,6 @@
+for i in range(int(input())):
+    l=int(input())
+    if l%3==0:
+        print("yes")
+    else:
+        print("no")

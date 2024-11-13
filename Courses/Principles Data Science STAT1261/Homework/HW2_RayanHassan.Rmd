@@ -1,0 +1,142 @@
+---
+title: "STAT 1261/2260 Homework 2"
+author: "Rayan Hassan"
+date: "2023-09-13"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Exercise 1
+
+- Harry Potter and the Prisoner of Azkaban
+
+- Harry Potter and the Deathly Hallows part 2
+
+- **Harry Potter and the Order of the Phoenix**
+
+# Exercise 2
+
+![Aston Martin One 77](C:/Users/RAYAN/OneDrive/Desktop/photo.png)
+
+# Exercise 3
+
+```{r}
+
+library(kableExtra)
+data=data.frame(
+                Name=c("Sam","Tom","Susan"),
+                Age=c(22,25,20),
+                Salary=c("$55,000","$60,000","$80,000")
+)
+data %>%
+  kbl()%>%
+  kable_styling()
+
+
+```
+
+# Exercise 4
+
+## Problem 3
+
+```{r}
+x <- 1:5
+```
+```{r}
+x <- x + 1
+```
+```{r}
+x
+```
+
+## Problem 4
+
+```{r echo = FALSE}
+x <- 1:5
+```
+```{r echo = FALSE}
+x <- x + 1
+```
+```{r include = FALSE}
+x
+```
+
+Here none of the code chunks is going to appear in the finished word document because we set echo to FALSE. Similarily the end result will not display because we used include=FALSE, which prevent the code and the result to be shown.
+
+## Problem 5
+
+```{r echo = FALSE}
+x <- 1:5
+```
+```{r echo = FALSE}
+x <- x + 1
+```
+```{r echo = FALSE}
+x
+```
+Here only the end result appears because we used echo=FALSE for every code chunks, which prevent the code to appear.
+
+
+## Problem 6
+
+```{r echo = FALSE}
+x <- 1:5
+```
+```{r echo = FALSE, eval = FALSE}
+x <- x + 1
+```
+```{r echo = FALSE}
+x
+```
+
+Here the second code chunk will not execute because eval=FALSE, so it is as if we just did x<-1:5. And similar to problem5, echo = FALSE so none of the code will appear either.
+
+## Problem 9
+
+warning = TRUE will display the warning whereas warning = FALSE will not
+
+```{r, warning=TRUE}
+
+sqrt(-1)
+
+```
+```{r,warning=FALSE}
+sqrt(-1)
+
+```
+
+## Problem 12
+
+output 1:
+```{r chunk1, eval = TRUE, include = FALSE}
+x <- 15
+cat("assigning value to x.\n")
+```
+
+
+output 2:
+```{r chunk2, eval = TRUE, include = FALSE}
+x <- x + 3
+cat("updating value of x.\n")
+```
+
+
+output 3:
+```{r chunk3, eval = FALSE, include = TRUE}
+cat("x =", x, "\n")
+```
+
+output 4:
+
+```{r chunk1, eval = FALSE, include = TRUE}
+```
+
+output 5:
+
+```{r chunk2, eval = FALSE, include = TRUE}
+```
+
+
+
+

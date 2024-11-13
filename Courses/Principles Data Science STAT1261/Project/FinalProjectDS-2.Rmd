@@ -1,0 +1,393 @@
+---
+title: Effects of Smoking, Age, and Number of Blood Platelets on Chance of Death After
+  Heart Failure
+output:
+  word_document: default
+  html_document: default
+date: "2023-20-19"
+authors: 'Ian Murday, Norvell Bartow, Rayan Hassan '
+---
+###### Authors: Ian Murday, Norvell Bartow, Rayan Hassan
+```{r, message=FALSE, warning=FALSE}
+df = read.csv("heart_failure_clinical_records_dataset.csv", header = TRUE, sep = ",")
+
+library(dplyr)
+library(tidyr)  
+library(ggplot2)
+library(readr)
+library(e1071)
+library(glmnet)
+library(randomForest)
+```
+
+
+#### Introduction
+Heart failure is a cardiovascular condition that affects millions of individuals worldwide. It is characterized by the heart’s inability to pump blood effectively, leading to several problems and sometimes even death. Many factors can affect and contribute to its severity. However, in this study we first intend to look at how age, number of blood platelets and whether a person smokes affect someone's chances of living after having experienced heart failure using graphics. Then, we plan to use logistic regression, a decision tree, naive bayes, and a random forest in order to create an accurate model that predicts the death event. For our machine learning models we plan to us all variables in our data set except time in order to figure out which machine learning method can create the most accurate model. 
+
+### Distrabution of Quantatative Variables
+Before starting an analysis of how age, number of blood platelets and whether the person smokes affect the chance of living after heart failure, it is important to check the distribution, symmetry, and normality of our quantitative variables. In the case of this study, age and blood platelets are the quantitative variables.
+
+```{r, message=FALSE, warning=FALSE}
+hist(
+  df$age, 
+  main = "Distrabution of Age of People who Experienced Heart Failure",
+  xlab = "Age when Heart Failure Occured"
+  )
+
+qqnorm(df$age, pch = 1, frame = FALSE, main = "Normaility Q-Q plot")
+qqline(df$age, col = "steelblue", lwd = 2)
+```
+    
+Above is a histogram and a QQ plot of the age of all of the people in our dataset who experienced heart failure. As can be seen in the histogram, our data doesn’t appear to be very symmetric as it is right-skewed. Furthermore, it looks like outliers occur in the upper age ranges. Lastly, as it can be seen from the histogram and the QQ plot, this variable does not follow a normal distribution. The histogram doesn’t show a normal bell shaped curve which would indicate normality. Also, on the QQ plot there is a long tail on the lower end, a short tail on the upper end, and the points zig zag the reference line throughout.
+
+```{r, message=FALSE, warning=FALSE}
+hist(
+  df$platelets, 
+  main = "# of Platelets of the People who Experienced Heart Failure",
+  xlab = "# of Platelets When Heart Failure Occured"
+  )
+
+qqnorm(df$platelets, pch = 1, frame = FALSE)
+qqline(df$platelets, col = "steelblue", lwd = 2)
+```
+    
+The blood platelets distributions can be seen above. The histogram seems to have a much more symmetrical distribution than age. It can be seen above in the histogram that there are certainly a lot of outliers on the upper end of the spectrum. But, where the density is the highest, it is symmetrical. That being said, this variable still isn’t normal. On the QQ plot there is a curved tail at the end of the plot showing a non normal distribution.       
+     
+     
+### Analysis     
+
+Below is the structure of the data that we retrieved off of kaggle. Death event is our response variable while age, smoking, and platelets are our explanatory variables. 
+```{r}
+df %>%
+  select(age, smoking, platelets, DEATH_EVENT)%>%
+  head(10)
+```
+        
+The code below is used to generate a histogram showing the effect of age on death by heart failure. Note that the labels have been divided into 6 age groups to help better visualize the data.
+
+
+```{r, message=FALSE, warning=FALSE}
+df$age_group <- cut(df$age, breaks = seq(40, 90, by = 10), labels = c("40-49", "50-59", "60-69", "70-79", "80-89"))
+
+ggplot(df, aes(x = age_group, fill = factor(DEATH_EVENT))) +
+  geom_bar(position = "dodge") +
+  labs(
+    x = "Age Group",
+    y = "Count",
+    fill = "Death Event",
+    title = "Effect of Age on Heart Failures"
+  ) +
+  scale_fill_manual(values = c("0" = "green", "1" = "red")) +
+  theme_minimal()
+
+```
+
+At first glance, the histogram above seems to show that in total, older people are not likely to die from heart failures as the red bars (corresponding to deaths) for age groups “70-79” and “80-89” are shorter than the ones corresponding to younger groups. However, this is misleading because the variable that should be taken into account is the ratio of deaths to non deaths for each age group. When comparing the green bars (corresponding to non-deaths) to the red ones, one can have a better understanding of the results. The red bars for age groups “70-79” and “80-89” are longer than the green ones corresponding to these same age groups. That means that older people are more likely to die from heart failures. Where as for younger age groups, the green bars are considerably longer than the red ones, signaling that younger people are not as likely to die from heart failures.    
+   
+      
+        
+     
+Let us study the ratio of deaths between older and younger individuals based on a specified age threshold. In this case, the threshold is chosen to be 65 as it seems reasonable looking at the histogram. In order to do that, the following code first categorizes individuals into "old" and "young" groups using the defined age threshold. Then, it calculates the ratio of deaths for each group, providing insights into whether age is a significant factor in heart failure-related deaths. 
+```{r, message=FALSE, warning=FALSE}
+age_threshold <- 65  
+
+df <- df %>%
+  mutate(age_group = ifelse(age >= age_threshold, 'old', 'young'))
+
+death_ratio <- df %>%
+  group_by(age_group, DEATH_EVENT) %>%
+  summarise(count = n()) %>%
+  spread(DEATH_EVENT, count, fill = 0) %>%
+  mutate(ratio = `1` / (`0` + `1`))
+
+print(death_ratio)
+
+```
+The results above show that 43.5% of people older than 65 years old die from heart failures, whereas only 25% of people younger than 65 die of that same reason. These results clearly show that age is a significant factor associated with heart failure-related deaths. 
+
+
+    
+    
+Another factor that we studied is smoking. The following code creates a histogram to visualize the effect of smoking on heart failure deaths.
+```{r, message=FALSE, warning=FALSE}
+ggplot(df, aes(x=factor(smoking, labels = c("Non-Smoker", "Smoker")), fill=factor(DEATH_EVENT))) + geom_bar(position="dodge") + 
+  labs(
+    x="Smoking Status",
+    y="Count",
+    fill = "Death Event",
+    title = "Effect of Smoking of Heart Failures"
+  ) +
+  scale_fill_manual(values= c("0"="green","1"="red"))+theme_minimal()
+
+```
+    
+Looking at the histogram, the ratios of heart failure-related deaths for smokers and non-smokers look almost equal. To verify that with numbers, a similar code calculates those ratios.    
+     
+     
+```{r, message=FALSE, warning=FALSE}
+smoking_death_ratio <- df %>%
+  group_by(smoking, DEATH_EVENT) %>%
+  summarise(count = n()) %>%
+  pivot_wider(names_from = DEATH_EVENT, values_from = count, values_fill = 0) %>%
+  mutate(ratio = `1` / (`0` + `1`))
+
+print(smoking_death_ratio)
+
+```
+As seen in the results above, the ratios are indeed almost the same (around 32%). This shows that there is no significant difference in the likelihood of heart failure-related deaths between smokers and non-smokers. Although these results might sound inaccurate, it is important to keep in mind that they are representative of the specific data set used which in itself could have limitations such as the size.
+     
+     
+```{r, message=FALSE, warning=FALSE}
+data <- ggplot(data = df, aes(platelets, age))
+ data + geom_point() + labs(x = "Platelet Count",y = "Age",
+                        	title = "Correlation of age and platelet count")
+```
+    
+The graph above was used to show if there was any correlation between a person's age and their platelet counts. As we examine the scatter plot we can see that the majority of the individuals studied in this data set have a platelet count of around 200,000 to 300,000. There are definitely some outliers, which we mainly see in the younger individuals of the group. However, despite the outliers, there are around 200,000 to 300,000 platelets in all of the age groups, 40 years old to 90 years old. This has led us to believe that there is not a correlation between someone's age and the number of platelets that they have.    
+     
+       
+```{r, message=FALSE, warning=FALSE}
+df$platelet_group <- cut(df$platelets, breaks = seq(25100, 850000, by = 200000))
+ggplot(df, aes(x = platelets, fill = factor(DEATH_EVENT))) +
+  geom_boxplot(position = "dodge") +
+  labs(x = "platelets group", y = "count", fill = "Death Event", title = "Effect of Platelets on Heart Failure") +
+  scale_fill_manual(values = c("0" = "green", "1" = "red"))
+
+
+```
+    
+The graph above is showing the correlation between the number of platelets that a person has and its correlation with dying from heart disease. As we look at the graph we see that the results look almost 50/50 with a large outlier of a death event occurring in the middle of the pack. Due to this we can infer that the number of platelets do not increase the chances of a person dying from heart failure.
+
+    
+Another way to determine if variables are significant predictors is to build a model with said variables and look at their significance. Below is a model using smoking, age, and blood platelets to try and predict whether a person died from their heart failure.
+```{r, message=FALSE, warning=FALSE}
+modelDeathEvent = glm(DEATH_EVENT ~ age + platelets + smoking , data = df, family = "binomial")
+summary(modelDeathEvent)
+```
+    
+The significance of the independent variables in this model comes at no surprise after the analysis. Both platelets and whether a person smokes seemed to be random when compared against the death event and that shows in this model. Platelets have a p-value of 0.49 in the model and whether a person smokes has a p-value of 0.78 which are both very high p-values. Furthermore, there were certainly age grouping that had higher death rates after heart failure which is why it would make sense to see age's p-value much below 0.01. So, through our analysis and the model above, it can be confidently concluded that the number of blood platelets and smoking are not significant predictors to predict death when someone experiences heart failure. Also, we can confidently conclude that the age of the person that experienced heart failure is a significant predictor to predict death when someone experiences heart failure.    
+    
+    
+    
+Now that we have determined which of the predictors are significant, it is important to evaluate the model that is supposed to predict death. To do this we will save the logit of the predicted probability from the model.Then, categorize whether the person lives or passes by splitting probability at 0.5. Lastly, a table will be printed in order to interpret the results.
+```{r, message=FALSE, warning=FALSE}
+df$pred_death = predict(modelDeathEvent)
+df$prob = exp(df$pred_death)/(1+exp(df$pred_death))
+df$predOut = ifelse(df$prob > 0.5, 1, 0)
+table(df$predOut, df$DEATH_EVENT)
+```
+    
+In order to find accuracy of this model, we must sum the number of times the model predicted a death when a death occurred with the times the model predicted heart failure did not cause death and a death did not occur, all over the total number of observations. This works out to be 0.716 meaning our model predicts the death event of an observation from the data set correctly 71.6% of the time. This is a very mediocre accuracy, it isn't good but it isn't necessarily bad.    
+
+
+### Machine Learning Models
+```{r}
+df = read.csv("heart_failure_clinical_records_dataset.csv", header = TRUE, sep = ",")
+
+library(dplyr)
+library(tidyr)  
+library(ggplot2)
+library(readr)
+library(e1071)
+library(glmnet)
+library(randomForest)
+library(rpart)
+library(rpart.plot)
+```
+
+
+```{r}
+dim(df)
+names(df)
+glimpse(df)
+
+data2<- df %>%
+  select(DEATH_EVENT, smoking, sex, serum_sodium, serum_sodium, serum_creatinine, platelets, high_blood_pressure, ejection_fraction, diabetes, creatinine_phosphokinase, anaemia, age) %>% drop_na()
+
+set.seed(100)
+train2 <- df %>% sample_frac(size = 0.8, fac=DEATH_EVENT)
+test2 <- df %>% setdiff(train2)
+
+```
+
+
+The code above displays all variables and a glimpse of what the data they contain looks like. In the following section we will be including all variables expect time in the machine learning models in attempt to create the most accurate model. Time is neglected from all models because it doesn't have a description on kaggle where the data set was downloaded from and all models preform better without it. 
+As seen above, the data has been split into 80% for training and 20% for testing. 
+
+```{r}
+form_full = as.formula(DEATH_EVENT ~ smoking + sex + serum_sodium + serum_creatinine + platelets + high_blood_pressure + ejection_fraction + diabetes + creatinine_phosphokinase + anaemia + age)
+
+predictors <- model.matrix(form_full, data = train2)
+mod_tree <- rpart(form_full,data=train2)
+rpart.plot(mod_tree)
+```
+     
+Above is a decision tree that was trained using all of the variables in the data set. We are usualy able to conclude what variables are most important in a model based on how high the variable is in the decision tree. Above we see that Serum Creatinine levels, ejection fraction, and age are the most important variables in this data set. We neglected two of these variables in our first analysis which is one of the reasons why the first logistic regression model is so poor. Due to the nature of the data set the accuracy and sensitivity statistics weren't able to be retrieved for the decision tree but it is still important to observe which variables are important using the tree. It isn't vital that these performance statistics were able to be retrieved since a random forst is included in this analysis later on.
+
+
+
+
+
+Another model that we trained is Naive Bayes. The training and testing data used is the same as the other models. To visualize how the model performed, we have created a confusion matrix.
+      
+```{r}
+mod_nb <- naiveBayes(DEATH_EVENT ~ .,train2)
+
+confusion_matrix <- function(data,y,mod){
+  confusion_matrix <- data %>% 
+  mutate(pred = predict(mod, newdata = data, type = "class"),
+         y=y) %>%
+  select(y,pred) %>% table()
+}
+misclass <- function(confusion){
+  misclass <- 1- sum(diag(confusion))/sum(confusion)
+  return(misclass)
+}
+
+confusion = confusion_matrix(test2, test2$DEATH_EVENT, mod_nb)
+confusion
+misclas = misclass(confusion)
+misclas
+
+```
+      
+The confusion matrix above shows the false positives, true positives, false negatives and true negatives. From the table, we can see that among 60 testing samples, 12 are false negatives, meaning they were predicted '0' when they are actually '1'. Similarly, 7 samples are false positives, meaning they were predicted '1' when they should have been predicted '0'. The misclassification rate is therefore around 31.7% as shown in the results. Which corresponds to a testing accuracy of around 68.3%.
+     
+       
+Below we built a logistic regression model but this time we included all of the variables in order to make the model more accurate.  
+```{r}
+regressionModel = glm(DEATH_EVENT ~ smoking + sex + serum_sodium + serum_sodium + serum_creatinine + platelets + high_blood_pressure + ejection_fraction + diabetes + creatinine_phosphokinase + anaemia + age, data = train2, family = "binomial")
+summary(regressionModel)
+```
+As can be seen by the significance of each explanatory variable, Serum Creatinine levels, age, and ejection fraction are the three most important variables in this model for predicting the death event. It is also important to note that Creatinine Phosphokinase levels also was just barley not significant in this logistic regression model. We expected these variables to all be the most significant because of there positioning in the decision tree. It is important to look at the accuracy of this model.       
+       
+       
+```{r}
+holdTest = test2
+holdTest$pred_death = predict(regressionModel, holdTest)
+holdTest$prob = exp(holdTest$pred_death)/(1+exp(holdTest$pred_death))
+holdTest$predOut = ifelse(holdTest$prob > 0.5, 1, 0)
+table(holdTest$predOut, holdTest$DEATH_EVENT)
+```
+      
+As we can see from the confusion matrix above, the model has about a 67% accuracy. This is a slight decrease from what we got from our original logistic regression model. This is a surprise considering that we only added more variables and three more variables that were significant predictors. This may be due to the fact that are validation data set is so small that results can be very variable. This model has a true positive rate of about 0.57 and true negative rate of about 0.70. This model ended up not being very impressive at predicting the death event.
+
+
+
+Below we will construct a Random Forrest model.
+```{r, warning=FALSE}
+mtry <- tuneRF(test2[-1],test2$DEATH_EVENT, ntreeTry=1000,
+               stepFactor=1.5,improve=0.01, trace=TRUE, plot=TRUE)
+best.m <- mtry[mtry[, 2] == min(mtry[, 2]), 1]
+print(mtry)
+print(best.m)
+```
+
+The first thing we did when creating our Random Forrest model was to tune the data. We did this by looking for the most optimal mtyr value. We did this my comparing the mtyr value to the OOBError. When comparing the mtyr value to the OOBError we found that mtyr 12 was the most optimal. 
+
+```{r, warning=FALSE}
+form_full<- as.formula(DEATH_EVENT~age+anaemia+creatinine_phosphokinase+diabetes+ejection_fraction+high_blood_pressure+platelets+serum_creatinine+serum_sodium+sex+smoking)
+mod_rf <- randomForest(formula = form_full,data=train2,ntree = 1000,mtry = 12)
+mod_rf
+```
+
+Using the most optimal mtyr that we found above, we then ran the random forrest model. This told us that the mean square of residuals was 0.18 and the percent variance explained is 18.98
+
+
+```{r}
+library(tibble)
+importance(mod_rf)%>%
+  as.data.frame()%>%
+  rownames_to_column()%>%
+  arrange(desc(IncNodePurity))
+```
+
+```{r}
+table(train2$DEATH_EVENT)/length(train2$DEATH_EVENT)
+```
+
+After running the random forest model we looked at the accuracy and error rate of the data. We found that the data had a 69% accuracy rate and a 33% error rate. We see that this model is not balanced and we can bet that the error rate a person will have a death event is 31%
+
+
+```{r}
+predictors <- model.matrix(form_full, data = train2) 
+cv.fit <- cv.glmnet(predictors, train2$DEATH_EVENT, family = "binomial", type = "class")
+lambda_opt=cv.fit$lambda.1se
+mod_lr2 <- glmnet(predictors, train2$DEATH_EVENT, family = "binomial", lambda = lambda_opt)
+y_lr = predict(mod_lr2, newx = model.matrix(form_full, data = test2), type = "class")
+confusion_lr = table(test2$DEATH_EVENT, y_lr)
+confusion_lr
+
+tpr_lr = confusion_lr[2,2]/sum(confusion_lr[2,]); tpr_lr
+
+tnr_lr = confusion_lr[1,1]/sum(confusion_lr[1,]); tnr_lr
+
+```
+
+We also looked at the true positive and negative rate of the model and found that the model had a true positive rate of 0.32 and a true negative rate of 0.92. 
+
+
+
+
+To summarize all these results, we generated ROC curves for each model.
+
+```{r}
+library(ROCR)
+
+roc_data <- function(test,y_test,model,type){
+  prob = model %>% 
+    predict(newdata=test, type=type) %>% 
+    as.data.frame()
+  if (type == "raw") {
+  pred_prob = prediction(prob[,2], y_test)
+  }
+  else {
+  pred_prob = prediction(prob[,1], y_test)
+  }
+  perf = performance(pred_prob, 'tpr', 'fpr')
+  perf_df = data.frame(perf@x.values, perf@y.values)
+  names(perf_df)=c('fpr','tpr')
+  return(perf_df)
+}
+
+roc_data_lr <- function(test,y_test,model,type, newx){
+  prob = model %>% 
+    predict(newdata=test, newx=newx, type=type) %>% 
+    as.data.frame()
+  pred_prob = prediction(prob[,1], y_test)
+  perf = performance(pred_prob, 'tpr', 'fpr')
+  perf_df = data.frame(perf@x.values, perf@y.values)
+  names(perf_df)=c('fpr','tpr')
+  return(perf_df)
+}
+
+perf_df_dt = roc_data(test2, test2$DEATH_EVENT, mod_tree, "matrix")
+perf_df_rf = roc_data(test2, test2$DEATH_EVENT, mod_rf, "response")
+perf_df_nb = roc_data(test2, test2$DEATH_EVENT, mod_nb, "raw")
+perf_df_lr = roc_data_lr(test2, test2$DEATH_EVENT, mod_lr2, "response",newx = model.matrix(form_full, data = test2))
+
+
+ 
+p <- ggplot(data =perf_df_nb, aes(x=fpr, y=tpr))+
+  geom_line(color="blue",linewidth=1)+
+  geom_abline(intercept=0,slope=1,lty=3)+
+  geom_line(data =perf_df_dt,color="red",linewidth=1) +
+  geom_line(data =perf_df_rf,color="yellow",linewidth=1) + 
+  geom_line(data =perf_df_lr,color="green",linewidth=1) + 
+  labs(x='False Positive Rate', y='True Positive Rate')
+
+p
+```
+
+Above are a blue, red, yellow and green ROC curve corresponding respectively to the Naive Bayes, Decision Tree, Random Forest and Logistic Regression models. As we can see, there is no significant difference in their performances but we can tell for instance that the Decision Tree model performed most poorly as the area below the curve (AUC) seems to be the smallest, which would indicate a lower accuracy. It is hard to compare the AUCs of the other curves as they look almost equal, but this is expected as their accuracies were almost the same with 67% for logistic regression, 68% for Naive Bayes and 69% for Random Forest.
+
+
+
+
+
+### Conclusion
+    
+Our goal in this study was to first look at how age, number of blood platelets and whether a person smokes affects someone's chance of living after having experienced heart failure. Then, to develop various machine learning models in order to create the best possible model to predict the death event. We have concluded that whether someone smokes and their number of blood platelets are not correlated with whether someone dies after heart failure. But, age does have a strong correlation at predicting the death event. On the other hand, after analyzing all four of the machine learning models that we evaluated for performance, we can conclude that the Random Forest is the best model for predicting the death even of someone that has heart failure. We also learned that ejection fraction and serum creatinine were both very important predictors in all of our models. None of the models that were developed were extremely compelling and accurate, so it would be important for further research to be done on confounding variables in order to create a more accurate model.
+
+
+

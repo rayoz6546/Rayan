@@ -1,0 +1,17 @@
+import numpy as np
+class Solution:
+    def maximizeWin(self, prizePositions: List[int], k: int) -> int:
+
+        n = len(prizePositions)
+
+        L = [] 
+        for i in range(0,n,k):
+            x= i
+            L.append(prizePositions[x:x+k])
+        m = []
+        L = np.array(L)
+        print(L)
+        for i in range(len(L)):
+            m.append(np.sum(L[i]))
+        print(m)
+        return max(m)

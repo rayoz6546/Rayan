@@ -1,0 +1,10 @@
+for i in range(int(input())):
+    line = input()
+    line = line.split(" ")
+    x = int(line[0])
+    y = int(line[1])
+    
+    if 5*x >= y:
+        print("yes")
+    else:
+        print("no")

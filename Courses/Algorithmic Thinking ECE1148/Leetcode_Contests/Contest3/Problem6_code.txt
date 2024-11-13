@@ -1,0 +1,27 @@
+for line in range(int(input())):
+    l = input()
+    l=l.split(" ")
+    n = int(l[0]) #length of s 
+    p = int(l[1]) #type 1 max
+    q = int(l[2]) # type 2 max 
+    
+    s= str(input())
+    
+    values = []
+    for i in range(n):
+        values.append(ord(s[i]))
+    
+    forward=0
+
+    m = max(values)
+    for i in range(n):
+        if m==122: #letter z
+            values[values.index(m)]=97 #replace z by a
+            m = max(values)  # new max
+        else:
+            values[values.index(m)]=m-1
+    out=""
+    for i in range(len(values)):
+        out+=chr(values[i])
+        
+    print(out)

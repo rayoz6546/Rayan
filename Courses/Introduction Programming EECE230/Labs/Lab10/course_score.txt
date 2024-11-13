@@ -1,0 +1,4 @@
+Courses' Averages
+Course 1:78.4
+Course 2:79.0
+Course 3:80.6

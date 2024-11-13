@@ -1,0 +1,16 @@
+def canAttend(L):
+    output = True
+    for i in range(len(L)):
+        for j in range(len(L)):
+            if (L[i][0]<L[j][0] and L[i][1]>L[j][1]):
+                output = False
+                return output
+    return output
+               
+# Test cases
+# L = [[1,2],[2,3],[4,5],[6,12]]
+# print(canAttend(L))
+# L = [[7,10],[2,4]]
+# print(canAttend(L))
+# L = [[0,30],[5,10],[15,20]]
+# print(canAttend(L))

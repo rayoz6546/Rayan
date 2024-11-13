@@ -1,0 +1,30 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def partition(arr,left,right):
+    i = left - 1        
+    pivot = arr[right]     
+
+    for j in range(left, right):
+        if arr[j]>pivot:
+            continue
+        else:
+            i+=1
+            arr[i], arr[j] = arr[j], arr[i]
+
+    arr[i + 1], arr[right] = arr[right], arr[i+1]
+    print (' '.join(str(a) for a in arr))
+
+    return i + 1
+
+    
+def quickSort(arr,start,end):
+    m=len(arr)
+    if m == 1:
+        return arr
+    if start < end:        
+        pivot_index = partition(arr, start, end)        
+        quickSort(arr, start, pivot_index-1)
+        quickSort(arr, pivot_index+1, end)
+
+n = int(input().rstrip())
+arr = list(map(int,input().rstrip().split()))
+quickSort(arr, 0, n-1)

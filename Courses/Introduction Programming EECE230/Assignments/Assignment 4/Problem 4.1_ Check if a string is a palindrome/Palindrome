@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep 25 15:10:03 2019
+
+@author: ahmadbeydoun
+"""
+
+s=str(input("Enter string:"))
+is_palindrome=True
+for i in range(len(s)):
+    if s[i]!=s[len(s)-1-i]:
+        is_palindrome=False
+        break
+if is_palindrome:
+    print ("YES palindrome")
+else:
+    print ("Not a palindrome")

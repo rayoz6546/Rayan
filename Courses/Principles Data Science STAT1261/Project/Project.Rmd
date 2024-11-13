@@ -1,0 +1,77 @@
+---
+title: "Project"
+author: "Rayan Hassan"
+date: "2023-10-15"
+output: html_document
+---
+
+
+
+
+
+```{r}
+library("readxl")
+
+df = read_xlsx("C:/Users/RAYAN/OneDrive/Desktop/Rcodes/heart_failure_clinical_records_dataset.xlsx")
+
+#head(df)
+library(ggplot2)
+
+df$age_group <- cut(df$age, breaks = seq(40, 90, by = 10), labels = c("40-49", "50-59", "60-69", "70-79", "80-89"))
+
+ggplot(df, aes(x = age_group, fill = factor(DEATH_EVENT))) +
+  geom_bar(position = "dodge") +
+  labs(
+    x = "Age Group",
+    y = "Count",
+    fill = "Death Event",
+    title = "Effect of Age on Heart Failures"
+  ) +
+  scale_fill_manual(values = c("0" = "green", "1" = "red")) +
+  theme_minimal()
+
+```
+
+```{r}
+
+library(dplyr)
+library(tidyr)  
+
+age_threshold <- 65  
+
+df <- df %>%
+  mutate(age_group = ifelse(age >= age_threshold, 'old', 'young'))
+
+death_ratio <- df %>%
+  group_by(age_group, DEATH_EVENT) %>%
+  summarise(count = n()) %>%
+  spread(DEATH_EVENT, count, fill = 0) %>%
+  mutate(ratio = `1` / (`0` + `1`))
+
+print(death_ratio)
+```
+
+
+```{r}
+ggplot(df, aes(x=factor(smoking, labels = c("Non-Smoker", "Smoker")), fill=factor(DEATH_EVENT))) + geom_bar(position="dodge") + 
+  labs(
+    x="Smoking Status",
+    y="Count",
+    fill = "Death Event",
+    title = "Effect of Smoking of Heart Failures"
+  ) +
+  scale_fill_manual(values= c("0"="green","1"="red"))+theme_minimal()
+    
+  
+```
+
+```{r}
+smoking_death_ratio <- df %>%
+  group_by(smoking, DEATH_EVENT) %>%
+  summarise(count = n()) %>%
+  pivot_wider(names_from = DEATH_EVENT, values_from = count, values_fill = 0) %>%
+  mutate(ratio = `1` / (`0` + `1`))
+
+print(smoking_death_ratio)
+```
+

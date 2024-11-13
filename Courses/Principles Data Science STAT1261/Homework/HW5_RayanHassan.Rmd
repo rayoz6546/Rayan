@@ -1,0 +1,96 @@
+---
+title: "STAT 1261/2260 Homework 5"
+author: "Rayan Hassan"
+date: "2023-10-25"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+ebsurvey <- read_csv('https://uoepsy.github.io/data/science-faith-attitude.csv')
+head(ebsurvey)
+```
+```{r}
+ebsurvey0 <- ebsurvey %>% 
+  select(kstot, age, toomuchscience) %>% 
+  rename(science_score = kstot,
+         attitude = toomuchscience)
+
+ebsurvey1 <- na.omit(ebsurvey0)
+dim(ebsurvey1)
+
+ebsurvey1
+```
+
+
+
+# Exercise 1 
+```{r}
+ggplot(ebsurvey1, aes(x=science_score,y=after_stat(density)))+geom_histogram(color='white',fill='blue', binwidth = 1)+
+         labs(x = "Scores on science quiz (science_score)", y="frequency")+geom_density(linewidth=1)
+
+```
+
+```{r}
+library(kableExtra)
+ebsurvey1%>%
+  select(science_score)%>%
+  summarise(mean = mean(science_score),
+          std = sd(science_score),
+          median = quantile(science_score,0.5),
+          q1 = quantile(science_score,0.25),
+          q3 = quantile(science_score,0.75),
+          range = max(science_score)-min(science_score)) %>%
+  
+
+  kable(digits = 2, caption = 'Descriptive Statistics of Science_Score') %>%
+  kable_styling(full_width = FALSE)
+```
+
+# Exercise 2
+
+```{r}
+library(broom)
+library(modelr)
+library(purrr)
+library(car)
+reg = lm(science_score ~ attitude + age, data = ebsurvey1)
+
+summary(reg)
+
+boot_reg = Boot(reg,R=100)
+summary(boot_reg)
+```
+```{r}
+Confint(boot_reg, level = 0.99, type = "perc") %>%
+      kable(digits = 3, caption = 'Bootstrap 99% CIs') %>%
+      kable_styling(full_width = FALSE)
+
+```
+
+# Exercise 3
+
+```{r}
+head(boot_reg$t)
+```
+
+```{r}
+plot_data <- as_tibble(boot_reg$t)
+head(plot_data)
+```
+```{r}
+
+library(dplyr)
+library(tidyr)
+
+combined_data <- plot_data %>%
+  gather(variable, value, `(Intercept)`, attitude, age)
+
+
+ggplot(combined_data, aes(x = value, y = after_stat(density))) +
+  geom_histogram(color = 'white', bins=30) +
+  geom_density() +
+  facet_wrap(~ variable, scales = 'free') 
+
+```
+

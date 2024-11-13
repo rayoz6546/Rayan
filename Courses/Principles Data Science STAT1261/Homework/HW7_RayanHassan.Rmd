@@ -1,0 +1,181 @@
+---
+title: "STAT 1261/2260 Homework 7"
+author: "Rayan Hassan"
+date: "2023-11-14"
+output: html_document
+---
+
+
+```{r}
+library(NHANES)
+library(tidyverse)
+data2<- NHANES %>%
+  select(Gender,Age,Race1,Education,MaritalStatus,HHIncomeMid,Poverty,HomeOwn,Weight,Height,
+         BMI,Pulse,BPSysAve,BPDiaAve,Diabetes,HealthGen,DaysPhysHlthBad,DaysMentHlthBad,
+         Depressed,SleepHrsNight,SleepTrouble,AlcoholDay,Smoke100,Marijuana,HardDrugs) %>% 
+  drop_na()
+
+set.seed(100)
+train2 <- data2 %>% sample_frac(size = 0.8, fac=HardDrugs)
+test2 <- data2 %>% setdiff(train2)
+
+
+library(rpart)
+library(rpart.plot)
+form_full<- as.formula(HardDrugs~Gender+Age+Race1+Education+MaritalStatus+HHIncomeMid+Poverty+HomeOwn+Weight+Height+BMI+Pulse+BPSysAve+BPDiaAve+Diabetes+HealthGen+DaysPhysHlthBad+DaysMentHlthBad+Depressed+SleepHrsNight+SleepTrouble+AlcoholDay+Smoke100+Marijuana)
+
+mod_tree <- rpart(form_full,data=train2)
+
+library(randomForest)
+
+mod_rf<- randomForest(form_full,train2,ntree=1000)
+mod_rf
+
+confusion_matrix <- function(data,y,mod){
+  confusion_matrix <- data %>% 
+  mutate(pred = predict(mod, newdata = data, type = "class"),
+         y=y) %>%
+  select(y,pred) %>% table()
+}
+misclass <- function(confusion){
+  misclass <- 1- sum(diag(confusion))/sum(confusion)
+  return(misclass)
+}
+
+```
+# Exercise 1
+
+```{r}
+confusion1 = confusion_matrix(test2, test2$HardDrugs, mod_rf)
+misclas1 = misclass(confusion1)
+misclas1
+```
+# Exercise 2
+
+```{r}
+library(e1071)
+mod_nb <- naiveBayes(HardDrugs ~ .,train2)
+confusion2 = confusion_matrix(test2, test2$HardDrugs, mod_nb)
+misclas2 = misclass(confusion2)
+misclas2
+```
+# Exercise 3
+
+```{r}
+
+# For random forest
+sensitivity1 = confusion1["Yes","Yes"]/sum(confusion1['Yes', ])
+sensitivity1
+specificity1 = confusion1["No","No"]/sum(confusion1['No', ])
+specificity1
+
+# For naive Bayes
+sensitivity2 = confusion2["Yes","Yes"]/sum(confusion2['Yes', ])
+sensitivity2
+specificity2 = confusion2["No","No"]/sum(confusion2['No', ])
+specificity2
+```
+# Exercise 4
+
+```{r}
+library(ROCR)
+
+roc_data <- function(test,y_test,model,type){
+  prob = model %>% 
+    predict(newdata=test, type=type) %>% 
+    as.data.frame()
+  pred_prob = prediction(prob[,2], y_test)
+  perf = performance(pred_prob, 'tpr', 'fpr')
+  perf_df = data.frame(perf@x.values, perf@y.values)
+  names(perf_df)=c('fpr','tpr')
+  return(perf_df)
+}
+
+point_data <- function(test,y_test,model,type){
+  y_pred = predict(model, newdata=test,type=type)
+  confusion_matrix = table(y_test, y_pred)
+  tpr = confusion_matrix['Yes','Yes']/sum(confusion_matrix['Yes',])
+  fpr = confusion_matrix['No','Yes']/sum(confusion_matrix['No',])
+  return(c(fpr,tpr))
+}
+
+perf_df_rf = roc_data(test2, test2$HardDrugs, mod_rf, "prob")
+point_rf = point_data(test2, test2$HardDrugs, mod_rf, "class")
+
+
+# For naive Bayes
+perf_df_nb = roc_data(test2, test2$HardDrugs, mod_nb, "raw")
+point_nb = point_data(test2, test2$HardDrugs, mod_nb, "class")
+
+# For decision tree
+
+perf_df_dt = roc_data(test2, test2$HardDrugs, mod_tree, "prob")
+point_dt = point_data(test2, test2$HardDrugs, mod_tree, "class")
+
+
+p <- ggplot(data =perf_df_rf, aes(x=fpr, y=tpr))+
+  geom_line(color="green",linewidth=1)+
+  geom_point(x=point_rf[1],y=point_rf[2],size=3,col="red")+
+  geom_line(data =perf_df_nb,color="lightblue",linewidth=1) +
+  geom_line(data =perf_df_dt,color="yellow",linewidth=1) + 
+  geom_point(x=point_nb[1],y=point_nb[2],size=3,col="red") +
+  geom_point(x=point_dt[1],y=point_dt[2],size=3,col="red") +
+  labs(x='False Positive Rate', y='True Positive Rate')
+
+p
+
+
+
+```
+
+# Exercise 5
+
+```{r}
+
+library(caret)
+
+set.seed(123)
+tc <- trainControl(method="repeatedcv",number=5,repeats=2)
+
+mtryGrid <- expand.grid(mtry = seq(2, 20, by = 2))
+fit <- train(form_full,
+             data=train2,
+             method = "rf",
+             tuneGrid = mtryGrid,
+             trControl = tc,
+             metric = "Accuracy")
+
+
+optimal = fit$bestTune$mtry
+optimal
+
+fit %>%
+ggplot(aes(x=mtry,y=Accuracy))+
+geom_line()+
+labs(x="mtry",y="Accuracy")+
+geom_vline(xintercept=optimal,linetype=2, color=2, size=1.5)
+
+
+mod_rf_tuned <- randomForest(form_full,train2,ntree=1000, mtry=optimal)
+
+confusion3 = confusion_matrix(test2, test2$HardDrugs, mod_rf_tuned)
+misclas3 = misclass(confusion3)
+misclas3
+
+
+
+
+```
+
+# Exercise 6
+
+```{r}
+mod_rf_tuned <- randomForest(form_full,train2,ntree=1000, mtry=6)
+
+confusion4 = confusion_matrix(test2, test2$HardDrugs, mod_rf_tuned)
+misclas4 = misclass(confusion4)
+misclas4
+```
+Having mtry=6 might be better because having a very high (complex) mtry can cause overfitting (when model fails to generalize to new, unseen data)
+
+

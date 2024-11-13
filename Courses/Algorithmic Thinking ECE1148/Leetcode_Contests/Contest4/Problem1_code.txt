@@ -1,0 +1,35 @@
+class Solution:
+    def minNumber(self, nums1: List[int], nums2: List[int]) -> int:
+
+        nums1.sort()
+        nums2.sort()
+        
+        
+        x=[]
+        n=len(nums1)
+        m=len(nums2)
+        for i in range(n):
+            for j in range(m):
+                if nums1[i]==nums2[j]:
+                    
+                    x.append(nums1[i])
+                    
+                    
+        if x != []:
+            return min(x)
+        else:
+            a=min(nums1)
+            b=min(nums2)
+            if a>b:
+                s=""
+                s+=str(b)
+                s+=str(a)
+                out=int(s)
+                return out
+
+            else:
+                s=""
+                s+=str(a)
+                s+=str(b)
+                out=int(s)
+                return out

@@ -1,0 +1,127 @@
+---
+title: "STAT 1261/2260 Homework 8"
+author: "Rayan Hassan"
+date: "2023-12-03"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(factoextra)
+library(cluster)
+library(ggplot2)
+
+country = read_csv("Country-data.csv",show_col_types = FALSE)
+```
+
+# Exercise 1
+
+
+```{r}
+country_pc = country %>% 
+  select(-country) %>% 
+  prcomp(scale = TRUE)
+
+#head(country_pc)
+
+variance_proportions = country_pc$sdev^2 / sum(country_pc$sdev^2)
+
+variance_proportions
+
+```
+
+# Exercise 2
+
+
+```{r}
+
+PC=1:9
+data=data.frame(PC, variance_proportions)
+ggplot(data=data, aes(x=PC, y=variance_proportions))+
+geom_line(color="navy")+
+geom_point(aes(x=3,y=0.13),cex=5,color="orange",alpha=0.3)+
+geom_point(color="red",cex=2)+
+labs(title="Scree Plot", x="Principal Component",y="variance_proportions")+
+scale_x_continuous(breaks = 1:10)
+```
+
+The elbow can be the point corresponding to the 3rd dimension since after the 3rd dimension the decrease in variance becomes less pronounced.
+
+# Exercise 3
+
+
+```{r}
+
+
+ggplot(data=data, aes(x=PC, y=cumsum(variance_proportions)))+
+geom_hline(aes(yintercept=0.9),lty=2,color="purple",linewidth=1, alpha=0.5)+
+geom_line(color="navy")+
+geom_point(color="red",cex=2)+
+labs(title="Cumulative Proportion of Variance Explained",
+x="Principal Component",
+y="cumulative pve")+
+scale_x_continuous(breaks = 1:9)
+
+```
+
+# Exercise 4
+
+
+```{r}
+
+
+country_s = scale(country[,-1])
+
+pc_4 <- country_s %>% as_tibble() %>% select(1:4)
+
+fviz_nbclust(pc_4, kmeans, method = "gap_stat")
+
+```
+
+# Exercise 5
+
+
+```{r}
+km_mod = kmeans(country_s, centers = 3)
+pam_mod = pam(country_s, 3)
+
+sum(km_mod$cluster != pam_mod$cluster)
+```
+
+# Exercise 6
+
+
+```{r}
+country_pam = country %>% mutate(cluster=factor(pam_mod$cluster))
+country_pam %>% 
+  ggplot(aes(x = cluster, y = gdpp)) +
+  geom_boxplot() +
+  labs(title = "Comparison of GDP per Capita by Cluster")
+```
+
+# Exercise 7
+
+
+```{r}
+country_pam %>% 
+  group_by(cluster) %>% 
+  summarize(median_life_expectancy = median(life_expec))
+```
+
+
+# Exercise 8
+
+
+```{r, fig.width=5, fig.height=20}
+library(ape)
+country_dend = country_s %>% dist(method="euclidean") %>% 
+  hclust(method="ward.D2")
+
+plot(as.phylo(country_dend), type = "cladogram", cex = 0.5, 
+     label.offset = 0.5)
+
+
+
+
+```
+

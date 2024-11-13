@@ -1,0 +1,8 @@
+Number of students: 5
+Number of courses: 3
+Student_ID  Course 1 Course 2 Course 3
+1:            85       90       67
+2:            75       65       86 
+3:            97       93       94
+4:            78       82       81
+5:            57       65       75

@@ -1,0 +1,137 @@
+---
+title: "STAT 1261/2260 Homework 6"
+author: "Rayan Hassan"
+date: "2023-11-05"
+output: html_document
+---
+
+# Exercise 1
+
+```{r}
+library(NHANES)
+library(tidyverse)
+
+data1<- NHANES %>%
+  select(HardDrugs,Gender,HealthGen,Depressed,SleepHrsNight,AlcoholDay, SmokeNow, Marijuana) %>% na.omit()
+glimpse(data1)
+```
+# Exercise 1
+
+
+```{r}
+set.seed(99)
+train1 <- data1 %>% sample_frac(size = 0.8)
+test1 <- data1 %>% setdiff(train1)
+
+
+library(glmnet)
+form<- as.formula(
+  "HardDrugs ~Gender+HealthGen+Depressed+SleepHrsNight+AlcoholDay+SmokeNow+Marijuana")
+predictors <- model.matrix(form, data = train1) 
+cv.fit <- cv.glmnet(predictors, train1$HardDrugs, family = "binomial", type = "class")
+cv.fit$lambda.1se
+
+plot(cv.fit)
+
+
+lambda_opt=cv.fit$lambda.1se
+mod_lr <- glmnet(predictors, train1$HardDrugs, family = "binomial", lambda = lambda_opt)
+mod_lr$beta
+
+form2 <- as.formula(HardDrugs~Gender+Depressed+AlcoholDay+Marijuana)
+mod_lr2 <- glm(form2, data=train1,family=binomial)
+summary(mod_lr2)
+```
+# Exercise 2
+
+The variable that is most significant is MarijuanaYes with the smallest p-value of < 2e-16
+
+# Exercise 3
+
+The coefficient of MarijuanaYes is 3.11054 (positive). So it is a positive direction which indicated that individuals who use Marijuana are more likely to use hard drugs. In terms of strength, MarijuanaYes has a very small p-value of less then 2e-16 (almost close to zero), which suggests that the relationship between Marijuana and HardDrugs is extremely strong.
+
+# Exercise 4
+
+Gendermale has a very small p-value (around 6.5e-5) which indicates that Gendermale is a significant variable. Also, it has a coefficient of 0.51475, which is positive. This suggests that males are more likely to use hard drugs and that the relationship between both is very strong
+
+```{r}
+library(rpart)
+library(rpart.plot)
+
+mod_tree <- rpart(form2,data=train1)
+rpart.plot(mod_tree)
+```
+
+# Exercise 5
+
+The most important predictor seems to be Marijuana. Only 4% of people that don't do Marijuana do Hard Drugs versus 46% that smoke Marijuana. This difference is huge and shows how much smoking Marijuana leads to hard drugs.  
+
+# Exercise 6
+
+The two subgroups that are most likely to use hard drugs are Marijuana which we explained before (so if person smokes marijuana) and if person is Depressed. 58% of people that do Marijuana and that are Depressed do Hard Drugs. Whereas 41% people who do Marijuana but are not Depressed do Hard Drugs. Which shows that in addition to smoking Marijuana, Depression is also a significant factor. 
+
+# Exercise 7
+
+```{r}
+
+data2<- NHANES %>%
+  select(Gender,Age,Race1,Education,MaritalStatus,HHIncomeMid,Poverty,HomeOwn,Weight,Height,
+         BMI,Pulse,BPSysAve,BPDiaAve,Diabetes,HealthGen,DaysPhysHlthBad,DaysMentHlthBad,
+         Depressed,SleepHrsNight,SleepTrouble,AlcoholDay,Smoke100,Marijuana,HardDrugs) %>% 
+  drop_na()
+
+train2 <- data2 %>% sample_frac(size = 0.8, fac=HardDrugs)
+test2 <- data2 %>% setdiff(train2)
+
+form_full<- as.formula(HardDrugs~Gender+Age+Race1+Education+MaritalStatus+HHIncomeMid+Poverty+HomeOwn+Weight+Height+BMI+Pulse+BPSysAve+BPDiaAve+Diabetes+HealthGen+DaysPhysHlthBad+DaysMentHlthBad+Depressed+SleepHrsNight+SleepTrouble+AlcoholDay+Smoke100+Marijuana)
+predictors <- model.matrix(form_full, data = train2) 
+cv.fit <- cv.glmnet(predictors, train2$HardDrugs, family = "binomial", type = "class")
+cv.fit$lambda.1se
+
+plot(cv.fit)
+
+lambda_opt=cv.fit$lambda.1se
+mod_lr2 <- glmnet(predictors, train2$HardDrugs, family = "binomial", lambda = lambda_opt)
+mod_lr2$beta
+
+```
+
+# Exercise 7
+
+```{r}
+mod_tree2 <- rpart(form_full,data=train2)
+rpart.plot(mod_tree2)
+```
+
+# Exercise 8
+
+```{r}
+confusion_matrix <- function(data,y,mod){
+  confusion_matrix <- data %>% 
+  mutate(pred = predict(mod, newdata = data, type = "class"),
+         y=y) %>%
+  select(y,pred) %>% table()
+}
+
+misclass <- function(confusion){
+  misclass <- 1- sum(diag(confusion))/sum(confusion)
+  return(misclass)
+}
+
+
+c <- confusion_matrix(test2, test2$HardDrugs, mod_tree2)
+c
+
+
+misclass(c)
+
+```
+
+
+
+
+
+
+
+
+

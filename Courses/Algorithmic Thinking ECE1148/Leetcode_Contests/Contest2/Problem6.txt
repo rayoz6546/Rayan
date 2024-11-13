@@ -1,0 +1,19 @@
+for i in range(int(input())):
+    # line = input()
+    # line = line.split(" ")
+    # A = int(line[0])
+    # B = int(line[1])
+    # C = int(line[2])
+    # D = int(line[3])
+    A,B,C,D = map(int, input().split())
+    if (A+1)%B == (C+1)%D:
+        print(1)
+    else:
+        modulo = A%B
+        mA = A- modulo 
+        while(D):
+            B,D = D, B%D 
+        lcm = (B*D)//abs(B)
+        mA += lcm
+        
+        print(mA-A)

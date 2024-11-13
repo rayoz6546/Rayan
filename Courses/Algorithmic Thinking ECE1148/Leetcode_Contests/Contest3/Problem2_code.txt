@@ -1,0 +1,6 @@
+for line in range(int(input())):
+    r  = int(input())*1000
+    
+    n = r//2
+    
+    print(n//5)

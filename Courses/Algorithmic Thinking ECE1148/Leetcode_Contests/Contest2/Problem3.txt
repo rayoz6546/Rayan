@@ -1,0 +1,27 @@
+for i in range(int(input())):
+    l = int(input())
+    arr = input()
+    arr=arr.split(" ")
+    A = []
+    for j in range(l):
+        A.append(arr[j])
+        
+    if len(A)==1:
+        print(0)
+    else:
+        dict_ = {x:0 for x in A}
+        for f in range(l):
+            dict_[A[f]]+=1
+
+        min_ = min(A)
+        op=0
+        rep = 0
+        for k in range(l):
+            if A[k]!=min_:
+                rep+=1
+        if dict_[min_]>=rep:
+            op = rep
+        else:
+            op=dict_[min_]
+
+        print(op)

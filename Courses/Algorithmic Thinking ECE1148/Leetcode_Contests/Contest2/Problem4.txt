@@ -1,0 +1,38 @@
+for i in range(int(input())):
+    l = int(input())
+    _A_ = input()
+    _A_=_A_.split(" ")
+    A = []
+    for j in range(l):
+        A.append(int(_A_[j]))
+        
+    _B_ = input()
+    _B_ = _B_.split(" ")
+    B = []
+    for j in range(l):
+        B.append(int(_B_[j]))
+        
+    if (A[0]!=B[0]) or (A[l-1]!=B[l-1]):
+        print("no")
+        
+    else:
+        out = "Yes"
+        
+        for k in range(1,l):
+            if A[k]!=B[k]:
+                lower=[]
+                for a in range(1,k):
+                    lower.append(A[a])
+                higher=[]
+                for a in range(k+1,l):
+                    higher.append(A[a])
+                    
+                if B[k]==0:  #since A[k] would be =1, so bitwise or can never be 0
+                        out="no"
+                        break
+                else:
+                    if (1 not in lower) and (1 not in higher):
+                        out="no"
+                        break
+                    
+        print(out)

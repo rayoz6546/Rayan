@@ -1,0 +1,8 @@
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        n = len(nums)
+        h = dict()
+        for i in nums: # i = elements in list, not index
+            h[i]=h.get(i,0)+1 #if element is in h then value increments by 1
+            if h[i]>n//2:
+                return i
