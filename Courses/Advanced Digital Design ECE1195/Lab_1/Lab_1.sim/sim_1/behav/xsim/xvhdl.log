@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/RAYAN/Lab_1/Lab_1.srcs/sources_1/imports/Desktop/adder_subtractor.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'adder_subtractor'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/RAYAN/Lab_1/Lab_1.srcs/sources_1/imports/Desktop/adder_subtractor_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'adder_subtractor_tb'
