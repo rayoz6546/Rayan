@@ -1,3 +1,7 @@
+# Kanbas
+
+This project involved the creation of a learning management system (LMS) used by universities to support online teaching and learning, inspired by "Canvas". This is part of a Website Development course (CS5610) at Northeastern University (Fall 2024).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
