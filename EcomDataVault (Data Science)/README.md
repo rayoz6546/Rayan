@@ -1,6 +1,6 @@
 # EcomDataVault
 **EcomDataVault** is a scalable, robust data warehousing solution designed to handle large-scale e-commerce data, with a focus on Amazon's user reviews and product metadata. This project aims to streamline the extraction, transformation, and loading (ETL) of vast datasets into a structured, query-optimized data warehouse. Some tools used are Apache Airflow to orchestrate the ETL pipeline, and Flask to create an interactive UI to showcase data visualization.
-On the other hand, the solution also includes a ChatBot called VaultBot, to be used by clients to help them answer any question about any product. It used Meta-LLaMA-3-70B as ML model, and Streamlit to create a basic front-end to showcase functionality.
+On the other hand, the solution also includes a ChatBot called VaultBot, to be used by clients to help them answer any question about any product. It uses Meta-LLaMA-3-70B as ML model, and Streamlit to create a basic front-end to showcase functionality.
 
 ## Key Features:
 
