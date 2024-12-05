@@ -1,0 +1,5 @@
+venv/
+.DS_Store
+.env
+.devcontainer
+dockdecoder-03cb7054df7e.json
