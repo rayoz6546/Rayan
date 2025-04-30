@@ -1,0 +1,101 @@
+---
+title: "ICA2Solutions"
+author: "Rayan Hassan"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# In-class Assignment 2: Bootstrap Sampling
+
+In this assignment you will consider bootstrap sampling to evaluate estimation bias and MSE.
+
+## Evaluation of bias and MSE for variance estimation
+
+Consider an i.i.d. sample of size n.  Suppose we would like to estimate the mean and variance of this population.  Of course, we will consider the sample mean as the estimator of the statistical mean. We will explore this estimator's MSE and bias using bootstrap sampling, and compare them to the known values of MSE and bias.
+
+```{r load library, echo=FALSE, message=FALSE}
+library(boot)
+library(tidyverse)
+```
+
+Here is our small data set (if you change the set.seed argument, the TA's answers will not agree with yours)
+
+```{r gen_data, echo=TRUE}
+set.seed(408)
+(small_population <- rnorm(10))
+```
+
+If you peeked at the code chunk, you saw a Gaussian sample with mean 0 and variance 1.  For this case, the sample mean, with value `r mean(small_population)`, estimates the mean with bias of 0 and MSE of 1/n. Let's check this out using bootstrap sampling.  First, we create a function that computes the estimator
+
+```{r sample_mean}
+my_sample_mean <- function(data,index)
+  return(mean(data[index]))
+```
+
+Next, we consider applying this function to R=1000 bootstrap samples.
+
+```{r bootstrap_sample_mean}
+my_boot <- boot(small_population, my_sample_mean, R=1000)
+my_boot
+```
+
+As shown here, the bootstrap samples allow us to accurately determine the performance of an estimator.  Specifically, we see that the bias is approximated as `r mean(my_boot$t)-mean(small_population)`, (true answer is 0) and the MSE is approximated as `r mean((my_boot$t - mean(small_population))^2)`, (true answer is 0.1).  But, the `boot()` method did not know the true distribution (as you do). How was the bias or MSE determined if this distribution is not known?  Quite simply, bootstrap methods assume the true distribution is the n samples it is given, sampled with replacement.  As mentioned in class, this is what we do when viewing histograms: we assume the the next measurement will come from a bin with a probability proportional to the count for that bin.
+
+Now it is your turn.  In the following, we will consider two estimators for the variance of our data.  It is important to remember that we must estimate the mean in the process (even though we "know" the correct answer).  The first estimator is given by `var()` and it is the unbiased variance estimator (bias=0).  The second is the maximum likelihood estimator of the variance, given by `(1-1/n)var()`.  Is biasedness a bad thing?  Not necessarily.  This second estimator is known to have a bias of `-1/n*true_var`, when the true variance is `true_var`.  Again, the `boot()` method does not know that the variance is `1`, so do not assume that it does.  Instead, the `boot()` method applies your variance estimator to the full data set to *get* its value of `true_var`.
+
+**Use the bootstrap method with R=1000 to estimate the bias and MSE of these two estimators. How accurate are the approximations of biases?  Which has the lowest MSE, the biased or unbiased version?**
+
+**The actual MSE of the unbiased estimator is known to be** `2/(n-1)`.  
+**How accurate is the bootstrap method of approximating the MSE of this estimator?**
+
+```{r}
+# Estimator 1
+var1 <- function(data, index) {
+  return(var(data[index]))
+}
+
+# Estimator 2
+
+var2 <- function(data, index) {
+  n <- length(index)
+  return((1 - 1/n) * var(data[index]))
+}
+
+boot1 <- boot(small_population, var1, R = 1000)
+boot1
+boot2 <- boot(small_population, var2, R = 1000)
+boot2
+
+
+true_var1 <- var1(small_population, 1:10)
+true_var2 <- var2(small_population, 1:10)
+
+# Bias calculation
+bias1 <- mean(boot1$t) - true_var1
+bias1
+bias2 <- mean(boot2$t) - true_var2
+bias2
+
+# MSE calculation
+mse1 <- mean((boot1$t - true_var1)^2)
+mse1
+mse2 <- mean((boot2$t - true_var2)^2)
+mse2
+
+# Known actual MSE for unbiased estimator
+n <- length(small_population)
+actual_mse_unbiased <- 2 / (n - 1)
+actual_mse_unbiased
+
+
+```
+The unbiased estimator theoretically has bias = 0. With bootstrap we got -0.08495686 which is slightly off but close enough.The MLE (biased) estimator has a theoretical bias = -1/(n x true_variance) which in this case is = -1/(10 x 1.0464) = -0.1046. The one we got with bootstrap is -0.08718 which is also fine even if slightly less biased. Therefore, the bootstrap approximations of bias are reasonably accurate.
+
+MSE of unbiased estimator: 0.2172006 and MSE of MLE (biased) estimator: 0.1708342. So the biased estimator (MLE) has the lower MSE.
+
+The bootstrap method of approximating the MSE of this estimator is fairly accurate since the theoretical MSE (0.222222) is very close to bootstrap MSE we got (0.2172006)

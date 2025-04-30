@@ -1,0 +1,460 @@
+---
+title: "Project"
+author: "Rayan Hassan, Kishan Kumar Parida"
+date: "2025-04-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(caret)
+library(glmnet)
+library(e1071)
+library(Metrics)
+library(randomForest)
+library(ggplot2)
+library(rpart)
+library(rpart.plot)
+library(nnet)
+```
+
+```{r}
+
+df <- read_csv("salaries.csv")
+
+```
+
+## Data Cleaning
+
+```{r}
+sum(is.na(df))
+
+# Removing duplicates
+df <- distinct(df)
+
+# Drop unneeded columns
+df <- df %>%
+  select(-salary, -salary_currency, -...1)
+
+
+df
+```
+
+```{r}
+df$is_us <- ifelse(df$employee_residence == "US", 1, 0)   # we will only use this when answering the question: Are salaries generally higher in the United States compared to the rest of the world?
+
+
+df$experience_level <- recode(df$experience_level,
+  "EN" = 0,
+  "MI" = 1,
+  "SE" = 2,
+  "EX" = 3
+)
+
+df$employment_type <- recode(df$employment_type,
+  "FT" = 0,
+  "PT" = 1,
+  "CT" = 2,
+  "FL" = 3
+)
+
+df$company_size <- recode(df$company_size,
+  "S" = 0,
+  "M" = 1,
+  "L" = 2
+)
+
+df$job_title <- as.numeric(as.factor(df$job_title))
+
+df$employee_residence <- as.numeric(as.factor(df$employee_residence))
+
+df$company_location <- as.numeric(as.factor(df$company_location))
+
+df
+```
+
+##  What features are most relevant in predicting an employee’s salary? How accurate can our predictions for salaries be ?
+
+```{r}
+full_model <- lm(salary_in_usd ~ ., data = df)
+summary(full_model)
+
+```
+All the p-values are extremely small, which means that all predictors are significant (except for company location which has a high p-value). However, statistical significance does not equal predictive power. Let's look at R-squared values and see how much of the variance in the response variable (salary) is explained by the model with different features, using forward selection.
+
+
+```{r}
+model0 <- lm(salary_in_usd ~ ., data = df)
+summary(model0)$adj.r.squared
+
+model1 <- lm(salary_in_usd ~ . -is_us, data = df)
+summary(model1)$adj.r.squared
+
+model2 <- lm(salary_in_usd ~ . -is_us -company_size, data=df)
+summary(model2)$adj.r.squared
+
+model3 <- lm(salary_in_usd ~ . -is_us -company_size -company_location, data=df)
+summary(model3)$adj.r.squared
+
+model4 <- lm(salary_in_usd ~ . -is_us -company_size -company_location -remote_ratio, data=df)
+summary(model4)$adj.r.squared
+
+model5 <- lm(salary_in_usd ~ . -is_us -company_size -company_location -remote_ratio -employee_residence, data=df)
+summary(model5)$adj.r.squared
+
+
+model6 <- lm(salary_in_usd ~ . -is_us -company_size -company_location -remote_ratio -employee_residence -job_title, data=df)
+summary(model6)$adj.r.squared
+
+model7 <- lm(salary_in_usd ~ . -is_us -company_size -company_location -remote_ratio -employee_residence -job_title -employment_type, data=df)
+summary(model7)$adj.r.squared
+
+
+model8 <- lm(salary_in_usd ~ . -is_us -company_size -company_location -remote_ratio -employee_residence -job_title -employment_type -experience_level, data=df)
+summary(model8)$adj.r.squared
+
+
+```
+Experience level is the most important feature since removing it causes a dramatic drop in adjusted R² from ~0.10 to ~0. 
+
+Job title also plays a major role as removing it causes a drop from ~0.16 to ~0.10.
+
+Employee residence also contribute meaningfully since its removal causes a noticeable drop (~0.19 to ~0.16)
+
+Company size,remote ratio, and company location have marginal impact since the adjusted R² barely changes when they’re removed.
+
+Therefore, we will be using model4 to predict salaries, and check for the accuracy of the model
+
+
+```{r}
+set.seed(42)
+train_index <- createDataPartition(df$salary_in_usd, p = 0.8, list = FALSE)
+train_data <- df[train_index, ]
+test_data <- df[-train_index, ]
+```
+
+```{r}
+model4 <- lm(salary_in_usd ~ work_year + experience_level + employment_type + job_title + employee_residence,
+             data = train_data)
+
+
+predictions <- predict(model4, newdata = test_data)
+actual <- test_data$salary_in_usd
+
+
+
+mae_val <- mae(actual, predictions)
+rmse_val <- rmse(actual, predictions)
+r2_val <- 1 - sum((actual - predictions)^2) / sum((actual - mean(actual))^2)
+
+cat("MAE:", round(mae_val, 2), "\n")
+cat("RMSE:", round(rmse_val, 2), "\n")
+cat("R-squared:", round(r2_val, 4), "\n")
+```
+
+The model does capture some meaningful patterns (R² ≈ 0.19 which is acceptable for real-world salary data, which is noisy and influenced by many unrecorded factors like bonuses, negotiation, perks, etc.).
+
+But a $49K MAE suggests that salaries are extremely spread out.
+
+So let's use regularization (Lasso) to simplify the model and see if we can get better results.
+
+```{r}
+
+x <- model.matrix(salary_in_usd ~ .,data = df)[, -1]  
+y <- df$salary_in_usd
+
+```
+
+```{r}
+set.seed(123)
+
+lasso_model <- cv.glmnet(x, y, alpha = 1) 
+
+plot(lasso_model)
+title("Figure 1: Lasso Cross-Validation Plot \n \n")
+
+```
+
+
+```{r}
+best_lambda <- lasso_model$lambda.min
+cat("Best lambda:", best_lambda, "\n")
+
+coef(lasso_model, s = "lambda.min")
+
+```
+
+
+```{r}
+x_test <- model.matrix(salary_in_usd ~ .,data = test_data)[, -1]
+y_test <- test_data$salary_in_usd
+
+
+lasso_preds <- predict(lasso_model, s = best_lambda, newx = x_test)
+
+
+mae_lasso <- mae(y_test, lasso_preds)
+rmse_lasso <- rmse(y_test, lasso_preds)
+r2_lasso <- 1 - sum((y_test - lasso_preds)^2) / sum((y_test - mean(y_test))^2)
+
+cat("Lasso MAE:", round(mae_lasso, 2), "\n")
+cat("Lasso RMSE:", round(rmse_lasso, 2), "\n")
+cat("Lasso R²:", round(r2_lasso, 4), "\n")
+
+```
+
+
+```{r}
+
+set.seed(123)
+rf_model <- randomForest(salary_in_usd ~ work_year + experience_level + employment_type + job_title + employee_residence + company_size + company_location + remote_ratio + is_us,
+                         data = train_data,
+                         ntree = 200)
+
+rf_preds <- predict(rf_model, newdata = test_data)
+
+
+mae_rf <- mae(test_data$salary_in_usd, rf_preds)
+rmse_rf <- rmse(test_data$salary_in_usd, rf_preds)
+r2_rf <- 1 - sum((test_data$salary_in_usd - rf_preds)^2) / sum((test_data$salary_in_usd - mean(test_data$salary_in_usd))^2)
+
+cat("Random Forest MAE:", round(mae_rf), "\n")
+cat("Random Forest RMSE:", round(rmse_rf), "\n")
+cat("Random Forest R²:", round(r2_rf, 4), "\n")
+
+```
+
+After testing linear regression, Lasso regularization, and Random Forest, we found that the Random Forest model performed the best at predicting salaries.
+It achieved the lowest Mean Absolute Error (MAE = $46,234) and the highest R² (0.2821), showing it captured the patterns in the data better than linear models.
+
+Salaries in your dataset range from $20,000 to $500,000, which is a spread of $480,000. 
+Our MAE ≈ $48,900 and Random Forest MAE ≈ $46,200. Which means that our error is about 10% of the full range, which isn’t bad.
+
+
+
+
+
+
+
+
+
+
+
+## Are salaries generally higher in the United States compared to the rest of the world?
+
+Null Hypothesis: the mean salary in the U.S. is equal to that in other countries 
+Alternative Hypothesis: the mean salary in the U.S. is greater than that in other countries
+
+```{r}
+model_us <- lm(salary_in_usd ~ . , data = df)
+summary(model_us)
+```
+
+Here we fitted a linear regression model using all features (include "is_us). Holding all other variables constant, we can deduce that being based in the United States (is_us = 1)  is associated with earning ~$97,610 more per year (estimate). This difference is statistically significant, with a p-value < 0.001.
+Also, we are 95% confident that being based in the U.S. increases salary by between $92,826 and $102,394, all else equal (CI = [estimate - 1.96 x standard error,estimate + 1.96 x standard error]).
+
+
+```{r}
+boxplot(salary_in_usd ~ is_us, 
+        data = df,
+        names = c("Other Countries", "United States"),
+        col = c("lightblue", "lightgreen"),
+        horizontal = TRUE,
+        main = "Salary (USD) by Location",
+        xlab = "Salary",
+        ylab = "Location of Employee")
+
+```
+
+These boxplots show a visualization for salaries earned in USD for employees that reside in the US versus outside the US. We can clearly that professionals based in the United States tend to earn significantly higher salaries than those in other countries. Not only is the median salary much higher, but the entire salary distribution is shifted upwards, and there's a greater number of high-earning outliers.
+
+
+Conclusion: we reject the null hypothesis and conclude that salaries are significantly higher in the United States compared to the rest of the world.
+
+
+
+## What positions tend to pay more and which ones pay less? 
+
+
+```{r}
+
+df_raw <- read_csv("salaries.csv")
+df$job_title <- df_raw$job_title
+
+avg_salary_by_title <- df %>%
+  group_by(job_title) %>%
+  summarise(
+    avg_salary = mean(salary_in_usd, na.rm = TRUE),
+    count = n()
+  ) %>%
+  filter(count > 5) %>%
+  arrange(desc(avg_salary))
+
+```
+
+
+```{r}
+
+top10 <- avg_salary_by_title %>% slice_max(avg_salary, n = 10)
+
+bottom10 <- avg_salary_by_title %>% slice_min(avg_salary, n = 10)
+
+
+ggplot(top10, aes(x = reorder(job_title, avg_salary), y = avg_salary)) +
+  geom_bar(stat = "identity", fill = "darkgreen") +
+  coord_flip() +
+  labs(title = "Top 10 Highest Paying Job Titles",
+       x = "Job Title", y = "Average Salary (USD)") +
+  theme_minimal() + 
+  theme(plot.title = element_text(face = "bold"))
+
+ggplot(bottom10, aes(x = reorder(job_title, avg_salary), y = avg_salary)) +
+  geom_bar(stat = "identity", fill = "darkred") +
+  coord_flip() +
+  labs(title = "Bottom 10 Lowest Paying Job Titles",
+       x = "Job Title", y = "Average Salary (USD)") +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+
+```
+These histograms show the top 10 most payed jobs in our datasets and the bottom 10 less payed ones. 
+We figured that linear regression is not very useful in our case for analyzing job titles because it treats each title as a separate dummy variable, which leads to an explosion of coefficients (312 job titles = 311 dummy variables!)
+
+
+
+## Are jobs more likely to become fully remote in the future? 
+
+```{r}
+df %>%
+  group_by(work_year) %>%
+  summarize(remote_rate = mean(remote_flag)) %>%
+  ggplot(aes(x = work_year, y = remote_rate)) +
+  geom_line(color = "steelblue") +
+  geom_point(size = 2) +
+  labs(title = "Trend of Remote Jobs Over Time",
+       x = "Year", y = "Proportion of Remote Jobs")+
+  theme(plot.title = element_text(face = "bold"))
+```
+
+
+```{r}
+df <- df %>%
+  mutate(remote_flag = ifelse(remote_ratio == 100, 1, 0))
+
+set.seed(123)
+trainIndex <- createDataPartition(df$remote_flag, p = 0.8, list = FALSE)
+train_data <- df[trainIndex, ]
+test_data <- df[-trainIndex, ]
+
+log_model <- glm(remote_flag ~ work_year, data = train_data, family = "binomial")
+
+# Predict probabilities first
+log_preds <- predict(log_model, newdata = test_data, type = "response")
+
+# Then convert to class labels
+log_class <- ifelse(log_preds >= 0.5, 1, 0)
+
+# Finally calculate accuracy
+log_accuracy <- mean(log_class == test_data$remote_flag)
+log_accuracy
+
+confusionMatrix(as.factor(log_class), as.factor(test_data$remote_flag))
+
+```
+
+```{r}
+library(ggeffects)
+gg <- ggpredict(log_model, terms = "work_year [2020:2025]")
+plot(gg) + labs(title = "Predicted Probability of Remoteness by Year (Logistic Regression)") + 
+  theme(plot.title = element_text(face = "bold"))
+```
+
+```{r}
+tree_model <- rpart(remote_flag ~ work_year,
+                    data = train_data,
+                    method = "class",
+                    control = rpart.control(minsplit = 10, cp = 0.001))
+
+rpart.plot(tree_model)
+title("Decision Tree Predicting Remoteness Based on Work Year \n \n ")
+
+# Predict
+tree_preds <- predict(tree_model, newdata = test_data, type = "class")
+confusionMatrix(tree_preds, as.factor(test_data$remote_flag))
+
+
+```
+
+
+We trained a decision tree using only work_year to determine whether remote work adoption has increased over time (from 2020 onward). The tree reveals a clear temporal trend: remote jobs increased notably from 1039 remote jobs prior to 2023 to 15000 remote jobs from 2024 onwards.Although our model predicted the majority class (on-site) for year 2024+, which shows that on-site jobs are still heavily present, it still shows an increase in remote ones.
+
+
+
+
+
+
+```{r}
+svm_model <- svm(as.factor(remote_flag) ~ work_year,
+                 data = train_data,
+                 kernel = "radial")
+
+# Predict
+svm_preds <- predict(svm_model, newdata = test_data)
+confusionMatrix(svm_preds, as.factor(test_data$remote_flag))
+```
+```{r}
+# Add predictions to test set
+test_data$svm_pred <- svm_preds
+
+# Plot
+ggplot(test_data, aes(x = work_year, y = as.numeric(remote_flag))) +
+  geom_jitter(aes(color = as.factor(svm_pred)), width = 0.2, height = 0.05, alpha = 0.6) +
+  geom_vline(xintercept = 2024, linetype = "dashed", color = "gray") +
+  labs(
+    title = "Prediction of Remoteness by Work Year (SVM)",
+    x = "Work Year",
+    y = "Remote Flag (0 = No, 1 = Yes)",
+    color = "Predicted Class"
+  ) +
+  theme_minimal()+
+  theme(plot.title = element_text(face = "bold"))
+```
+
+
+All of these models (logistic regression, decision tree, SVM) have accuracies of around 80% but they are only predicting the majority class correctly, which can be seen by the confusion matrices. This is because of how imbalanced the dataset is.
+
+
+
+```{r}
+# Count how imbalanced your data is
+table(train_data$remote_flag)
+
+```
+We can see that dataset only has 20% remote, which makes it skewed. We can try to counter this using weights: 
+
+```{r}
+# Create weights: give more importance to class 1 (remote jobs)
+weights <- ifelse(train_data$remote_flag == 1, 4, 1)
+
+# Fit tree with weights
+tree_model_weighted <- rpart(remote_flag ~ work_year,
+                             data = train_data,
+                             method = "class",
+                             control = rpart.control(minsplit = 10, cp = 0.0005),
+                             weights = weights)
+
+# Plot and predict
+library(rpart.plot)
+rpart.plot(tree_model_weighted)
+
+tree_preds_weighted <- predict(tree_model_weighted, newdata = test_data, type = "class")
+confusionMatrix(tree_preds_weighted, as.factor(test_data$remote_flag))
+```
+After we added weights on the minority class, we can see that specificity improved, but it is still relatively low. 
+
+We cannot conclude that remote jobs will be more present in the future, since these models are very simple (using only 1 predictor)

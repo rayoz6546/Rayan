@@ -1,0 +1,246 @@
+Employee_ID,Name,Department,Gender,Years_at_Company,Salary,Experience_Level,Termination_Flag
+66888,Melissa Marks,HR,Female,7,115353.0,Junior,Retain
+53229,Kevin Reynolds,Product Management,Female,2,116797.0,Mid,Retain
+36956,Mr. Charles Larsen,Customer Support,Female,11,105953.0,Mid,Retain
+4764,Holly Hamilton,Product Management,Male,10,102330.90000000001,Mid,Retain
+60439,Brian Santos,Product Management,Male,2,147112.0,Mid,Retain
+53153,Alan Campbell,Marketing,Female,10,60358.0,Junior,Retain
+96790,Cody Cooper MD,Customer Support,Female,1,43267.0,Junior,Terminate
+40728,Audrey Wells,Data Science,Male,8,122745.0,Senior,Retain
+73900,Alexander Delgado,Customer Support,Male,1,129588.0,Mid,Terminate
+18782,Sabrina Moore,Data Science,Female,9,82438.65000000001,Senior,Retain
+55517,Jamie Richardson,Talent Development,Male,11,66092.0,Junior,Retain
+76893,Michael Gomez,Customer Support,Female,6,51338.0,Junior,Retain
+82661,Joseph Barton,Product Management,Female,7,40412.0,Junior,Retain
+17292,Carla Fisher,Marketing,Male,13,47543.0,Junior,Retain
+96597,Nicholas Anderson,HR,Male,10,145891.0,Junior,Retain
+60068,Latasha Bass,Marketing,Female,7,73496.0,Junior,Retain
+42919,Antonio Smith,HR,Female,10,100692.0,Junior,Retain
+44480,Cathy Garcia,Product Management,Male,3,129084.0,Mid,Retain
+78166,Tiffany Rivera,Data Science,Female,2,130000.0,Senior,Retain
+85082,Carlos Butler,HR,Male,9,84425.0,Junior,Retain
+84784,Andres Mitchell,Marketing,Female,8,78756.0,Mid,Retain
+97686,Rebecca Friedman,Product Management,Male,13,61832.4,Mid,Retain
+53344,Renee Thompson,Data Science,Male,12,75735.0,Senior,Retain
+18931,Calvin Singh,Engineering,Male,10,87295.0,Junior,Retain
+95190,Glenn Carter,Data Science,Female,7,123042.0,Senior,Retain
+90667,Kerry Jacobs,Customer Support,Female,9,125999.0,Junior,Retain
+75216,Danielle Pennington,Customer Support,Male,4,57955.0,Mid,Retain
+39664,Richard Kim,Marketing,Female,13,77841.0,Mid,Retain
+19017,Troy Kelly,HR,Male,4,110640.0,Mid,Retain
+60848,Dylan Gomez,HR,Male,1,105510.0,Mid,Retain
+21468,Robert Moss,Data Science,Female,8,74911.0,Senior,Retain
+10171,Michael Roman,Talent Development,Female,14,99031.0,Junior,Retain
+65434,Kevin Phillips,Talent Development,Male,14,128726.0,Junior,Retain
+9342,Cindy Lopez,Data Science,Female,12,47357.0,Senior,Retain
+11646,Rebecca Fletcher,Customer Support,Female,3,72479.0,Junior,Retain
+6778,Kayla Johnson,Product Management,Male,7,101476.0,Mid,Retain
+3936,Kimberly Fowler,Customer Support,Male,12,84811.0,Junior,Retain
+59276,Michael Ross,Product Management,Female,2,76208.0,Mid,Retain
+20633,Melissa Pittman,Data Science,Male,2,60150.0,Senior,Retain
+19788,Curtis Johnson,Marketing,Male,7,111180.0,Junior,Retain
+96764,Dawn Williams,Data Science,Female,6,83286.0,Senior,Retain
+80367,Lisa Neal,Engineering,Male,3,108450.0,Junior,Retain
+96404,Christopher White,HR,Male,9,61352.0,Mid,Retain
+23467,Stephanie Martinez,Data Science,Female,10,95069.0,Senior,Retain
+29595,Randall Martinez,Marketing,Female,14,54397.0,Junior,Retain
+23171,Jeffrey Beck,Data Science,Male,13,81555.0,Senior,Retain
+84674,Crystal Dunlap,Data Science,Male,6,86959.0,Senior,Retain
+26518,Stephanie Blair,Data Science,Female,10,42764.4,Senior,Retain
+23091,Carolyn Smith,Marketing,Female,10,90517.0,Junior,Retain
+5857,Mark Thompson,HR,Female,6,106234.0,Junior,Retain
+78257,Ashley House,HR,Female,1,79954.0,Junior,Retain
+94615,Ryan Hopkins,HR,Male,4,87280.0,Mid,Retain
+60615,April Knight,HR,Female,10,119459.0,Junior,Retain
+75967,Renee Perez,Data Science,Female,6,56779.0,Senior,Retain
+11415,William Lutz,Data Science,Male,6,103932.0,Senior,Retain
+63500,Janet Dodson,Engineering,Female,11,112936.0,Junior,Retain
+33709,Michael Vang,Talent Development,Male,12,64466.0,Junior,Retain
+34665,Ashley Soto,Data Science,Female,5,76939.0,Senior,Retain
+95420,Michael Kane,HR,Female,1,109896.0,Mid,Retain
+30615,Melissa Scott,Marketing,Female,8,75270.0,Junior,Retain
+34369,Mary Schneider,Marketing,Male,5,99163.0,Junior,Retain
+72610,Lisa Peterson,Data Science,Male,12,122637.0,Senior,Retain
+77630,Jimmy King,Product Management,Female,12,96530.7,Junior,Retain
+21035,Misty Bell,Marketing,Male,12,104895.0,Mid,Retain
+18425,Daniel Rivera,Data Science,Male,5,72307.0,Senior,Retain
+47635,Denise Hernandez,HR,Male,7,94098.0,Junior,Retain
+1053,Tiffany Evans,Data Science,Male,4,100921.0,Senior,Retain
+42615,Tiffany Lawrence,Marketing,Male,6,45486.0,Junior,Retain
+12466,Steven Carpenter,Talent Development,Male,13,48335.0,Junior,Retain
+4272,Carla Ross,HR,Female,4,126900.0,Junior,Retain
+6253,Kenneth Young,Data Science,Female,14,130000.0,Senior,Retain
+68019,Amanda Brown,Product Management,Male,3,129112.0,Mid,Retain
+85011,John Gibson,Data Science,Female,7,137203.0,Senior,Retain
+83131,Matthew George,Marketing,Female,8,51130.0,Junior,Retain
+79753,Kyle Holland,Product Management,Female,4,127508.0,Junior,Retain
+83312,Kristy Hall,Marketing,Female,13,145955.0,Mid,Retain
+88185,David Reyes,Engineering,Male,2,100566.0,Junior,Retain
+95795,Travis Hall,Talent Development,Female,12,106703.0,Mid,Retain
+6911,Christopher Nelson,HR,Female,10,67192.0,Junior,Retain
+19524,Brandon Coleman,Data Science,Male,14,41062.0,Senior,Retain
+37639,Susan Odonnell,Product Management,Male,3,124076.0,Junior,Retain
+64274,James Oliver,Engineering,Female,1,129780.0,Junior,Retain
+84076,Aaron Adkins,Product Management,Female,8,64622.25,Mid,Retain
+53326,Antonio White,Product Management,Female,3,61689.0,Junior,Retain
+5413,Emily Anderson,Engineering,Female,12,51174.0,Junior,Retain
+28271,Tina Ross,Data Science,Female,10,128461.0,Senior,Retain
+30327,Samantha Daugherty,Data Science,Female,7,130000.0,Senior,Retain
+62714,Leslie Burgess,Data Science,Male,10,49348.0,Senior,Retain
+35505,Michael Callahan,HR,Female,5,63714.0,Mid,Retain
+34762,Kevin Henry,Customer Support,Female,10,78102.0,Mid,Retain
+98747,Sharon Williams,Customer Support,Male,5,114460.0,Mid,Retain
+41206,Yvonne White,Data Science,Male,14,130000.0,Senior,Retain
+62820,Richard Davis,Customer Support,Male,7,129930.0,Mid,Retain
+53697,Nathan Jenkins,Data Science,Male,9,46801.0,Senior,Retain
+57217,Bradley Sanford,Data Science,Female,12,130000.0,Senior,Retain
+7997,Richard Brown,Customer Support,Female,5,112267.0,Mid,Retain
+38543,Joseph Sandoval,Product Management,Female,1,88136.0,Junior,Retain
+73809,Kaitlyn Brown,Marketing,Female,10,63625.0,Mid,Retain
+97820,Keith Wise,Marketing,Female,10,122873.0,Junior,Retain
+40607,Kelly Watson,Engineering,Female,1,130000.0,Mid,Retain
+29335,Erin Collins,HR,Male,2,112592.0,Mid,Retain
+1106,Jamie Sanders,Data Science,Female,14,117052.0,Senior,Retain
+92957,Mark Cox,HR,Male,6,84261.0,Junior,Retain
+21902,Joshua Bolton,Marketing,Male,9,41542.0,Junior,Retain
+9659,Katie Jones,Data Science,Female,8,61677.0,Senior,Retain
+70930,Darlene Roth,Data Science,Male,13,91068.6,Senior,Retain
+77520,Richard Gentry,Data Science,Female,5,90343.0,Senior,Retain
+80920,Roger Perry,Data Science,Male,1,79081.0,Senior,Retain
+95382,Daniel Sanchez,Customer Support,Female,13,102856.0,Junior,Retain
+15882,Katherine Vazquez,Customer Support,Male,7,133105.0,Junior,Retain
+93618,Dr. Rebecca Turner,Data Science,Female,5,128858.0,Senior,Retain
+65334,Janice Kim,Customer Support,Female,6,59065.0,Mid,Retain
+94328,Lauren Campbell,Data Science,Female,13,129633.0,Senior,Retain
+90421,Bonnie Mcclure,Data Science,Female,7,128092.0,Senior,Retain
+50363,Kevin Franco,Data Science,Female,3,94693.0,Senior,Retain
+62011,Scott Bates,Product Management,Male,12,70310.1,Mid,Retain
+33010,Ethan Obrien,Marketing,Male,10,68295.0,Mid,Retain
+67884,Alicia Graham,Customer Support,Male,3,53807.0,Mid,Retain
+3797,Michele Mullen,Data Science,Female,5,82348.0,Senior,Retain
+30325,Aaron Rogers,Marketing,Male,6,66432.0,Mid,Retain
+45909,Sara Johnston,Marketing,Female,9,123285.0,Mid,Retain
+90983,Matthew Morse,Talent Development,Female,13,146995.0,Mid,Retain
+4536,Nathaniel Rodriguez,Data Science,Male,14,138381.6,Senior,Retain
+49041,Logan Garcia,Data Science,Male,12,97854.0,Senior,Retain
+43185,Michael Miller,Data Science,Female,5,80262.0,Senior,Retain
+80867,Joshua Arroyo,Data Science,Male,1,77080.0,Senior,Retain
+94400,Bradley Conley,Product Management,Female,14,43390.200000000004,Mid,Retain
+79584,Susan Hammond,Talent Development,Female,14,131267.0,Junior,Retain
+37433,Jeffrey Miller,Product Management,Female,14,79704.45,Mid,Retain
+26932,Walter Mclean,Product Management,Female,4,129339.0,Junior,Retain
+42066,Shawn Orozco,Data Science,Female,5,59870.0,Senior,Retain
+49445,Maria Higgins,Product Management,Male,12,78306.90000000001,Mid,Retain
+41835,Rodney Ross,Data Science,Male,10,112124.0,Senior,Retain
+77603,John Booth,Product Management,Female,10,150785.25,Mid,Retain
+23015,Morgan Price,Data Science,Female,5,66790.0,Senior,Retain
+4214,Mary Keith DVM,Customer Support,Male,7,65289.0,Junior,Retain
+7800,Lisa Torres,HR,Male,4,95129.0,Junior,Retain
+6947,Dorothy Patterson,Marketing,Female,1,133714.0,Junior,Retain
+98744,Jamie Wright,Marketing,Male,14,134246.0,Mid,Retain
+59002,Jason Schmidt,Product Management,Female,14,58259.25,Junior,Retain
+49749,James Ford,Data Science,Male,5,84482.0,Senior,Retain
+91978,Matthew Richardson,Product Management,Female,7,126188.0,Junior,Retain
+80898,Stephanie Johnson,HR,Male,10,44748.0,Junior,Retain
+41080,Brittany Gonzalez,HR,Female,10,126769.0,Mid,Retain
+52260,Randy Pena,HR,Male,6,49435.0,Mid,Retain
+97235,Christopher Owens,HR,Male,5,43709.0,Junior,Retain
+34517,Isabella Harvey,HR,Female,4,70355.0,Mid,Retain
+85114,Patricia Mcdowell,Customer Support,Male,2,95771.0,Junior,Retain
+27964,Maria Andrews,Marketing,Female,4,97799.0,Mid,Retain
+80194,Richard Stone,Data Science,Male,10,53116.0,Senior,Retain
+4835,Jonathan Figueroa,Data Science,Female,10,65470.0,Senior,Retain
+63705,Jenny Lloyd,Data Science,Male,3,82344.0,Senior,Retain
+60180,Jennifer Saunders DDS,Data Science,Female,10,82918.0,Senior,Retain
+58597,Courtney Armstrong,Data Science,Male,1,92224.0,Senior,Retain
+55040,Rebekah Beck,Customer Support,Female,8,79298.0,Junior,Retain
+87807,Walter Espinoza,Data Science,Male,5,130000.0,Senior,Retain
+38199,Lynn Love,Data Science,Female,13,120219.0,Senior,Retain
+48383,Brooke Stevens,Data Science,Female,4,101629.0,Senior,Retain
+68339,John Turner,Data Science,Female,8,106040.0,Senior,Retain
+68379,Crystal Mccormick,Customer Support,Male,7,139518.0,Mid,Retain
+40322,Charles Hamilton,Customer Support,Female,2,139835.0,Junior,Retain
+63380,Douglas Ingram,Data Science,Male,1,68016.0,Senior,Retain
+83733,Jeffery Moore,Data Science,Female,12,67158.0,Senior,Retain
+90966,Miranda Sampson,Data Science,Male,11,73591.0,Senior,Retain
+50014,Ryan Holden,Customer Support,Female,4,122848.0,Junior,Retain
+49981,Sierra Marsh,Marketing,Male,8,143333.0,Mid,Retain
+96172,Gloria Foster,Talent Development,Male,12,107641.0,Junior,Retain
+93284,Eddie Williamson,Customer Support,Female,2,76395.0,Mid,Retain
+61258,Alexandra Jones,Data Science,Male,3,62700.0,Senior,Retain
+90761,Sarah Thompson,Data Science,Male,12,74620.0,Senior,Retain
+95720,Eddie Ramirez,Engineering,Female,1,130000.0,Junior,Retain
+11302,Dr. Joy Rose MD,Engineering,Male,1,60559.0,Junior,Retain
+70430,Jennifer Farmer,Marketing,Male,13,133045.0,Mid,Retain
+68795,Dana Mueller,HR,Male,3,133396.0,Mid,Retain
+61865,Marc Gross,Talent Development,Female,11,101642.0,Junior,Retain
+84250,Mrs. Tina Clayton,Marketing,Male,5,116539.0,Mid,Retain
+96414,Mitchell Martinez,Customer Support,Female,12,61732.0,Junior,Retain
+66952,Mark Walker,Engineering,Male,3,130000.0,Mid,Retain
+91153,Regina Joseph,Product Management,Male,1,70354.0,Junior,Retain
+51506,Joshua Williams,Engineering,Male,1,53843.0,Junior,Retain
+90091,Eric Jackson,Engineering,Female,8,111726.0,Junior,Retain
+45637,Adrian Castro,Customer Support,Male,10,57640.0,Mid,Retain
+54358,Jeffrey Dudley,Data Science,Male,11,92528.0,Senior,Retain
+96884,Jennifer Nash,Marketing,Female,12,78413.0,Mid,Retain
+58023,Sheena Figueroa,Marketing,Male,13,92638.0,Junior,Retain
+6588,Curtis Lee,Talent Development,Female,13,92736.0,Mid,Retain
+8754,Wendy Sexton,Product Management,Female,12,155286.6,Mid,Retain
+22843,Julie Butler MD,Engineering,Male,14,130000.0,Junior,Retain
+52942,Catherine Schultz,Data Science,Female,2,108866.0,Senior,Retain
+32888,Terry Haas,Customer Support,Male,13,59087.0,Junior,Retain
+53483,Christopher Anderson,Marketing,Female,3,81430.0,Mid,Retain
+72276,Alexander Torres,Product Management,Female,2,64504.0,Junior,Retain
+17679,Benjamin Thomas,Data Science,Male,3,47114.0,Senior,Retain
+5627,Sarah Kelley,Marketing,Female,7,118859.0,Junior,Retain
+10672,Nicole Anderson,HR,Female,1,139657.0,Mid,Retain
+65902,Matthew Fisher,Data Science,Female,10,50975.0,Senior,Retain
+48366,Michael Campos,Customer Support,Female,8,51023.0,Mid,Retain
+50773,Robin Myers,Data Science,Female,13,61447.0,Senior,Retain
+97272,Ryan Potts,Data Science,Male,10,136992.45,Senior,Retain
+58399,Carlos Jones,HR,Female,10,63959.0,Junior,Retain
+56726,Derrick Murphy,Engineering,1,1,76988.0,Junior,Retain
+62217,Mr. Thomas Khan,Engineering,1,0,88410.0,Junior,Retain
+18549,Wendy Cox,Engineering,1,1,84594.0,Junior,Retain
+94766,Paul Miller,Engineering,1,0,90128.0,Junior,Retain
+41502,Christopher Mercer,Engineering,1,0,95477.0,Junior,Retain
+85824,Jamie Mcdonald,Product Management,1,0,73930.0,Junior,Retain
+81917,Hannah Hogan,Product Management,1,0,50077.0,Junior,Retain
+21371,Kimberly Graham,Product Management,0,1,70611.0,Mid,Retain
+82119,Daniel Gonzalez,Engineering,0,1,66984.0,Mid,Retain
+80270,Theresa Wolfe,Engineering,1,1,64060.0,Junior,Retain
+30686,Thomas Reyes,Product Management,0,1,93303.0,Junior,Retain
+53775,Bobby Soto,Product Management,0,1,109207.0,Junior,Retain
+54941,Brian Wade,Product Management,0,0,79287.0,Mid,Retain
+45512,Zachary Golden,Engineering,1,1,89711.0,Mid,Retain
+27740,Ryan Johnson,Product Management,1,0,61954.0,Mid,Retain
+96074,Cody Fernandez,Product Management,1,0,68574.0,Mid,Retain
+52961,Kenneth Jones,Product Management,1,0,59184.0,Junior,Retain
+56496,Valerie King,Engineering,1,1,69096.0,Junior,Retain
+55176,Bryce Jones,Engineering,0,1,117728.0,Junior,Retain
+19454,Andrew Wilson,Engineering,1,1,84016.0,Junior,Retain
+16053,Terry Collins,Engineering,0,0,61246.0,Mid,Retain
+32055,Donna Anderson,Engineering,0,0,95558.0,Mid,Retain
+14041,Gary Mayer,Engineering,1,0,68381.0,Junior,Retain
+69559,Wendy Medina,Engineering,1,0,86455.0,Junior,Retain
+16054,John Valdez,Engineering,0,0,54018.0,Mid,Retain
+32923,Jennifer Miles MD,HR,1,0,46371.0,Junior,Retain
+90715,Gary Jones,Marketing,1,0,46359.0,Junior,Retain
+845,Martha Phillips,HR,1,0,47863.0,Junior,Retain
+93408,Susan Maxwell,HR,1,0,43228.0,Junior,Retain
+45780,Daniel Lambert,HR,0,0,54382.0,Junior,Retain
+36363,Alice Alvarado,HR,0,0,58755.0,Junior,Retain
+74461,William Powell,HR,1,0,42891.0,Junior,Retain
+73405,Rebecca Webb,HR,0,0,43756.0,Junior,Retain
+38675,Stephen Clark,HR,1,0,55770.0,Junior,Retain
+5353,Anita Ortiz,Marketing,1,0,56478.0,Junior,Retain
+46727,Abigail Santos,Engineering,1,0,96410.0,Junior,
+52823,Donna Rubio,Engineering,1,0,72116.0,Junior,
+11544,David Rogers,Engineering,1,1,75779.0,Junior,
+51344,Stephanie Davis,Engineering,1,1,82298.0,Junior,
+34030,Autumn Boyd,Engineering,1,1,97901.0,Junior,
+46727,Abigail Santos,Engineering,1,0,96410.0,Junior,
+52823,Donna Rubio,Engineering,1,0,72116.0,Junior,
+11544,David Rogers,Engineering,1,1,75779.0,Junior,
+51344,Stephanie Davis,Engineering,1,1,82298.0,Junior,
+34030,Autumn Boyd,Engineering,1,1,97901.0,Junior,

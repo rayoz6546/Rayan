@@ -1,0 +1,359 @@
+---
+title: "JWCh4Homework"
+author: "Rayan Hassan"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(MASS)
+library(tidyverse)
+library(ISLR)
+library(stats)
+library(caret)
+library(class)
+```
+
+# Problem 10
+ This question should be answered using the `Weekly` data set, which
+is part of the ISLR package. This data is similar in nature to the
+Smarket data from this chapter’s lab, except that it contains 1, 089
+weekly returns for 21 years, from the beginning of 1990 to the end of
+2010.
+
+## (a) 
+Produce some numerical and graphical summaries of the Weekly
+data. Do there appear to be any patterns with `Direction` as a response?
+
+```{r, echo=TRUE}
+data(Weekly)
+?Weekly
+head(Weekly)
+
+# Numerical summary
+summary(Weekly)
+
+# Correlation matrix
+cor(Weekly[, -9])  # Excluding Direction (factor)
+
+# Graphical summaries
+pairs(Weekly)
+```
+Using these summaries we can see a strong correlation between Volume and Year (equal to 0.8419 of we look at the correlation matrix). And if we look at the pairs plot we can see the corresponding scatter plot (volume vs year) shows this positive correlation. 
+
+
+## (b) 
+
+Use the full data set to perform a logistic regression with
+`Direction` as the response and the five `lag` variables plus `Volume`
+as predictors. Use the summary function to print the results. Do
+any of the predictors appear to be statistically significant (don't include `Intercept`)? If so, which ones?
+
+```{r logR1}
+log_model <- glm(Direction ~ Lag1 + Lag2 + Lag3 + Lag4 + Lag5 + Volume, 
+                 data=Weekly, family=binomial)
+summary(log_model)
+```
+The only variable that is statistically significant is Lag2 (p-value is 0.0296 which is less than 0.05).
+
+##  (c) 
+
+Compute the confusion matrix and overall fraction of correct
+predictions. Explain what the confusion matrix is telling you
+about the types of mistakes made by logistic regression.  (Hint: Instead of `table()`, try using `caret::confusionMatrix(as.factor(),as.factor()))` for more information, and less computation.  There, use `Accuracy`, its 95% confidence interval, `Sensitivity`, and `Specificity`.
+
+```{r trainingError}
+pred_probs <- predict(log_model, type="response")
+pred_class <- ifelse(pred_probs > 0.5, "Up", "Down")
+confusionMatrix(as.factor(pred_class), as.factor(Weekly$Direction))
+```
+This shows that the model was able to predict weekly trends correctly 56.11% of the time (accuracy) with a confidence interval of [53.1, 59.1]. It correctly predicted that trend would go down 92.07% of the time (specificity), but correctly predicted that trend would go up only 11.1% of the time (sensitivity).
+
+## (d) 
+
+Now fit the logistic regression model using a training data period
+from 1990 to 2008, with Lag2 as the only predictor. Compute the
+confusion matrix and the overall fraction of correct predictions
+for the held out data (that is, the data from 2009 and 2010). Again, retain, `Accuracy`, its 95% CI, `Sensitivity` and `Specificity`, using `confusionMatrix`. How would you compare the accuracy of this classifier, using test data, to the previous one, using training data.  Can you say that one is better?  Why or why not?
+
+```{r}
+
+train_data <- Weekly[Weekly$Year <= 2008, ]
+test_data <- Weekly[Weekly$Year > 2008, ]
+
+log_model_lag2 <- glm(Direction ~ Lag2, data=train_data, family=binomial)
+pred_probs_test <- predict(log_model_lag2, newdata=test_data, type="response")
+pred_class_test <- ifelse(pred_probs_test > 0.5, "Up", "Down")
+cM_log=confusionMatrix(as.factor(pred_class_test), as.factor(test_data$Direction))
+cM_log
+```
+In this case, the model correctly predicted the outcome (of testing data) 62.5% of the time (accuracy) with a confidence interval of [52.47, 71.8] which is slightly better than the previous model. It properly predicted that trend would go down 91.8% (specificity) of the time and that it would go up 20.93% (sensitivity) of the time. Therefore yes, this one is better. This could be explained by the fact that we only used Lag2 as predictor variable, which as mentioned previously is the only statistically significant. So using it only allows the model to focus on the most informative feature (avoiding noise from other, less important predictors).
+
+## (e) 
+
+Repeat (d) using LDA.
+
+```{r}
+
+lda_model <- lda(Direction ~ Lag2, data=train_data)
+lda_pred <- predict(lda_model, newdata=test_data)
+pred_class_test <- lda_pred$class
+cM_lda=confusionMatrix(as.factor(pred_class_test), as.factor(test_data$Direction))
+cM_lda
+
+```
+we get the same results as previous model.
+
+## (f) 
+
+Repeat (d) using QDA.
+
+```{r}
+qda_model <- qda(Direction ~ Lag2, data=train_data)
+qda_pred <- predict(qda_model, newdata=test_data)
+pred_class_test <- qda_pred$class
+cM_qda=confusionMatrix(as.factor(pred_class_test), as.factor(test_data$Direction))
+cM_qda
+```
+Here, accuracy is 58.65% with a 95% CI of [48.58, 68.23], sensitivity of 0% and specificity of 100%.
+
+## (g) 
+
+Repeat (d) using KNN with K = 1.  (Enclose both `train` and `test` vectors in `data.frame()`. Make sure that `cl` is as in `class` and not `c1`.) 
+
+```{r}
+train_X <- data.frame(Lag2 = train_data$Lag2)
+test_X <- data.frame(Lag2 = test_data$Lag2)
+train_Y <- train_data$Direction
+knn_pred <- knn(train = train_X, test = test_X, cl = train_Y, k = 1)
+cM_knn=confusionMatrix(as.factor(knn_pred), as.factor(test_data$Direction))
+cM_knn
+```
+Here, accuracy is only 50% with a 95% CI of [40, 59.9], sensitivity of 48.84% and specificity of 50.82%.
+
+## (h) 
+
+Which of these methods appears to provide the best results on
+this data?  (Hint: use `cM$overall[3:4]` to get accuracy confidence interval
+endpoints for each output of `confusionMatrix()`.) Construct a table with
+columns 1 describing the test method, column 2 denoting the `Sensitivity` and
+column 3 denoting the `Specificity`. column 4 denoting the lower endpoint of the
+accuracy confidence interval, and column 5 providing the right endpoint. 
+
+```{r}
+
+results <- data.frame(
+  Method = c("Logistic Regression", "LDA","QDA", "KNN (K=1)"),
+  
+  Sensitivity = c(cM_log$byClass["Sensitivity"], cM_lda$byClass["Sensitivity"], cM_qda$byClass["Sensitivity"], cM_knn$byClass["Sensitivity"]),
+  
+  Specificity = c(cM_log$byClass["Specificity"], cM_lda$byClass["Specificity"], cM_qda$byClass["Specificity"], cM_knn$byClass["Specificity"]),
+  
+  CI_Lower = c(cM_log$overall[3], cM_lda$overall[3], cM_qda$overall[3], cM_knn$overall[3]),
+  
+  CI_Upper = c(cM_log$overall[4], cM_lda$overall[4],cM_qda$overall[4], cM_knn$overall[4])
+)
+
+print(results)
+
+```
+If we only care about accuracy, than the ones with highest accuracy are logistic regression and LDA (62.5%). If we care about detecting up then knn wins (highest sensitivity). If we care about predicting down then QDA wins (100% specificity).
+
+## Do not do part (i)!
+
+#(i) Experiment with different combinations of predictors, including possible
+#transformations and interactions, for each of the methods. Report the variables,
+#method, and associated confusion matrix that appears to provide the best results
+#on the held out data. Note that you should also experiment with values for K in
+#the KNN classifier.
+
+
+# (11)
+
+In this problem, you will develop a model to predict whether a given
+car gets high or low gas mileage based on the Auto data set.
+
+##  (a) 
+
+Create a binary variable, `mpg01`, that contains a `1` if `mpg` contains
+a value above its median, and a `0` if `mpg` contains a value below
+its median. You can compute the median using the `median()`
+function. Note you may find it helpful to use the data.frame()
+function to create a single data set containing both `mpg01` and
+the other `Auto` variables.  Note: please make this variable a factor using `mpg01 <- as.factor(mpg01)'
+
+```{r }
+data(Auto)
+?Auto
+Auto <- cbind("mpg01"=as.factor((Auto$mpg>median(Auto$mpg))), Auto)
+mpg01 <- ifelse(Auto$mpg > median(Auto$mpg),1,0)
+mpg01 <- as.factor(mpg01)
+Auto_mpg01 <- data.frame(Auto, mpg01)
+head(Auto_mpg01)
+```
+
+## (b) 
+
+Explore the data graphically in order to investigate the association between `mpg01` and the other features.  In particular, produce a `pairs()` plot for the data frame.  Next, produce a boxplot of each variable, besides `origin`, versus `mpg01` (2 side-by-side boxplots for each measurement). Finally, use the `table()` function on `as.factor(origin)` and `mpg01` to explore the information provided in `origin`.  Which of the other
+features seem most likely to be useful in predicting `mpg01`? Describe your findings.
+
+```{r}
+pairs(Auto_mpg01[,-9])
+```
+
+
+```{r}
+par(mfrow=c(2,3))
+boxplot(cylinders ~ mpg01, data = Auto_mpg01, main = "Cylinders vs mpg01",horizontal=TRUE,col="red")
+boxplot(displacement ~ mpg01, data = Auto_mpg01, main = "Displacement vs mpg01",horizontal=TRUE,col="yellow")
+boxplot(horsepower ~ mpg01, data = Auto_mpg01, main = "Horsepower vs mpg01",horizontal=TRUE,col="cyan")
+boxplot(weight ~ mpg01, data = Auto_mpg01, main = "Weight vs mpg01",horizontal=TRUE,col="green")
+boxplot(acceleration ~ mpg01, data = Auto_mpg01, main = "Acceleration vs mpg01",horizontal=TRUE,col="blue")
+boxplot(year ~ mpg01, data = Auto_mpg01, main = "Year vs mpg01",horizontal=TRUE,col="violet")
+
+```
+
+
+```{r}
+table(Auto_mpg01$origin, Auto_mpg01$mpg01)
+```
+
+
+## (c) 
+
+Split the data into a training set and a test set.  Choose 20% of the data as test data, using these rows for testing (ignore the leading quantity in square brackets):
+
+```{r}
+set.seed(405)
+testidx <- sample(x=1:nrow(Auto),replace=FALSE, size=.20*nrow(Auto))
+testidx
+
+test_data <- Auto_mpg01[testidx, ]
+train_data <- Auto_mpg01[-testidx, ]
+
+```
+
+##  (d) 
+
+Perform LDA on the training data in order to predict `mpg01`
+using all variables except `mpg`, `name`, origin` and `cylinders`. 
+What is the test error of the model obtained?
+
+```{r}
+lda_model <- lda(mpg01 ~ displacement + horsepower + weight + acceleration + year, data=train_data)
+
+lda_pred <- predict(lda_model, newdata=test_data)
+cM_lda <- confusionMatrix(lda_pred$class , test_data$mpg01)
+cM_lda
+test_error <- 1 - cM_lda$overall["Accuracy"]
+test_error
+```
+Test error: 5.13%
+
+##  (e) 
+
+Perform QDA on the training data in order to predict `mpg01`
+using the same variables as in part (d).
+What is the test error of the model obtained?
+
+```{r}
+qda_model <- qda(mpg01 ~ displacement + horsepower + weight + acceleration + year, data=train_data)
+
+qda_pred <- predict(qda_model, newdata=test_data)
+cM_qda <- confusionMatrix(qda_pred$class , test_data$mpg01)
+cM_qda
+test_error <- 1 - cM_qda$overall["Accuracy"]
+test_error
+```
+Test error is same as lda: 5.13%
+
+##  (f) 
+
+Perform logistic regression on the training data in order to predict `mpg01` using the same variables as above.  What is the test error of the model obtained?  Hint: I found it helpful to glm to remove the unused variable from both `Auto.text` and `Auto.train`.
+
+```{r}
+
+log_model <- glm(mpg01 ~ displacement + horsepower + weight + acceleration + year, 
+                 data=train_data, family=binomial)
+
+
+log_pred <- predict(log_model, newdata=test_data, type="response")
+
+log_pred_class <- ifelse(log_pred > 0.5, "TRUE", "FALSE")  
+cM_log <- confusionMatrix(as.factor(log_pred_class), test_data$mpg01)
+cM_log
+test_error <- 1 - cM_log$overall["Accuracy"]
+test_error
+```
+Test error: 7.69%
+
+##  (g) 
+
+Perform KNN on the training data, with values of K=5,50,100 in
+order to predict `mpg01`. Use the variables as in `lda()`.
+What test errors do you obtain?
+Which value of K seems to perform the best on this data set?
+Summarize the results of all classifiers on the `Auto` dataset in a table, as in problem (10.).
+
+
+```{r}
+predictors <- c("displacement", "horsepower", "weight", "acceleration", "year")
+
+
+train_X <- train_data[, predictors]
+test_X <- test_data[, predictors]
+train_Y <- train_data$mpg01
+
+knn_pred_5 <- knn(train = train_X, test = test_X, cl = train_Y, k =  5)
+cM_knn_5 <- confusionMatrix(knn_pred_5, test_data$mpg01)
+cM_knn_5
+
+test_error <- 1 - cM_knn_5$overall["Accuracy"]
+test_error
+
+```
+Test error (K=5): 12.82%
+
+```{r}
+knn_pred_50 <- knn(train = train_X, test = test_X, cl = train_Y, k =  50)
+cM_knn_50 <- confusionMatrix(knn_pred_50, test_data$mpg01)
+cM_knn_50
+
+test_error <- 1 - cM_knn_50$overall["Accuracy"]
+test_error
+```
+Test error (K=50): 8.97%
+
+```{r}
+knn_pred_100 <- knn(train = train_X, test = test_X, cl = train_Y, k =  100)
+cM_knn_100 <- confusionMatrix(knn_pred_100, test_data$mpg01)
+cM_knn_100
+
+test_error <- 1 - cM_knn_100$overall["Accuracy"]
+test_error
+```
+Test error (K=100): 10.26%
+
+It looks like K=50 performs the best, with the highest accuracy of 91%.
+
+```{r}
+
+results <- data.frame(
+  Method = c("LDA","QDA","Logistic Regression", "KNN (K=5)", "KNN (K=50)", "KNN (K=100)"),
+  
+  Sensitivity = c(cM_lda$byClass["Sensitivity"], cM_qda$byClass["Sensitivity"], cM_log$byClass["Sensitivity"], cM_knn_5$byClass["Sensitivity"]
+,cM_knn_50$byClass["Sensitivity"],cM_knn_100$byClass["Sensitivity"]),
+  
+  Specificity = c(cM_lda$byClass["Specificity"], cM_qda$byClass["Specificity"],
+cM_log$byClass["Specificity"],cM_knn_5$byClass["Specificity"],
+cM_knn_50$byClass["Specificity"],cM_knn_100$byClass["Specificity"]),
+  
+  CI_Lower = c(cM_lda$overall[3], cM_qda$overall[3],cM_log$overall[3], cM_knn_5$overall[3],
+cM_knn_50$overall[3],cM_knn_100$overall[3]),
+  
+  CI_Upper = c(cM_lda$overall[4], cM_qda$overall[4],cM_log$overall[4], cM_knn_5$overall[4],
+cM_knn_50$overall[4],cM_knn_100$overall[4]))
+
+print(results)
+```
+

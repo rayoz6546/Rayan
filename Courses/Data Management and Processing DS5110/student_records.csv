@@ -1,0 +1,151 @@
+StudentID,FirstName,LastName,Major,Year,GPA
+1,Isabella,Lee,English,Sophomore,2.9
+2,Elijah,Martinez,Physics,Junior,4.0
+3,Bob,Thomas,Computer Science,Freshman,3.2
+4,Bob,Taylor,Economics,Freshman,2.4
+5,John,Miller,Computer Science,Senior,3.2
+6,Clara,Garcia,Chemistry,Freshman,3.0
+7,David,Anderson,Mathematics,Freshman,2.7
+8,James,Moore,English,Senior,3.3
+9,Isabella,Martin,Mathematics,Junior,2.6
+10,Sophia,Martinez,Economics,Senior,3.9
+11,Lily,Smith,Chemistry,Freshman,2.1
+12,Ethan,Lee,English,Sophomore,3.1
+13,Olivia,Thomas,Engineering,Senior,4.0
+14,Noah,White,Mathematics,Sophomore,3.8
+15,Lily,Miller,Psychology,Junior,3.0
+16,Olivia,Thomas,Mathematics,Junior,2.9
+17,Lily,Harris,Physics,Junior,3.7
+18,Ethan,Lee,English,Freshman,2.2
+19,Elijah,White,Physics,Sophomore,2.3
+20,Mia,Miller,Psychology,Freshman,3.4
+21,Sophia,Martinez,Biology,Senior,2.7
+22,Jacob,Thomas,Chemistry,Freshman,3.1
+23,Alice,Anderson,Biology,Senior,3.3
+24,Mia,Robinson,Economics,Senior,3.8
+25,Emma,Martin,Mathematics,Freshman,3.3
+26,Bob,Clark,English,Junior,3.0
+27,Ava,Harris,Chemistry,Sophomore,3.5
+28,Mia,White,Engineering,Senior,3.8
+29,Olivia,Davis,Physics,Freshman,2.3
+30,Ethan,Harris,Chemistry,Senior,2.3
+31,Mason,Martin,Psychology,Senior,2.7
+32,Michael,Robinson,Engineering,Junior,2.5
+33,Alice,Clark,Physics,Freshman,3.4
+34,Ethan,Clark,Physics,Sophomore,2.8
+35,Sophia,Taylor,English,Sophomore,2.1
+36,James,Taylor,Art,Freshman,2.4
+37,Jacob,Martin,Biology,Senior,2.1
+38,David,Garcia,Chemistry,Sophomore,2.6
+39,Alice,Taylor,Engineering,Junior,3.3
+40,Mia,Jackson,Biology,Sophomore,2.5
+41,Bob,White,Mathematics,Sophomore,2.2
+42,Bob,Thompson,Biology,Senior,2.6
+43,James,Wilson,Computer Science,Sophomore,2.8
+44,Ethan,Davis,Engineering,Junior,2.9
+45,Bob,Moore,Art,Sophomore,3.2
+46,John,Thomas,Art,Sophomore,2.6
+47,Michael,Clark,English,Senior,2.6
+48,Mason,Clark,Art,Freshman,3.8
+49,Ava,Wilson,Art,Senior,2.4
+50,Mia,Brown,Physics,Freshman,3.8
+51,Clara,Garcia,Engineering,Junior,2.1
+52,Liam,Smith,Mathematics,Sophomore,2.2
+53,Clara,Smith,Engineering,Freshman,2.3
+54,Clara,Taylor,Computer Science,Senior,2.1
+55,Mia,Martinez,Chemistry,Senior,3.4
+56,Olivia,Robinson,Physics,Senior,3.0
+57,Michael,Martin,Biology,Sophomore,3.2
+58,John,Jackson,Psychology,Sophomore,2.6
+59,Ava,White,Chemistry,Junior,2.3
+60,Mia,Robinson,Biology,Junior,2.7
+61,David,Taylor,Physics,Senior,2.1
+62,Sophia,Thompson,Economics,Junior,3.9
+63,Liam,Harris,English,Junior,3.5
+64,Olivia,Davis,Art,Sophomore,2.1
+65,Noah,Davis,Economics,Junior,2.5
+66,Sophia,Jackson,Biology,Junior,2.4
+67,Noah,Martin,Psychology,Freshman,2.7
+68,David,Robinson,Economics,Senior,3.0
+69,Olivia,Martin,Psychology,Junior,2.8
+70,Clara,Clark,Art,Senior,3.1
+71,Emma,Wilson,Biology,Senior,2.1
+72,Isabella,Smith,Mathematics,Freshman,3.3
+73,Elijah,White,Physics,Junior,2.6
+74,James,Harris,Computer Science,Freshman,2.7
+75,Sophia,Smith,Economics,Sophomore,3.9
+76,Bob,Moore,Computer Science,Sophomore,3.9
+77,Lily,Thompson,Engineering,Senior,2.2
+78,Liam,Martinez,Art,Freshman,3.4
+79,Liam,Johnson,Art,Junior,3.2
+80,Mia,Thomas,Biology,Sophomore,3.7
+81,John,Martinez,Physics,Sophomore,2.2
+82,James,Lee,Physics,Junior,2.7
+83,Noah,Jackson,Art,Junior,3.8
+84,Isabella,Jackson,Mathematics,Freshman,2.3
+85,John,White,Psychology,Senior,3.4
+86,Sophia,Wilson,Psychology,Sophomore,3.5
+87,James,Clark,Computer Science,Senior,2.7
+88,Jacob,Jackson,Computer Science,Freshman,3.8
+89,Alice,Smith,Computer Science,Sophomore,2.3
+90,Alice,Jackson,Mathematics,Freshman,3.7
+91,Liam,Wilson,Engineering,Senior,2.1
+92,Elijah,Jackson,Mathematics,Sophomore,3.2
+93,Olivia,Martin,Physics,Sophomore,2.3
+94,James,Clark,Computer Science,Junior,2.4
+95,Bob,Harris,Art,Sophomore,2.2
+96,Olivia,Brown,Art,Senior,3.4
+97,Clara,Wilson,English,Junior,2.1
+98,David,Thompson,Mathematics,Sophomore,3.7
+99,Bob,Thompson,Mathematics,Junior,3.9
+100,Ava,Moore,Computer Science,Senior,3.8
+101,Emma,Miller,Biology,Sophomore,3.6
+102,John,Robinson,Physics,Freshman,3.7
+103,Olivia,Taylor,Economics,Junior,2.9
+104,Isabella,Clark,English,Sophomore,2.8
+105,Jacob,Davis,English,Senior,2.8
+106,Mia,Thomas,Mathematics,Senior,3.4
+107,Noah,Johnson,Economics,Senior,3.5
+108,Sophia,Harris,Mathematics,Sophomore,2.4
+109,Ava,Miller,Chemistry,Freshman,3.0
+110,Lily,Garcia,Psychology,Senior,2.7
+111,Clara,Jackson,Computer Science,Sophomore,3.6
+112,Olivia,Davis,Biology,Senior,3.9
+113,John,Martin,Physics,Sophomore,3.0
+114,Elijah,Thomas,Economics,Sophomore,2.7
+115,Isabella,Miller,Computer Science,Junior,2.8
+116,Noah,Martinez,Physics,Freshman,3.0
+117,Isabella,Robinson,Art,Sophomore,2.1
+118,Isabella,Martinez,Physics,Freshman,3.5
+119,Lily,Lee,Physics,Senior,3.8
+120,Bob,Brown,Engineering,Sophomore,2.0
+121,James,Anderson,Engineering,Junior,3.2
+122,Mason,Jackson,English,Junior,2.7
+123,Bob,Taylor,Computer Science,Freshman,2.9
+124,Jacob,Clark,Physics,Sophomore,2.9
+125,Isabella,Wilson,Computer Science,Freshman,2.3
+126,Mia,Anderson,English,Freshman,2.6
+127,Liam,Johnson,Computer Science,Sophomore,2.2
+128,Elijah,Miller,Psychology,Junior,3.8
+129,John,Garcia,Physics,Junior,3.2
+130,Liam,Clark,Mathematics,Freshman,3.1
+131,Ethan,Garcia,Mathematics,Freshman,2.5
+132,Ava,Garcia,Biology,Freshman,3.9
+133,Sophia,Davis,Biology,Freshman,3.6
+134,Noah,Moore,Psychology,Junior,3.0
+135,Isabella,White,Biology,Junior,2.5
+136,Mia,Thomas,Computer Science,Freshman,3.8
+137,Liam,Taylor,Computer Science,Junior,3.2
+138,Jacob,Thomas,Art,Sophomore,3.2
+139,Lily,Garcia,Art,Senior,3.5
+140,Jacob,Smith,Chemistry,Junior,2.0
+141,Olivia,Anderson,Engineering,Freshman,3.6
+142,Sophia,Harris,Engineering,Senior,2.3
+143,Jacob,Anderson,Chemistry,Freshman,2.7
+144,Elijah,Garcia,Psychology,Sophomore,2.4
+145,John,Jackson,Psychology,Freshman,3.5
+146,Ethan,Martinez,Art,Freshman,2.3
+147,Isabella,Miller,Economics,Junior,2.2
+148,Isabella,Robinson,Economics,Sophomore,2.4
+149,Jacob,Jackson,Biology,Senior,2.1
+150,Elijah,Miller,Engineering,Junior,3.4

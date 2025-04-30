@@ -1,0 +1,193 @@
+---
+title: "Midterm Exam "
+author: "Rayan Hassan"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# DS5220 Midterm Exam 
+
+## Linear Regression
+```{r linearRegression, echo = FALSE}
+data(attitude)
+write.csv(attitude,"attitude.csv")
+```
+
+You have been hired as a data scientist to consult with the corporate board of a large, mid-Western financial firm.  The company's board is trying to improve the work conditions of the corporation's employees and asked 30 departments to hand out the following questions for completion.
+
+1. Are you satisfied with the potential of advancement? Y/N
+2. Do you believe that there is excessive criticism ? Y/N
+3. Do you feel that salary raises reflect employee effort? Y/N
+4. Are you satisfied with the options for education advancement? Y/N
+5. Is there sufficient effort to show employee appreciation? Y/N
+6. Are employee complaints handled adequately Y/N
+7. Are you satisfied in general with your position? Y/N
+
+Each department asked many employees to complete this questionaire anonymously, and reported the departmental percentage of Y's for each question to the corporate board.  The resulting 30 observations are reported here
+
+```{r attitude, echo=FALSE}
+force(attitude)
+attitude <- as_tibble(attitude)
+```
+
+The board is willing to pay for 2 hours of your time to help them improve morale.  What can be done to improve job satisfaction within departments?  What distinguishes a high-morale department from the rest?
+
+## Pairs Plot
+
+1.) To begin your work, please produce a pairs plot and spend 5 minutes looking it over and commenting.  With a focus on the `rating` response, what measurements seem to effect `rating`?
+
+```{r pairs, echo=FALSE}
+pairs(attitude)
+```
+
+ANS: 
+
+By looking at the pairs plot, there is a noticeable positive linear relationship between "ratings" and "complaints", which means that "complaints" seem to affect "ratings" considerably. We cannot say the same about the other measurements since from the other scatterplots we cannot deduce any obvious relationship with "ratings".
+
+## On what does `rating` depend, most strongly?
+
+2.) In ten minutes, please use linear regression to capture the dependence of overall job satisfaction on particular predictors.  Begin with the formula `rating ~ .`, and produce a `summary(lm(...))`, which shows the p-value tables covered in class. Which predictors don't effect overall job satifaction?  Which predictors do?  Use the (\*,\*\*,\*\*\*) score as a guidance.  Why are the p-value thresholds for (***) variables, seen in the summary output,  much higher than those seen in lecture?
+
+```{r lm, echo=FALSE}
+linear_model1 = lm(rating ~ ., data=attitude)
+summary(linear_model1)
+
+```
+
+ANS: 
+
+Predictors that do not affect job satisfaction significantly are: privileges, raises, critical, and advance. (high p-values, non-significant measurements)
+
+The predictors that affect job satisfaction are: "complaints" (which has a p-value of 0.000903 meaning it is highly significant), and "learning" slightly (much less significant, with a p-value of 0.069925).
+
+
+## How does `rating` depend on strong predictors?
+
+3.) Using only the (\*\*\*) predictors from (2), rerun the linear regression one more time, fitting `rating` to only those variables, and produce a `summary()`.  Please explain any difference in p-values compared to those in (2.). (Hint: Review the *t-statistic* on Wikipedia.)  Use the coefficient sign and magnitude for each predictor to address the following question.  How would the overall job satisfaction change with an increase of 10 in that predictor alone?
+
+```{r lm2, echo = FALSE}
+linear_model2 = lm(rating ~ complaints, data=attitude)
+summary(linear_model2)
+```
+ANS: 
+
+Here, the p-value for predictor "complaints" is much lower that the one seen in the previous model (1.99e-08 << 0.000903). Also, the t-statistic increased from 3.809 to 7.737 (t = estimate/standard error). This is because when we fit the model with other variables, they shared some of the variance which in turns reduced some of the "uniqueness" of "complaints". Removing them allowed "complaints" to explain more variance (no more noise coming from the other, non-significant, measurements) which increased the t-statistic and decreased the p-value.
+
+"complaints" has an estimate of 0.75461 (=slope="beta1"). This means that for every one-unit increase in "complaints", the overall job satisfaction ("rating") increases by 0.75461 units. Also, the estimate for the intercept (="beta0"="rating") is 14.37632. So the formula for this linear regression model is: 
+
+overall_job_satisfaction = 14.37632 + 0.75461complaints
+
+If "complaints" increases by 10: 
+
+new_overall_job_satisfaction = 14.37632 + 0.75461(complaints+10)
+
+new_overall_job_satisfaction = 14.37632 + 0.75461complaints + 0.75461*10
+
+new_overall_job_satisfaction = 14.37632 + 0.75461complaints + 7.5461
+
+new_overall_job_satisfaction = overall_job_satisfaction + 7.5461
+
+So the overall job satisfaction would increase by 7.5461
+
+## Backwards selection of predictors
+
+4.) Spend 15 minutes finding, by backward selection, the best combination of predictors to estimate `rating`. (Hint: You can do this by hand, as the data set is small in width).  Stop removing predictors when the *adjusted R-squared* decreases.  Which predictors did you keep at the end?  Which coefficients are confidently far from 0, and why are you confident?  For each coefficient, you may separately determine the confidence for its sign and magnitude.
+
+**Important formatting** Only display the lm() call at each step, or the predictors removed at each step), and the adjusted $R^2$, the latter using `summary()$adj.r.squared`.  For your final choice **only**, display the full `summary()`.
+
+```{r forward selection, echo=TRUE}
+model1 <- lm(rating ~ complaints + privileges + learning + raises + critical + advance, data = attitude)
+summary(model1)$adj.r.squared
+
+model2 <- lm(rating ~ complaints + privileges + learning + raises + advance, data = attitude)
+summary(model2)$adj.r.squared
+
+model3 <- lm(rating ~ complaints + privileges + learning + advance, data = attitude)
+summary(model3)$adj.r.squared
+
+model4 <- lm(rating ~ complaints + learning + advance, data = attitude)
+summary(model4)$adj.r.squared
+
+model5 <- lm(rating ~ complaints + learning, data = attitude)
+summary(model5)$adj.r.squared
+
+summary(model5)
+
+```
+
+ANS: 
+
+I ended up keeping "complaints" and "learning" following the backwards method.
+
+Let's calculate the 95% confidence interval for each coefficient using this formula: 
+
+CI=[Estimate - 2std. error ; Estimate + 2std. error].
+
+"beta0" (intercept): 95% CI: [9.8709 - 2 x 7.0612 ; 9.8709 + 2 x 7.0612] = [-4.2515 ; 23.9933]
+
+"beta1" (complaints): 95% CI = [ 0.6435 - 2 x 0.1185 ; 0.6435 + 2 x 0.1185 ] = [0.4065 ; 0.8805]
+
+"beta2" (learning): 95% CI = [0.2112 - 2 x 0.1344 ; 0.2112 + 2 x 0.1344] = [-0.0576 ; 0.48]
+
+
+Interpretations: 
+
+For "beta0" (intercept): The CI includes 0 so it is NOT confidently far from 0, and since the sign can be positive or negative, we are NOT confident about the sign of beta0. The CI is very wide which shows a lot of uncertainty in the magnitude. Therefore, we are NOT confident about the magnitude of beta0.
+
+For "beta1" (complaints): It is confidently far from 0 since the CI does not include 0 and the p-value is less than 0.05. The CI is entirely positive, so we are confident that the sign of beta1 is positive. Also, The CI is relatively narrow which suggests that the magnitude is precise. So we are confident about the magnitude of beta1. 
+
+For "beta2" (learning): The CI includes 0 so it is NOT confidently far from 0, and since the sign can be positive or negative, we are NOT confident about the sign of beta2. As for the magnitude, I we are NOT confident about because even though looking at the range of the CI one might say it's close to the range obtained for beta1, the standard error (0.1344) is relatively large when compared to the estimate (0.2112), which signals that we are NOT confident about the magnitude of beta2.
+
+
+## What is the chance that a department is good?
+
+The board would like for you to estimate the probability that each department is a "good" department, according to `rating`.  We will do this by logistic regression, using *leave-one-out-cross-validation*.
+
+Step 1.) 
+Create a new, binary measurement called `high_rated` and add it to your data frame.  Create this measurement by the test `rating > median(rating)`, and then remove the measurement `rating` from the data frame.  
+
+```{r glm_prep}
+attitude$high_rated <- as.numeric(attitude$rating > median(attitude$rating))
+attitude$rating <- NULL
+head(attitude)
+```
+
+Step 2.) Using only the most-confident predictor found earlier, perform a logistic regression for the probability that each department is `high_rated`. Compute this probability for each department.  Use the row index of the data frame to index the department, and provide a table showing: department index, 'high_rated' and P_high_rated. Please sort this table by descending probability.  Explain any descrepancies between the columns, above and below a probability threshold of 0.5 separately.  Based on this work, what advise should you give to the board?
+
+```{r glm}
+logistic_model <- glm(high_rated ~ complaints, data = attitude, family = binomial)
+
+attitude$P_high_rated <- predict(logistic_model, type = "response")
+
+attitude$department_index <- 1:nrow(attitude)
+
+result <- attitude[order(-attitude$P_high_rated), c("department_index", "high_rated", "P_high_rated")]
+
+result
+
+confusion_matrix <- table(
+  Actual = attitude$high_rated,
+  Predicted = round(attitude$P_high_rated)
+)
+
+confusion_matrix
+```
+
+ANS: 
+
+From the confusion matrix generated above, we can see that we had 2 false positives and 3 false negatives. This means that 2 departments were predicted to have high rate when really the do not (from the first table we can tell that these are departments with index 19 and 7), and 3 departments were predicted to have low rate when really they have high rate (from the table, departments at index 13, 10, and 12) The accuracy of the model is: (13+12)/30 = 25/30 = 83.33%. Sensitivity (true positivie rate) is equal to 12/(12+3) = 80%, which means that the model correctly identified 80% of the actual high rated departments and missed 20% of them. Specificity is equal to 13/(13+2) = 86.67%, which means that the model correctly identifies 86.67% of the actual not high rated departments.
+
+In general, this model has a good accuracy. This means that "complaints" is a good indicator for whether a department is highly rated or not.
+
+Overall Analysis:
+
+Low ratings for departments 19, 7, 23, 2,4, 22, 18, 20, 28, 6, 25, 11, 1, 21, 24 are mainly associated with the firm's inability to handle complaints adequately. This is shown due to the strong positive linear relationship between people who answered Y to "Are employee complaints handled adequately" and people who answered Y to "Are you satisfied in general with your position?", and the non-significant effect of the other predictors on "ratings". Not to mention the high accuracy obtained after training the logistic model using only "complaints" as predictor. This suggests that if people answered N to "Are you satisfied in general with your position?", it is highly likely that the inadequate handling of complaints was the main reason for it.
+
+
+Final advise for board: 
+
+Improve handling of complaints.

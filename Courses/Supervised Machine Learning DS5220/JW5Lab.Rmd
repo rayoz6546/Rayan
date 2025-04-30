@@ -1,0 +1,156 @@
+---
+title: "JW Ch 5 Lab"
+author: "Rayan Hassan"
+date: "3/9/2025"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Instructions and time-saving hints.**  To begin this lab, download the archive and unpack it.  Inside the folder, you will find a Rmarkdown file.
+
+The purpose of this lab is to implement linear regression in R.  You will reproduce the commands blocks in JW Section 5.3 in this Rmarkdown file.  **Please do not retype all the R commands as shown in Section 5.3.**  Instead, go to [link to text for Lab JW Ch 5](http://faculty.marshall.usc.edu/gareth-james/ISL/Chapter%205%20Lab.txt), cut and paste the text into your Rmarkdown file.  Then break up the R commands into the R chunks shown in the text.  (R chunks are braced by triple backticks and a leading {r}, as before.)  Do not put all commands into the same block!  The idea is to imitate the code chunks in Section 5.3 with the additional plots and output omitted from the text.  Below, I have given you the first two blocks for reference.
+
+After creating a new chunk, you may knit the document.  Read Section 5.3 as you go.  You may comment out the ```fix()``` commands if you do not wish to close editor windows during knitting.  You may also wish to comment out the commands which deliberately produce an error during the exercise.  Since R chunks are independent pieces of code, you will produce some errors when imitating the format in the book.  For example, the ```abline()``` commands must be grouped in the same chunk as the initial ```plot()``` command.
+
+Congratulations!  When the document is successfully knitted, you should reread Section 5.3 along with the Rmarkdown output.  You should see the commands along with the output plots.    Submit your Rmd file along with an unzipped PDF of the result before the deadline.
+ 
+# Chaper 5 Lab: Cross-Validation and the Bootstrap
+
+# The Validation Set Approach
+
+```{r}
+library(ISLR)
+set.seed(1)
+train=sample(392,196)
+```
+
+```{r}
+lm.fit=lm(mpg~horsepower,data=Auto,subset=train)
+```
+
+```{r}
+attach(Auto) 
+mean((mpg-predict(lm.fit,Auto))[-train]^2)
+```
+
+```{r}
+lm.fit2=lm(mpg~poly(horsepower,2),data=Auto,subset=train) 
+mean((mpg-predict(lm.fit2,Auto))[-train]^2)
+```
+
+```{r}
+lm.fit3=lm(mpg~poly(horsepower,3),data=Auto,subset=train) 
+mean((mpg-predict(lm.fit3,Auto))[-train]^2)
+```
+
+```{r}
+set.seed(2) 
+train=sample(392,196) 
+lm.fit=lm(mpg~horsepower,subset=train)
+mean((mpg-predict(lm.fit,Auto))[-train]^2)
+lm.fit2=lm(mpg~poly(horsepower,2),data=Auto,subset=train) 
+mean((mpg-predict(lm.fit2,Auto))[-train]^2)
+lm.fit3=lm(mpg~poly(horsepower,3),data=Auto,subset=train) 
+mean((mpg-predict(lm.fit3,Auto))[-train]^2)
+```
+
+# Leave-One-Out Cross-Validation
+
+```{r}
+glm.fit=glm(mpg~horsepower,data=Auto) 
+coef(glm.fit)
+```
+
+```{r}
+lm.fit=lm(mpg~horsepower,data=Auto) 
+coef(lm.fit)
+```
+
+```{r}
+library(boot) 
+glm.fit=glm(mpg~horsepower,data=Auto) 
+cv.err=cv.glm(Auto,glm.fit) 
+cv.err$delta
+```
+
+```{r}
+cv.error=rep(0,5) 
+for (i in 1:5){ 
+glm.fit=glm(mpg~poly(horsepower,i),data=Auto) 
+cv.error[i]=cv.glm(Auto,glm.fit)$delta[1] 
+} 
+cv.error
+```
+
+# k-Fold Cross-Validation
+
+```{r}
+set.seed(17) 
+cv.error.10=rep(0,10) 
+for (i in 1:10){ 
+  glm.fit=glm(mpg~poly(horsepower,i),data=Auto) 
+  cv.error.10[i]=cv.glm(Auto,glm.fit,K=10)$delta[1] 
+  } 
+cv.error.10
+```
+
+# The Bootstrap
+
+```{r}
+alpha.fn=function(data,index){ 
+  X=data$X[index] 
+  Y=data$Y[index] 
+  return((var(Y)-cov(X,Y))/(var(X)+var(Y)-2*cov(X,Y))) 
+  }
+```
+
+```{r}
+alpha.fn(Portfolio,1:100)
+```
+
+```{r}
+set.seed(1) 
+alpha.fn(Portfolio,sample(100,100,replace=T))
+```
+
+```{r}
+boot(Portfolio,alpha.fn,R=1000)
+```
+
+# Estimating the Accuracy of a Linear Regression Model
+
+```{r}
+boot.fn=function(data,index) 
+  return(coef(lm(mpg~horsepower,data=data,subset=index))) 
+boot.fn(Auto,1:392)
+```
+
+```{r}
+set.seed(1) 
+boot.fn(Auto,sample(392,392,replace=T))  
+boot.fn(Auto,sample(392,392,replace=T))
+```
+
+```{r}
+boot(Auto,boot.fn,1000)
+```
+
+```{r}
+summary(lm(mpg~horsepower,data=Auto))$coef
+```
+
+```{r}
+boot.fn=function(data,index) 
+  coefficients(lm(mpg~horsepower+I(horsepower^2),data=data, subset=index)) 
+set.seed(1) 
+boot(Auto,boot.fn,1000)
+```
+
+```{r}
+summary(lm(mpg~horsepower+I(horsepower^2),data=Auto))$coef
+```

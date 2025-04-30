@@ -1,0 +1,199 @@
+---
+title: "GWLabCh5 Solutions"
+author: "Rayan Hassan"
+date: ""
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+```
+In this lab we’re going to focus on how to use the `dplyr` package, another core member of the `tidyverse`. We’ll illustrate the key ideas using data from the `nycflights13` package, and use `ggplot2` to help us understand the data. 
+
+Please read Chapter 5, edition 1,  of  [*R for Data Science (GW),* Garrett Grolemund, Hadley Wickham](https://r4ds.had.co.nz), and complete the exercises below after you finish each section.  Edit the markdown file which came with this html directly.  Make sure to enter your R code in the chunks following each question to demonstrate your answers.   Answers without demonstration will be given little credit.  The function `glimpse()` is used to show only the graded portion of your answer.
+
+For this lab, you will need to install the `nycflights13` data set.  Go to your *Console* window, and type `install.packages("nycflight13")` before you run the `library()` call below.
+
+```{r }
+library(nycflights13)
+library(tidyverse)
+glimpse(flights)
+```
+
+## 5.2.4 Exercises
+
+1.1  Using `filter()` then `glimpse()`, find all flights that had an arrival delay of two or more hours.  
+```{r}
+
+flights %>% 
+  filter(arr_delay>=120) %>%
+  glimpse()
+```
+1.2 Using `filter()` then `glimpse()`, find all flights that flew to Houston (IAH or HOU)
+```{r}
+flights %>%
+  filter(dest == "IAH" | dest == "HOU") %>%
+  glimpse()
+```
+1.3  Using `filter()` then `glimpse()`, were operated by United, American, or Delta. 
+```{r}
+flights %>%
+  filter(carrier=="UA" | carrier=="AA"| carrier=="DL") %>%
+  glimpse()
+
+```
+1.4 Using `filter()` and `glimpse()`, find all flights that departed in summer (July, August, and September).  Use the `%in%` operator.
+```{r}
+flights %>%
+  filter(month %in% 7:9) %>%
+  glimpse()
+
+```
+1.5 Using `filter()` and `glimpse()`, find all flights that arrived more than two hours late, but didn’t leave late. 
+```{r}
+flights %>%
+  filter(arr_delay > 120, dep_delay <= 0) %>%
+  glimpse()
+```
+1.6 Using `filter()` and `glimpse()`, find all flights that were delayed by at least an hour, but made up over 30 minutes in flight 
+```{r}
+flights %>%
+  filter(dep_delay >= 60, dep_delay - arr_delay > 30) %>%
+  glimpse()
+``` 
+1.7  Using `filter()` and `glimpse()`, find all flights that departed between midnight and 6am (inclusive) 
+```{r}
+# in this dataset midnight is represented by 2400 (for reference)
+flights %>%
+  filter(dep_time<=600 | dep_time==2400) %>%
+  glimpse()
+``` 
+2.0 `between(x,left,right)` returns a logical vector indicating those elements of `x` which satisfy `left<= x <= right`.  Here are two examples:
+```{r}
+# Example 1: Find flights departing between 6:00 and 10:00 am
+flights %>%
+  filter(between(dep_time, 600, 1000)) %>%
+  glimpse()
+
+# Example 2: Find flights with arrival delay between 30 and 60 minutes
+flights %>%
+  filter(between(arr_delay, 30, 60)) %>%
+  glimpse()
+``` 
+Here is the code rewritten for 1.4
+```{r,eval=FALSE}
+flights %>%
+  filter(between(month,7,9)) %>%
+  glimpse()
+```
+Here is the code rewritten for 1.7
+```{r,eval=FALSE}
+flights %>%
+  filter(between(dep_time, 0, 600) | dep_time == 2400) %>%
+  glimpse()
+``` 
+3.0 How many flights have a missing dep_time? What other variables are missing? What might these rows represent? 
+```{r}
+summary(flights)
+```
+The summary shows us that 8255 flights have a missing dep_time, 8255 have a missing dep_delay, 8713 have a missing arr_time, 9430 have a missing arr_delay, and 9430 have a missing air_time. These can be flights that failed to depart or arrive (maybe cancelled flights). Or they can just be lost data about the flights.
+
+4.0 Why is NA ^ 0 not missing? Why is NA | TRUE not missing? Why is FALSE & NA not missing? Can you figure out the general rule? (NA * 0 is a tricky counterexample!)
+
+```{r}
+NA ^ 0  
+NA | TRUE 
+FALSE & NA 
+NA * 0
+```
+NA ^ 0  Not missing because anything to the power 0 returns 1.
+NA | TRUE Not missing because | evaluates to TRUE if any of the terms is true.
+FALSE & NA Not missing because & evaluates to TRUE ONLY if both terms are TRUE, which is not the case here.
+NA * 0 is not 0 because it is undefined. it is like doing 0 * infinity and 0 * -infinity
+
+## 5.3.1 Exercises
+1.0 How could you use `arrange()` to sort all instances in `flights` have missing values of `dep_time` to the start? (Hint: use `is.na())`. Please use `glimpse()`.
+```{r}
+flights %>%
+  arrange(desc(is.na(dep_time))) %>%
+  glimpse()
+```
+2.0 Using `glimpse()` and `arrange()` sort flights to find the most delayed flights. Find the flights that left earliest (ahead of schedule). 
+```{r}
+flights %>%
+  arrange(desc(dep_delay)) %>%
+  glimpse()
+```
+Here the most delayed flight for example is flight 51 (carrier: HA) which was scheduled to depart January 9 2013 with delay of 1301 minutes.
+
+```{r}
+flights %>%
+  arrange(dep_delay) %>%
+  glimpse()
+```
+We can see for example that flight 97 (carrier: B6) which was scheduled to depart December 7 2013 AT 21:23 department 43 minutes early (dep_delay= -43).
+
+3. Sort flights to find the highest-speed flights. Please use `glimpse()`. 
+```{r}
+flights %>%
+  arrange(desc(distance / air_time)) %>%
+  glimpse()
+
+```
+4.0 Which flights travelled the farthest? Which travelled the shortest? Please use `glimpse()`.
+```{r}
+flights %>%
+  arrange(desc(distance)) %>%
+  glimpse()
+```
+Here for example the flight that travelled the farthest (highest distance) is flight 51 (carrier: "HA") which was scheduled to depart January 1 2013 from JFK to HNL.
+```{r}
+flights %>%
+  arrange(distance) %>%
+  glimpse()
+```
+Here for example the flight that travelled the shortest distance is flight 51 (carrier: "US") which was scheduled to depart July 27 2013 from EWR to LGA.
+
+## Section 5.4.1 Exercises
+
+1. Brainstorm as many ways as possible to select dep_time, dep_delay, arr_time, and arr_delay from flights.
+```{r, eval=FALSE}
+select(flights, dep_time,  dep_delay, arr_time, arr_delay)
+select(flights, c(dep_time,  dep_delay, arr_time, arr_delay))
+select(flights, "dep_time", "dep_delay", "arr_time", "arr_delay")
+select(flights, 4, 6, 7, 9)
+flights %>% 
+  select(dep_time,  dep_delay, arr_time, arr_delay)
+flights %>% 
+  select_("dep_time",  "dep_delay", "arr_time", "arr_delay")
+select(flights, any_of(c("dep_time", "dep_delay", "arr_time", "arr_delay")))
+select(flights, starts_with("dep_"), starts_with("arr_"))
+```
+
+2. What happens if you include the name of a variable multiple times in a `select()` call?  Why is this useful?
+```{r}
+flights %>% 
+  select(dep_delay, dep_delay, dep_delay)
+```
+Nothing happens when we include the variable mutliple times inside select(). Duplicates are prevented. This is useful because we don't have to worry about them. 
+
+3. What do the `any_of()`, `all_of()` and `one_of()` functions do? Why might it be helpful in conjunction with this vector?
+
+`vars <- c("year", "month", "day", "dep_delay", "arr_delay")`
+
+
+```{r}
+vars <- c("year", "month", "day", "dep_delay", "arr_delay")
+select(flights, any_of(vars))
+select(flights, all_of(vars))
+select(flights, one_of(vars))
+```
+
+These functions return all the variables we want, in this case all the variables in the vars vector. This is useful because it is easier to generate character vectors with variable names.
+
+4. How do the `select` helpers deal with case by default? How can you change that default?
+```{r}
+select(flights, contains("TIME"))
+select(flights, contains("TIME", ignore.case = FALSE))
+```
+By default contains() is not case sensitive. We can change that by using ignore.case=FALSE

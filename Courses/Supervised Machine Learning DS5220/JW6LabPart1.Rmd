@@ -1,0 +1,203 @@
+---
+title: "JW Ch 6 Lab, Part 1"
+author: "Rayan Hassan"
+date: 
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+**Instructions and time-saving hints.** The purpose of this lab is to learn
+linear regression in R.  You will reproduce the commands blocks in JW Section
+6.5 in this Rmarkdown file. **Please do not retype all the R commands as shown
+in Section 6.5.**  Instead, go to [link to text
+](https://www.statlearning.com/resources-first-edition), find Chapter 6 Lab
+text, and cut and paste the text into your Rmarkdown file.  Then break up the R
+commands into the R chunks shown in the text.  **Do not put all commands into
+the same block!**
+
+After breaking the text into the correct chunks, you may knit the document.
+You will notice some problems when knitting.  This is due to the fact that the
+pasted commands are meant for the command line, not Rmarkdown.  You must find
+Rmarkdown conversions for these problems.  One  problem is the appearance of the
+`fix()` commands in the blocks, which displays dataframes in a different window.
+As a substitute for `fix()`, please use the `kable` command from library
+`knitr`, as in `knitr::kable()`.  The results, however, will be too long to hand
+in!  Use this only for your personal use.  For your homework/lab submission,
+please instead use `head()` instead of `fix()`.  The TA will be less burdened
+that way. 
+
+Since R chunks are independent pieces of code, you will sometimes
+produce errors when imitating the format in the book.  For example, the
+```abline()``` commands must be grouped in the same chunk as the initial
+```plot()``` command.
+
+Congratulations!  When the document is successfully knitted, you should read
+Section 6.5 along with the Rmarkdown output.  You should see the commands along
+with the output plots.  Together, JW 6.5 and your Rmarkdown file will help you
+to learn linear regression in R.  Note that the plotting is done with core R
+commands and not with the `ggplot2` package. Submit your Rmd file along with an
+unzipped PDF of the result before the deadline.
+
+
+# Chapter 6 Lab 1: Subset Selection Methods
+
+# Best Subset Selection
+
+```{r}
+library(ISLR)
+head(Hitters)
+names(Hitters)
+dim(Hitters)
+sum(is.na(Hitters$Salary))
+```
+
+```{r}
+Hitters=na.omit(Hitters)
+dim(Hitters)
+sum(is.na(Hitters))
+```
+
+```{r}
+library(leaps)
+regfit.full=regsubsets(Salary~.,Hitters)
+summary(regfit.full)
+```
+
+```{r}
+regfit.full=regsubsets(Salary~.,data=Hitters,nvmax=19)
+reg.summary=summary(regfit.full)
+```
+
+```{r}
+names(reg.summary)
+
+```
+
+```{r}
+reg.summary$rsq
+```
+
+```{r}
+par(mfrow=c(2,2))
+plot(reg.summary$rss,xlab="Number of Variables",ylab="RSS",type="l")
+plot(reg.summary$adjr2,xlab="Number of Variables",ylab="Adjusted RSq",type="l")
+which.max(reg.summary$adjr2)
+points(11,reg.summary$adjr2[11], col="red",cex=2,pch=20)
+```
+
+
+
+```{r}
+plot(reg.summary$cp,xlab="Number of Variables",ylab="Cp",type='l')
+which.min(reg.summary$cp)
+points(10,reg.summary$cp[10],col="red",cex=2,pch=20)
+which.min(reg.summary$bic)
+plot(reg.summary$bic,xlab="Number of Variables",ylab="BIC",type='l')
+points(6,reg.summary$bic[6],col="red",cex=2,pch=20)
+
+```
+
+```{r}
+
+plot(regfit.full,scale="r2")
+plot(regfit.full,scale="adjr2")
+plot(regfit.full,scale="Cp")
+plot(regfit.full,scale="bic")
+
+coef(regfit.full,6)
+```
+
+# Forward and Backward Stepwise Selection
+
+```{r}
+regfit.fwd=regsubsets(Salary~.,data=Hitters,nvmax=19,method="forward")
+summary(regfit.fwd)
+regfit.bwd=regsubsets(Salary~.,data=Hitters,nvmax=19,method="backward")
+summary(regfit.bwd)
+```
+
+```{r}
+coef(regfit.full,7)
+coef(regfit.fwd,7)
+coef(regfit.bwd,7)
+```
+
+# Choosing Among Models
+
+```{r}
+set.seed(1)
+train=sample(c(TRUE,FALSE), nrow(Hitters),rep=TRUE)
+test=(!train)
+```
+
+```{r}
+regfit.best=regsubsets(Salary~.,data=Hitters[train,],nvmax=19)
+```
+
+```{r}
+test.mat=model.matrix(Salary~.,data=Hitters[test,])
+```
+
+```{r}
+val.errors=rep(NA,19)
+for(i in 1:19){
+   coefi=coef(regfit.best,id=i)
+   pred=test.mat[,names(coefi)]%*%coefi
+   val.errors[i]=mean((Hitters$Salary[test]-pred)^2)
+}
+```
+
+```{r}
+val.errors
+which.min(val.errors)
+coef(regfit.best,10)
+```
+
+```{r}
+predict.regsubsets=function(object,newdata,id,...){
+  form=as.formula(object$call[[2]])
+  mat=model.matrix(form,newdata)
+  coefi=coef(object,id=id)
+  xvars=names(coefi)
+  mat[,xvars]%*%coefi
+  }
+```
+
+```{r}
+# note change from text
+regfit.best=regsubsets(Salary~.,data=Hitters,nvmax=19)
+coef(regfit.best,7)
+```
+
+```{r}
+
+k=10
+set.seed(1)
+folds=sample(1:k,nrow(Hitters),replace=TRUE)
+cv.errors=matrix(NA,k,19, dimnames=list(NULL, paste(1:19)))
+```
+
+```{r}
+for(j in 1:k){
+  best.fit=regsubsets(Salary~.,data=Hitters[folds!=j,],nvmax=19)
+  for(i in 1:19){
+    pred=predict(best.fit,Hitters[folds==j,],id=i)
+    cv.errors[j,i]=mean( (Hitters$Salary[folds==j]-pred)^2)
+    }
+  }
+```
+
+```{r}
+mean.cv.errors=apply(cv.errors,2,mean)
+mean.cv.errors
+par(mfrow=c(1,1))
+plot(mean.cv.errors,type='b')
+```
+
+```{r}
+# note change from text
+reg.best=regsubsets(Salary~.,data=Hitters, nvmax=19)
+coef(reg.best,10)
+```

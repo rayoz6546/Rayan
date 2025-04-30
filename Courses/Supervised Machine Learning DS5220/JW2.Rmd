@@ -1,0 +1,394 @@
+---
+title: 'Lab 2: JW Chapter 2, Introduction to R and Homework 2: JW p.54 Applied Problem
+  (8.)'
+author: "Attach Homework 2 Solutions at the end - Rayan Hassan"
+date: ''
+output:
+  pdf_document: default
+---
+**Instructions and time-saving hints.**  Please do the lab before the homework.  To begin this lab, download the archive and unpack it.  Inside the folder, you will find a Rmarkdown file and csv files for lab data.  Please keep the Rmarkdown file in the same directory as the data files.
+
+The purpose of the first part of this lab is to quickly review the basics of R.  To review the basics, you will reproduce the commands blocks in JW Section 2.3 in this Rmarkdown file.  **Please do not retype all the R commands as shown in Section 2.3.**  Instead, go to [link to text for Lab 2](https://www.statlearning.com/resources-first-edition), find Chapter 2 Lab text, and cut and paste the text into your Rmarkdown file.  Then break up the R commands into the R chunks shown in the text.  (R chunks are braced by triple backticks and a leading {r}, as before.)  Do not put all commands into the same block!  The idea is to imitate the code chunks in Section 2.3 with the additional plots and output omitted from the text.  Below, I have given you the first two blocks for reference.
+
+After breaking the text into the correct chunks, you may knit the document.
+You will notice some problems when knitting.  This is due to the fact that the pasted commands are meant for the command line, not Rmarkdown.  You must find Rmarkdown conversions for these problems.  One  problem is the appearance of the `fix()` commands in the blocks, which displays dataframes in a different window.  As a substitute for `fix()`, please use the `kable` command from library `knitr`, as in `knitr::kable()`.  The results, however, will be too long to hand in!  Use this only for your personal use.  For your homework/lab submission, please instead use `head()` instead of `fix()`.  The TA will be less burdened that way. 
+
+Congratulations!  When the document is successfully knitted, you should read Section 2.3 along with the Rmarkdown output.  You should see the commands along with the output plots.  Of course, the blocks with help commands, fix() commands, and intentional errors will not be reproduced.  Together, JW2.3 and your Rmarkdown file will help you to review some basics of R.  Note that the plotting is done with core R commands and not with the `ggplot2` package.
+
+ **Homework 2:** Next, you will apply these core R basics to the `College.csv` dataset, as described in Applied problem 8, JW p.54.  Please complete the Rmarkdown document corresponding to problem statement.  Submit your Rmd file along with an unzipped PDF of the result before the deadline. **Warning:** you must convert the measurement `Private` to a **factor**, prior to applying the `pairs()` function.  This is done with `college$Private = as.factor(college$Private)`.
+ 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error=TRUE)
+```
+
+# Basic Commands
+
+```{r}
+x <- c(1,3,2,5)
+x
+```
+
+```{r}
+x = c(1,6,2)
+x
+y = c(1,4,3)
+```
+```{r}
+length(x)
+length(y)
+x+y
+```
+```{r}
+ls()
+rm(x,y)
+ls()
+```
+```{r}
+rm(list=ls())
+```
+
+```{r}
+?matrix
+```
+
+```{r}
+x=matrix(data=c(1,2,3,4), nrow=2, ncol=2)
+x
+```
+```{r}
+x=matrix(c(1,2,3,4),2,2)
+```
+
+```{r}
+matrix(c(1,2,3,4),2,2,byrow=TRUE)
+```
+```{r}
+sqrt(x)
+x^2
+```
+```{r}
+x=rnorm(50)
+y=x+rnorm(50,mean=50,sd=.1)
+cor(x,y)
+```
+```{r}
+set.seed(1303)
+rnorm(50)
+```
+
+```{r}
+set.seed(3)
+y=rnorm(100)
+mean(y)
+var(y)
+sqrt(var(y))
+sd(y)
+```
+
+# Graphics
+
+```{r}
+x=rnorm(100)
+y=rnorm(100)
+plot(x,y)
+plot(x,y,xlab="this is the x-axis",ylab="this is the y-axis",main="Plot of X vs Y")
+```
+```{r}
+pdf("Figure.pdf")
+plot(x,y,col="green")
+dev.off()
+```
+
+```{r}
+x=seq(1,10)
+x
+x=1:10
+x
+x=seq(-pi,pi,length=50)
+```
+```{r}
+y=x
+f=outer(x,y,function(x,y)cos(y)/(1+x^2))
+contour(x,y,f)
+contour(x,y,f,nlevels=45,add=T)
+fa=(f-t(f))/2
+contour(x,y,fa,nlevels=15)
+```
+
+
+```{r}
+image(x,y,fa)
+persp(x,y,fa)
+persp(x,y,fa,theta=30)
+persp(x,y,fa,theta=30,phi=20)
+persp(x,y,fa,theta=30,phi=70)
+persp(x,y,fa,theta=30,phi=40)
+```
+
+
+# Indexing Data
+
+```{r}
+A=matrix(1:16,4,4)
+A
+```
+```{r}
+A[2,3]
+```
+```{r}
+A[c(1,3),c(2,4)]
+A[1:3,2:4]
+A[1:2,]
+A[,1:2]
+```
+```{r}
+A[1,]
+```
+
+```{r}
+A[-c(1,3),]
+A[-c(1,3),-c(1,3,4)]
+```
+
+```{r}
+dim(A)
+```
+
+# Loading Data
+
+```{r}
+Auto=read.table("Auto.data")
+fix(Auto)
+```
+
+```{r}
+Auto=read.table("Auto.data",header=T,na.strings="?")
+fix(Auto)
+```
+
+```{r}
+Auto=read.csv("Auto.csv",header=T,na.strings="?")
+fix(Auto)
+dim(Auto)
+Auto[1:4,]
+```
+
+```{r}
+Auto=na.omit(Auto)
+dim(Auto)
+```
+
+
+```{r}
+names(Auto)
+```
+
+
+# Additional Graphical and Numerical Summaries
+
+```{r}
+plot(cylinders, mpg)
+```
+```{r}
+plot(Auto$cylinders, Auto$mpg)
+attach(Auto)
+plot(cylinders, mpg)
+```
+
+```{r}
+cylinders=as.factor(cylinders)
+```
+
+```{r}
+plot(cylinders, mpg)
+plot(cylinders, mpg, col="red")
+plot(cylinders, mpg, col="red", varwidth=T)
+plot(cylinders, mpg, col="red", varwidth=T,horizontal=T)
+plot(cylinders, mpg, col="red", varwidth=T, xlab="cylinders", ylab="MPG")
+```
+
+```{r}
+hist(mpg)
+hist(mpg,col=2)
+hist(mpg,col=2,breaks=15)
+```
+
+```{r}
+pairs(Auto)
+pairs(~ mpg + displacement + horsepower + weight + acceleration, Auto)
+```
+
+```{r}
+plot(horsepower,mpg)
+identify(horsepower,mpg,name)
+```
+```{r}
+summary(Auto)
+```
+
+
+```{r}
+summary(mpg)
+```
+
+
+# Homework 2: JW p.54 (Applied 8.)
+
+Here, we are using the `College` data set, found in  `College.csv`. 
+Before reading the data into R, it can be viewed in Excel or a text editor.
+
+1. Use the `read.csv()` function to read the data into R. Call the loaded data `college`. Make sure that you have the directory set to the correct location for the data.
+
+```{r}
+#
+college=read.csv("College.csv")
+
+```
+
+2. Look at the data using the `fix()` function. You should notice that the first column is just the name of each university. We don’t really want R to treat this as data. However, it may be handy to have these names for later. Try the following commands:
+
+```{r}
+
+rownames(college)=college[,1] 
+fix(college)
+head(college)
+```
+
+You should see that there is now a `row.names` column with the name of each university recorded. This means that R has given each row a name corresponding to the appropriate university. R will not try to perform calculations on the row names. However, we still need to eliminate the first column in the data where the names are stored. Try
+
+```{r}
+college=college[,-1] 
+fix(college)
+head(college)
+```
+
+Now you should see that the first data column is `Private`. Note that another column labeled `row.names` now appears before the `Private` column. However, this is not a data column but rather the name that R is giving to each row.
+
+3.   Please complete these parts.
+
+    Use the `summary()` function to produce a numerical summary of the variables in the data set.  
+    
+```{r}
+# 
+summary(college)
+
+```
+
+Use the `pairs()` function to produce a scatterplot matrix of the first ten columns or variables of the data. Recall that you can reference the first ten columns of a matrix `A` using `A[,1:10]`.  
+    
+```{r}
+#
+college$Private = as.factor(college$Private)
+pairs(college[,1:10])
+```
+
+Use the `plot()` function to produce side-by-side boxplots of `Outstate` versus `Private`.
+    
+```{r}
+#
+plot(college$Private, college$Outstate)
+```
+
+Create a new qualitative variable, called `Elite`, by *binning* the `Top10perc` variable. We are going to divide universities into two groups based on whether or not the proportion of students coming from the top 10% of their high school classes exceeds 50 %.
+    
+```{r}
+Elite = rep("No", nrow(college))
+Elite[college$Top10perc>50] = "Yes"
+Elite = as.factor(Elite)
+college = data.frame(college, Elite)
+```
+
+Use the `summary()` function to see how many elite universities there are. Now use the `plot()` function to produce side-by-side boxplots of `Outstate` versus `Elite`.
+    
+```{r}
+#
+summary(college$Elite)
+plot(college$Elite, college$Outstate)
+```
+Use the `hist()` function to produce some histograms with 5 and 50 bins for `Outstate` and `Apps`. Use the command `par(mfrow=c(2,2))`: it will divide the print window into four regions so that four plots can be made simultaneously. 
+    
+```{r}
+#
+par(mfrow=c(2,2)) 
+hist(college$Outstate, breaks=5)
+hist(college$Outstate, breaks=50)
+hist(college$Apps, breaks=5)
+hist(college$Apps, breaks=50)
+
+
+
+```
+
+*Continue exploring the data, and provide a brief summary of what you discover.* 
+
+This statement is intentionally vague: as a data scientist, it will be your job to propose hypotheses about the data, and then to use the data to address your hypotheses.  This is a creative, iterative, (and fun) process. 
+
+In this first lab I will propose four hypotheses for you.  You must address these hypotheses with the suggested approaches. The approach will be to produce one plot for each hypothesis in a 2 by 2 set of plots.  Discuss your findings for each case, including: whether the data supports or rejects the hypothesis, and to what degree the hypothesis is rejected or supported.  After addressing the four hypotheses, I would like for you to propose at least one more hypothesis, and  develop a methodology.  Brevity matters, and less is best.  Produce a single plot upon which to base your answer.  Long answers will be given little credit.  For this last part, you will be graded on the "interest" of the hypothesis, your approach to address it, and your discussion.  
+
+*Hypothesis 1. The tuition at the best colleges, as indicated by `Elite`, is higher than that at other colleges.*  **Methodology:** Use one-over-other horizontal red boxplots of `Outstate` for elite and non-elite colleges.  Title and label the axes of this plot thoughtfully. Carefully use this single plot to address this hypothesis.  Can you be precise about the word *higher* ?
+
+
+The enrollment rate is the fraction of accepted students who enrolled.
+*Hypothesis 2. The enrollment rate at the best colleges, as indicated by `Elite`, is higher than that at other colleges.*  **Methodology:** Create a new variable called `EnrollRate`, using `Enroll` and `Accept`.  Use the `attach()` function to make your code cleaner. Use one-over-other horizontal green boxplots of `EnrollRate` for elite and non-elite colleges.  Title and label the axes of this plot thoughtfully. Carefully use this single plot to address this hypothesis.  Can you be precise about the word *higher* ? Can you comment on the presence of outliers in the boxplots?
+
+*Hypothesis 3. The number of applications per enrolled student is higher at elite colleges than other colleges.* **Methodology:** Use one-over-other horizontal blue boxplots of applications per enrolled student for elite and non-elite colleges. Title and label the axes of this plot thoughtfully. Carefully use this single plot to address this hypothesis.  Can you be precise about the word *higher* ?  Can you comment on the presence of outliers in the boxplots?
+
+*Hypothesis 4.  The fraction of alumni who donate is higher at elite colleges than other colleges.* **Methodology:** Use one-over-other horizontal cyan boxplots of `perc.alumni` for elite and non-elite colleges. Title and label the axes of this plot thoughtfully. Carefully use this single plot to address this hypothesis.  Can you be precise about the word *higher* ?
+    
+```{r}
+# 
+par(mfrow=c(2,2))  
+
+# HYPOTHESIS 1
+boxplot(Outstate ~ Elite, data=college, main="Outstate Tuition vs Elite Colleges", ylab="Elite Status", xlab="Outstate Tuition", col="red",horizontal=TRUE)
+
+# HYPOTHESIS 2
+
+EnrollRate = college$Enroll / college$Accept
+boxplot(EnrollRate ~ Elite, data=college, main="Enrollment Rate vs Elite Colleges", ylab="Elite Status", xlab="Enrollment Rate", col="green",horizontal=TRUE)
+
+# HYPOTHESIS 3
+
+AppsPerEnroll = college$Apps / college$Enroll
+boxplot(AppsPerEnroll ~ Elite, data=college, main="Applications per Enrolled Student vs Elite Colleges", ylab="Elite Status", xlab="Applications per Enrolled Student", col="blue",horizontal=TRUE)
+
+# HYPOTHESIS 4
+
+boxplot(perc.alumni ~ Elite, data=college, main="Percentage of Alumni Donations vs Elite Colleges", ylab="Elite Status", xlab="Percentage of Alumni Donations", col="cyan",horizontal=TRUE)
+
+
+```
+# Explanation: 
+   
+HYPOTHESIS 1
+   
+The boxplot shows that the median tuition for elite colleges is significantly higher as well as the overall tuition distribution. Therefore, the data supports the hypothesis that tuition at elite colleges is higher, and in this case significantly higher.
+   
+HYPOTHESIS 2
+
+The boxplot shows that the median enrollment rate is almost similar between elite and non-elite colleges, but elite colleges have a slightly lower median and lower overall distribution in general. This means that the data does not support the hypothesis that the enrollment rate is higher in elite colleges. We can see that there are outliers in both groups but specifically in non-elite colleges. This means that there are several non-elite colleges with very high enrollment rate. 
+
+HYPOTHESIS 3
+
+The boxplot for applications per enrolled student shows that elite colleges have a higher (not significantly higher though) median and range. The spread of the data is broader for elite colleges The data supports the hypothesis that elite colleges receive more applications per enrolled student. We can see also that there are a several outliers for non-elite colleges, which means that there are multiple non-elite colleges that have high numbers of applications per enrolled students. These outliers do not necessarily invalidate the hypothesis, but they add nuance.
+
+HYPOTHESIS 4
+
+The boxplot for the percentage of alumni donations indicates that elite colleges have a higher median percentage compared to non-elite colleges. There is some overlap in the interquartile ranges, but the overall trend shows elite colleges lead in alumni donations.
+The data supports the hypothesis. Elite colleges have a slightly higher fraction of alumni donations, as indicated by the median and distribution.
+
+MY OWN HYPOTHESIS
+
+*Graduation Rate is Higher at Elite Colleges than at non-Elite Colleges.*
+
+```{r}
+
+boxplot(Grad.Rate ~ Elite, data = college,main = "Graduation Rate vs Elite Colleges",
+xlab = "Graduation Rate", ylab = "Elite Status",col = "purple", horizontal = TRUE)
+```
+
+#Explanation
+
+The boxplot clearly shows that elite colleges have a higher median graduation rate than non-elite colleges. The data supports the hypothesis that elite colleges have higher graduation rates.
+

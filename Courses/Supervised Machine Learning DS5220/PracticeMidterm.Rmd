@@ -1,0 +1,186 @@
+---
+title: "Practice Midterm"
+author: "Rayan Hassan"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Solutions: DS5220 Practice Midterm Exam
+
+## Linear Regression
+
+McGordo Feed Company has paid for 1.66 hours of your time to help them evaluate the benefits and risks, if any, of their experimental chicken feeds. Also, they have provided you with the following data frame, which consists of weight vs. time measurements of approximately 50 chicks total, grouped by diet fed from birth.
+
+```{r load}
+data("ChickWeight")
+as_tibble(ChickWeight)
+?ChickWeight
+```
+
+## Pairs Plot
+
+Produce a pairs plot of the data, and spend 5 minutes getting familiar with the measurements.
+
+```{r pairsplot}
+pairs(ChickWeight)
+```
+
+## Equally-safe Hypothesis
+
+Are there chick deaths associated with particular diets? To answer this, please review the following table.
+
+```{r fataldiets, echo=FALSE}
+ChickWeight <- as_tibble(ChickWeight)
+nVn1 <-ChickWeight |>
+  filter(Time %in% c(0)) |>
+  select(Chick,Diet,log_weight_birth=weight) |>
+  mutate(log_weight_birth=log(log_weight_birth))
+nVn2 <- ChickWeight |>
+  filter(Time %in% c(21)) |>
+  select(Chick,log_weight_21days=weight) |>
+  mutate(log_weight_21days=log(log_weight_21days))
+nVn <- left_join(nVn1,nVn2, by="Chick")
+as.data.frame(nVn) 
+
+```
+
+The p-value of a hypothesis is the probability that the measurement occurred under that hypothesis. Here is how it is used: one says "Based on the measurement, I accept the hypothesis with a confidence of (*insert p value* )."\
+Let's consider an `equally safe` hypothesis, in which each diet is equally safe, and each chick faces the safe death probability regardless of diet. Find the p-value of the equally safe hypothesis for the deaths that you measure. Also, find the highest p-value possible, over all possible measurements. Finally, are you confident that the measurements support the equally-safe hypothesis?
+
+ANS:
+
+Looking at the table, it looks like for diet 1 there were 4 deaths in total (I am refering to the NA values in log_weight_21days), versus only 1 for the 4th diet, and none for the 2nd and 3rd diet. The proportions of chick deaths for each diet are 4/20 = 0.2, 0, 0, and 1/10=0.1, for diets 1,2,3, and 4 respetively.
+
+So by the looks of it we might say that chick deaths might be associated with their diets. They are more likely to die following diet 1 and to a lesser extend, diet 4. But this is just from observation, and it might not be true.  
+
+Considering an equally safe hypothesis where each diet is equally safe, let's fit a logistic regression model where we have 2 outcomes: Survived and Not (1 and 0 respectively). 
+
+```{r}
+nVn <- nVn %>% mutate(Survived = ifelse(is.na(log_weight_21days), 0, 1))
+
+as.data.frame(nVn) 
+model = glm(Survived ~ factor(Diet), data = nVn, family=binomial)
+summary(model)
+```
+Looking at the results we can see that the p-values for Diet 1, 2, 3, and 4 are respectively 0.0131, 0.9957, 0.9957, and 0.4967. Therefore, we cannot say that diets 2, 3, and 4 are safer or more dangerous than diet 1 (p-value are too large).
+Therefore, we fail to reject the null hypothesis, which means that there is not enough evidence that chick deaths are associated to the diets.
+
+## Nature vs. Nuture
+
+McGordo Feed Company wants to promote its products as producing big chicks quickly. But is a chick big because of genetics (nature) or feed (nuture)? To help McGordo Feed tease the two apart, please consider the following data frame.
+
+```{r nature or nuture}
+ChickWeight <- as_tibble(ChickWeight)
+nVn1 <-ChickWeight |>
+  filter(Time %in% c(0)) |>
+  select(Chick,Diet,log_weight_birth=weight) |>
+  mutate(log_weight_birth=log(log_weight_birth))
+nVn2 <- ChickWeight |>
+  filter(Time %in% c(21)) |>
+  select(Chick,log_weight_21days=weight) |>
+  mutate(log_weight_21days=log(log_weight_21days))
+nVn <- left_join(nVn1,nVn2, by="Chick")
+nVn <- nVn |> 
+  filter(!is.na(log_weight_21days)) |>
+  select(!Chick)
+nVn
+```
+
+What is a better predictor for the log-weight at day 21? Is it log-weight at day 0 (*nature*), or diet (*nuture*)?\
+Apply linear regression for the response `log_weight_21days` three times: using both predictors together, only birth weight, and lastly, only diet. Create a `summary()` in each case, and use the results to provide an answer to the question: *nature or nuture?* (Hint: Compare across the three summaries, the coefficient estimates, $R^2$, adjusted $R^2$, and the t-statistic p-values.)
+
+ANS:
+
+```{r}
+model1 <- lm(log_weight_21days ~ log_weight_birth + Diet, data = nVn)
+model2 <- lm(log_weight_21days ~ log_weight_birth, data = nVn)
+model3 <- lm(log_weight_21days ~ Diet, data = nVn)
+
+summary(model1)
+summary(model2)
+summary(model3)
+```
+The regression analysis shows that diet (nurture) is a stronger predictor of chick weight at day 21 than birth weight (nature). Model 1, which includes both birth weight and diet, has the highest adjusted R-squared (0.192), but birth weight is not statistically significant (p = 0.20092), meaning it does not contribute much to predicting growth. Model 2, which only considers birth weight, has the lowest adjusted R-squared (0.064) and a borderline p-value (0.05153), suggesting that genetics alone is a weak predictor. In contrast, Model 3, which only considers diet, has a strong adjusted R-squared (0.178) and a significant p-value (0.01129), confirming that feed type plays a crucial role in chick growth. Specifically, Diet 3 (p = 0.00214) and Diet 4 (p = 0.01989) are significant, showing they have a strong positive effect on chick weight, while Diet 2 is not significant. Since birth weight alone does not explain growth well and diet type significantly impacts final weight, we can conclude that nurture (diet) is more important than nature (birth weight) in determining chick growth.
+
+
+## Rank Diets' Effect on Weight
+
+Using only the above summary for regression on diet alone, please explain the relative merits of the four diets on the chick weight at 21 days.
+
+ANS:
+
+The regression analysis on diet alone shows that Diet 3 is the most effective for chick growth, followed by Diet 4, while Diet 2 does not show a significant improvement over Diet 1. The intercept (5.12856, p < 2e-16) represents the average log-weight of chicks on Diet 1, serving as the baseline. Compared to Diet 1, chicks on Diet 3 have significantly higher weights (+0.43463, p = 0.00214), making it the most beneficial diet for growth. Diet 4 also leads to a significant weight increase (+0.33219, p = 0.01989), but the effect is slightly smaller than that of Diet 3. In contrast, Diet 2 shows only a minor weight increase (+0.16610) and is not statistically significant (p = 0.21755), suggesting that its effect on chick growth is weak and possibly due to chance. Since both Diet 3 and Diet 4 significantly improve chick weight at 21 days, they are clearly superior to Diet 1, while Diet 2 offers no substantial advantage. Therefore, if the goal is to maximize chick growth, Diet 3 is the best option, followed by Diet 4, whereas Diet 1 and Diet 2 are the least effective choices.
+
+## Classify Diet Based on Weight
+
+Are you able to determine whether or not a chick was on diet3, or on the baseline diet1, based on its weight at day 21? If so, how accurately? Let's explore this using logistic regression!
+
+Create a `OnDiet3` Boolean flag to add to your table. Then, remove all chicks but those with `diet1` or `diet3`.
+
+```{r logregPrep}
+nVn <- nVn %>%
+  mutate(OnDiet3 = ifelse(Diet == 3, 1, 0)) 
+
+nVn <- nVn %>%
+  filter(Diet %in% c(1, 3))
+
+nVn
+
+```
+
+Please use this method: it is called *leave-one-out cross validation*. Pick a chick and set it aside. Train logistic regression on the remaining chicks' `OnDiet3` and `log_weight_21days`. Estimate the `OnDiet3` probability of the set-aside chick and retain this probability. Cycle through all chicks and add the column of retained probabilities to your table. Diplay the table.
+
+ANS:
+
+```{r diet3}
+# Initializing an empty vector to store predicted probabilities
+predicted_probs <- numeric(nrow(nVn))
+
+
+for (i in 1:nrow(nVn)) {
+  # Set aside one chick (here I chose the one in the i-th row each time)
+  train_data <- nVn[-i, ]  
+  test_data <- nVn[i, ]    
+  
+  model <- glm(OnDiet3 ~ log_weight_21days, data = train_data, family = binomial)
+  
+  predicted_probs[i] <- predict(model, newdata = test_data, type = "response")
+}
+
+
+nVn$Predicted_Prob <- predicted_probs
+
+
+as.data.frame(nVn)
+
+```
+
+## Performance of Diet Classifier
+
+Please explain how to use the probability `P[diet3]` to classify each chick.\
+Then, please show the performance of your classifier, using a confusion matrix. From the confusion matrix, please provide an estimate of the error rate. Please provide an interpretation of your results for the marketing team at McGordo Feed.
+
+ANS:
+
+The predicted probability P(diet3) represents how likely a chick was on Diet 3 rather than Diet 1.
+If P[diet3] higher than 0.5, classify the chick as Diet 3 (1).
+If P[diet3] lower than 0.5, classify the chick as Diet 1 (0).
+
+```{r}
+
+nVn$Predicted_Class <- ifelse(nVn$Predicted_Prob > 0.5, 1, 0)
+
+
+conf_matrix <- table(Actual = nVn$OnDiet3, Predicted = nVn$Predicted_Class)
+
+error_rate <- sum(nVn$OnDiet3 != nVn$Predicted_Class) / nrow(nVn)
+
+list(Confusion_Matrix = conf_matrix, Error_Rate = error_rate)
+
+
+```
+The classifier achieved an 80.77% accuracy in distinguishing between chicks on Diet 1 and Diet 3 based on their weight at 21 days, with a precision of 77.78% and a recall of 70%, indicating that while it correctly predicts Diet 3 most of the time, it occasionally misclassifies some Diet 3 chicks as Diet 1. The model performs better at identifying Diet 1 chicks (specificity = 87.5%) than Diet 3 chicks, meaning weight alone is a stronger indicator of Diet 1 than Diet 3. The error rate of 19.23% suggests that while weight is a useful predictor, it is not a perfect classifier, and additional features may improve performance. For McGordo Feed's marketing, this result supports the claim that Diet 3 leads to noticeable weight differences, but other factors may also contribute to chick growth, and weight alone does not fully determine diet classification.

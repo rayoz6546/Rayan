@@ -1,0 +1,233 @@
+---
+title: "JW Ch. 3 Lab"
+author: "Rayan Hassan"
+date: "02/01/2025"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error=TRUE)
+```
+
+**Instructions and time-saving hints.** The purpose of this lab is to learn 
+linear regression in R.  You will reproduce the commands blocks in
+JW Section 3.6 in this Rmarkdown file. **Please do not retype all the R commands
+as shown in Section 3.6.**  Instead, go to [link to text for H
+3](https://www.statlearning.com/resources-first-edition), find Chapter 3 Lab
+text, and cut and paste the text into your Rmarkdown file.  Then break up the R
+commands into the R chunks shown in the text.  **Do not put all commands into the
+same block!**
+
+After breaking the text into the correct chunks, you may knit the document.
+You will notice some problems when knitting.  This is due to the fact that the
+pasted commands are meant for the command line, not Rmarkdown.  You must find
+Rmarkdown conversions for these problems.  One  problem is the appearance of the
+`fix()` commands in the blocks, which displays dataframes in a different window.
+As a substitute for `fix()`, please use the `kable` command from library
+`knitr`, as in `knitr::kable()`.  The results, however, will be too long to hand
+in!  Use this only for your personal use.  For your homework/lab submission,
+please instead use `head()` instead of `fix()`.  The TA will be less burdened
+that way. 
+
+Since R chunks are independent pieces of code, you will sometimes
+produce errors when imitating the format in the book.  For example, the
+```abline()``` commands must be grouped in the same chunk as the initial
+```plot()``` command.
+
+Congratulations!  When the document is successfully knitted, you should read
+Section 3.6 along with the Rmarkdown output.  You should see the commands along
+with the output plots.  Together, JW 3.6 and your Rmarkdown file will help you
+to learn linear regression in R.  Note that the plotting is done with core R
+commands and not with the `ggplot2` package.
+Submit your Rmd file along with an unzipped PDF of the result before the deadline.
+
+
+# Chapter 3 Lab: Linear Regression
+
+
+```{r}
+library(MASS) 
+library(ISLR)
+```
+
+# Simple Linear Regression
+
+```{r}
+#knitr::kable(Boston)
+head(Boston)
+?Boston
+```
+
+```{r} 
+# names() lists the names of the columns in Boston
+names(Boston)
+lm.fit=lm(medv~lstat) # this will give error here because we haven't specified the dataset
+```
+
+```{r}
+# here we properly fit the model (a linear regression one) where we want to predict house price/median value (medv) based on lstat (percentage of lower-status people)
+lm.fit=lm(medv~lstat,data=Boston)
+```
+```{r}
+# using attach here allows us to use medv and lstat without the Boston$ before
+attach(Boston)
+lm.fit=lm(medv~lstat)
+```
+```{r}
+# here we print the regression model followed by its summary
+lm.fit
+summary(lm.fit)
+```
+```{r}
+# using names() allows us to see the components of the model. Coef() extracts the intercept and slope. Confint() calculates confidence intervals for coefficients. 
+names(lm.fit)
+coef(lm.fit)
+confint(lm.fit)
+```
+```{r}
+# here we predict the median house value (medv) for lstat=5%, 10%, and 15% respectively. The first way uses a confidence interval and the second way a prediction interval.
+
+# For prediction with confidence interval: 
+# we can see for example that for lstat = 5, fit = 29.8 (rounded), which is the predicted median house price. lwr = 29 and upr=30.6 (rounded) which means that we are 95% confident that the mean house price is between $29K and $30.6K
+
+# For prediction with prediction interval:
+# we have the same predicted prices. But here, for example for lstat=5 also, we see that lwr = 17.566 and upr = 42.04 (rounded), which means that for an individual house, price can be anywhere between $17.566K and $42.04K, which is a much wider interval. 
+
+
+predict(lm.fit,data.frame(lstat=(c(5,10,15))), interval="confidence")
+predict(lm.fit,data.frame(lstat=(c(5,10,15))), interval="prediction")
+```
+```{r}
+# here we plot lstat vs medv (using scatterplot) and we add a regression line to the plot
+plot(lstat,medv)
+abline(lm.fit)
+abline(lm.fit,lwd=3)
+abline(lm.fit,lwd=3,col="red")
+```
+```{r}
+# here we plot lstat vs medv using different customizations in plots
+plot(lstat,medv,col="red")
+plot(lstat,medv,pch=20)
+plot(lstat,medv,pch="+")
+plot(1:20,1:20,pch=1:20)
+#
+```
+```{r}
+# this sets up a 2x2 grid and plots diagnostic plots
+par(mfrow=c(2,2))
+plot(lm.fit)
+```
+```{r}
+# plots for residuals vs fitted values and, studendized residuals
+plot(predict(lm.fit), residuals(lm.fit))
+plot(predict(lm.fit), rstudent(lm.fit))
+```
+```{r}
+# plot for leverage statistics, and the which.max() shows the most influential observation
+plot(hatvalues(lm.fit))
+which.max(hatvalues(lm.fit))
+```
+
+# Multiple Linear Regression
+
+```{r}
+# here we are predicting medv based on lstat and age
+lm.fit=lm(medv~lstat+age,data=Boston)
+summary(lm.fit)
+```
+```{r}
+# here we are predicting medv based on all the variables
+lm.fit=lm(medv~.,data=Boston)
+summary(lm.fit)
+```
+```{r}
+# vif() is variance intlation factor which tells us how high correlation between predictors is
+library(car)
+vif(lm.fit)
+```
+```{r}
+# here we remove age variable
+lm.fit1=lm(medv~.-age,data=Boston)
+summary(lm.fit1)
+```
+```{r}
+# this is just another way to remove age
+lm.fit1=update(lm.fit, ~.-age)
+```
+
+# Interaction Terms
+
+```{r}
+# includes age + lstat + interation (lstat:age)
+summary(lm(medv~lstat*age,data=Boston))
+```
+
+# Non-linear Transformations of the Predictors
+
+```{r}
+# this adds squared term for lstat to model non-linearily
+lm.fit2=lm(medv~lstat+I(lstat^2))
+summary(lm.fit2)
+```
+```{r}
+# anova compares models
+lm.fit=lm(medv~lstat)
+anova(lm.fit,lm.fit2)
+```
+```{r}
+#
+par(mfrow=c(2,2))
+plot(lm.fit2)
+```
+```{r}
+# fits a polynomial regression up to degree 5
+lm.fit5=lm(medv~poly(lstat,5))
+summary(lm.fit5)
+```
+```{r}
+#
+summary(lm(medv~log(rm),data=Boston))
+```
+
+# Qualitative Predictors
+
+```{r}
+#
+fix(Carseats)
+names(Carseats)
+```
+```{r}
+# includes all predictors + interaction terms (Income:advertising) and (Price:Age)
+lm.fit=lm(Sales~.+Income:Advertising+Price:Age,data=Carseats)
+summary(lm.fit)
+```
+```{r}
+# contrasts() just shows how R encodes ShelveLoc numerically
+attach(Carseats)
+contrasts(ShelveLoc)
+
+```
+
+# Writing Functions
+
+```{r}
+# this does not do anything because LoadLibraries is not defined yet
+LoadLibraries
+LoadLibraries()
+```
+```{r}
+#
+LoadLibraries=function(){
+ library(ISLR)
+ library(MASS)
+ print("The libraries have been loaded.")
+ }
+```
+
+```{r}
+# calls the LoadLibraries function and therefore loads the required packages
+LoadLibraries
+LoadLibraries()
+```

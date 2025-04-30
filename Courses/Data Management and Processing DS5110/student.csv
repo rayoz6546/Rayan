@@ -1,0 +1,301 @@
+student_id,first_name,last_name,email,age,home_address,sports_type,department_id
+1,Jennifer,Colon,jeremypeterson@example.net,22,"1374 Warren Dam
+New Jessica, AR 31888",Soccer,126
+2,Bill,Garrett,vanessa69@example.net,18,"29361 Grimes Viaduct
+Johnmouth, AS 59497",Swimming,10
+3,Taylor,Flores,uguerra@example.net,25,"401 Cunningham Coves Suite 504
+North Jeremy, IN 48620",Tennis,133
+4,Gina,Moore,ebishop@example.net,29,"07364 Kevin Gateway Suite 392
+West Codychester, AZ 09247",None,98
+5,Paul,Sawyer,morenosteven@example.com,20,"6698 Cruz Wells Apt. 801
+Lake Deborah, VA 71300",Tennis,20
+6,Jessica,Perry,christopher01@example.org,29,"43829 Joshua Expressway
+West Lynnport, CT 11085",Basketball,19
+7,Brandi,Mata,lamrobert@example.net,27,"USS Salas
+FPO AA 51922",Basketball,130
+8,Jason,Turner,donovanmelissa@example.org,30,"6286 Rebecca Run
+Duncanberg, PW 16413",Soccer,63
+9,John,Meadows,wnash@example.org,18,"03346 Jeffrey Alley Suite 711
+Steelefurt, PR 84466",Soccer,73
+10,Ryan,Hester,hhudson@example.org,25,"92150 Carla Hollow
+East Henryfort, KS 50784",None,89
+11,Sandra,Smith,paul22@example.org,18,"98992 Joann Flats
+East Petertown, AK 35831",Soccer,93
+12,Timothy,Garcia,catherinewilliams@example.com,19,"829 Mckenzie Fort Apt. 317
+East Sandrahaven, CT 61547",Swimming,45
+13,Gregory,Aguilar,emartin@example.net,21,"Unit 1734 Box 5612
+DPO AP 37249",Swimming,27
+14,Samantha,Wolfe,garciasarah@example.com,26,"0349 Kelly Rest
+Jamesborough, NJ 28202",None,146
+15,Calvin,Bennett,richard32@example.net,26,"8203 Matthew Shoals
+North Jeffery, DE 13197",Basketball,11
+16,Christine,Sosa,virginia41@example.com,26,"99071 Green Spurs
+Port Micheleport, MN 67942",Basketball,11
+17,Jennifer,Guerra,scoleman@example.org,18,"5154 Bryan Radial
+New Catherineville, CA 97713",Soccer,21
+18,Sabrina,Edwards,gatesbrian@example.com,26,"04836 Mccullough Union
+North Sarah, NH 14542",Swimming,39
+19,Vincent,Garza,jamesjefferson@example.net,26,"63176 Johnson Vista
+Davismouth, WY 37192",Tennis,144
+20,Kathy,Fowler,john20@example.com,29,"32030 Santos Village Apt. 968
+West Tammyfort, MO 78013",Swimming,70
+21,Vanessa,Martin,paul10@example.net,28,"4167 Zachary Passage Suite 122
+Greenside, PR 90428",None,131
+22,Sean,Parker,usmith@example.net,29,"PSC 0258, Box 2964
+APO AP 43347",Swimming,30
+23,Tracy,Golden,rebecca83@example.org,20,"USS Robinson
+FPO AA 56448",Tennis,81
+24,Samantha,Walker,tracyhall@example.com,19,"91679 Karen Orchard Apt. 869
+Williamsonchester, MA 45720",Swimming,123
+25,Ricky,Jones,piercedaniel@example.net,21,"757 Daniel Circle
+Lake Richardburgh, MN 26608",Swimming,118
+26,James,Yu,fischersara@example.net,18,"Unit 9428 Box 5944
+DPO AE 74299",Tennis,135
+27,Dana,Adams,sandra66@example.net,30,"PSC 1193, Box 4492
+APO AP 91225",Swimming,1
+28,Courtney,Khan,jennifer39@example.net,18,"5767 Jones Meadows
+East Shawn, MD 28672",Tennis,26
+29,Evan,Rodriguez,martinezbrandi@example.net,19,"4542 Christensen Expressway Apt. 043
+Sanderstown, DE 05820",Soccer,23
+30,James,Ware,grace65@example.net,27,"121 Angela Fords
+Piercefurt, NH 25256",Soccer,123
+31,Jillian,Sherman,phillipsmichael@example.net,18,"0668 Mason Bypass
+West Danielberg, WI 76377",Soccer,92
+32,Kaylee,Cobb,jeffrey24@example.net,21,"222 Stewart Orchard
+North Kevinside, NV 26716",Tennis,43
+33,Lisa,Webb,smithashley@example.net,19,"Unit 8277 Box 0583
+DPO AE 31174",Basketball,98
+34,Sarah,Johnson,delgadozachary@example.com,20,"23137 Daniel Cove Apt. 282
+South Nicoleville, NY 44206",Basketball,48
+35,David,Dominguez,ywright@example.net,27,"11939 Burnett Camp Apt. 331
+Kellytown, MA 57963",Basketball,53
+36,Jason,Contreras,ruth42@example.org,22,"35076 Tony Fields Suite 655
+West Emmafurt, PA 39388",Swimming,95
+37,Noah,Lopez,ashley01@example.com,27,"36150 Cook View
+South Anthony, GU 95025",Swimming,33
+38,Andrew,Nichols,parkersarah@example.net,24,"970 Mooney Crossroad Apt. 124
+Jamesview, MI 41600",Basketball,144
+39,Jacob,Solomon,jamesdudley@example.net,18,"969 Walker Spur Apt. 641
+Davisfurt, RI 92003",Swimming,99
+40,Sara,Harris,melanieherman@example.net,19,"00336 Craig Ranch
+North Rebeccaport, AS 55747",Basketball,65
+41,Holly,Wilkins,ibrown@example.net,21,"9282 Jones Trafficway Apt. 810
+Lucashaven, AK 89110",Soccer,136
+42,Roy,Hicks,jeffrey32@example.com,29,"USNV Meadows
+FPO AP 38016",Basketball,37
+43,Danielle,Gonzalez,jacquelinebray@example.com,25,"PSC 7889, Box 1580
+APO AP 02829",Tennis,122
+44,James,Carter,kjohnson@example.net,28,"40403 Julie Stream Apt. 245
+Alexanderborough, AZ 31428",Swimming,143
+45,Kelly,Thomas,sarah53@example.org,22,"270 Ann Plains Suite 453
+Melindaview, DC 19728",Swimming,83
+46,Barbara,Schneider,daniel63@example.net,27,"62412 Ashley Skyway Apt. 786
+North Lisa, HI 47567",None,134
+47,Destiny,Orozco,linda06@example.org,29,"06424 Johnson Summit Suite 632
+New Megan, OH 39199",Basketball,98
+48,Arthur,Lopez,smithdouglas@example.net,24,"4681 Ashley Trail
+Ericfort, MS 16759",Tennis,78
+49,Robert,Lewis,rebekah25@example.net,29,"2397 Frost Shoal Suite 382
+West Richard, VA 03936",None,80
+50,Steve,Huber,yscott@example.com,22,"63817 Rose Spring
+East Angelastad, KY 21350",Soccer,86
+51,Stephanie,Lewis,ramseybrandy@example.com,27,"0890 Andrew Mountains Suite 696
+Greenton, KY 12497",Swimming,71
+52,Judith,Sanchez,maria38@example.org,18,"PSC 0538, Box 9008
+APO AA 39929",None,115
+53,Teresa,Clark,zclarke@example.org,20,"1382 Matthew Knoll
+Lake Amyside, OK 45801",Soccer,143
+54,Marie,Greene,cardenasjoshua@example.org,29,"504 Michael Mission
+Carlamouth, NH 06757",Soccer,12
+55,Melanie,Franklin,dedwards@example.com,27,"353 Andrew Place
+Jessicaland, AS 70076",Basketball,136
+56,Annette,Williamson,gjackson@example.com,27,"PSC 4044, Box 1099
+APO AE 53622",Swimming,141
+57,Margaret,Thompson,chelseaprice@example.net,28,"99760 Cole Road
+West Joseshire, VT 90811",Swimming,113
+58,James,Coleman,michaelmurray@example.com,27,"291 Williams Circles
+North Jessica, IL 60194",Swimming,145
+59,Catherine,Johnson,dorothyanderson@example.org,23,"5447 Bailey Underpass Apt. 826
+East Alexanderview, IN 97194",None,80
+60,Cristian,Melendez,raymond49@example.net,28,"9927 Brandon Green Suite 115
+Port Michaelville, NE 25915",Tennis,44
+61,Stephanie,Murillo,freemanapril@example.com,20,"933 Shawn Village Apt. 023
+Francisland, PR 05059",Tennis,142
+62,Tara,Parks,bullockjoseph@example.net,24,"37058 Frazier Trace
+West Julie, OK 42311",Swimming,69
+63,Curtis,Shea,donnahill@example.com,28,"385 Atkins Club
+Lopezshire, ND 78629",Soccer,60
+64,Leah,Campos,courtney57@example.net,23,"USCGC Taylor
+FPO AA 97399",Basketball,32
+65,Daniel,Sanders,lwilliams@example.net,30,"32367 Boyer Union Apt. 651
+Jaymouth, MA 98615",None,136
+66,Nicole,Morales,kelly88@example.net,27,"955 Aimee Ramp
+Jamesbury, VA 96007",None,124
+67,Michelle,Moon,cody47@example.net,29,"941 Jacob Village Suite 793
+Davidport, AK 66751",None,60
+68,Ashley,Brown,lbryan@example.com,26,"PSC 7458, Box 8948
+APO AA 25469",Swimming,123
+69,Isaac,Watson,paula32@example.org,29,"2372 Jean Inlet
+Port Kaylaland, PA 71996",Tennis,53
+70,Anthony,Harper,thomaschris@example.net,25,"65032 Ronnie Mount Suite 002
+Edwardside, RI 19681",None,62
+71,Brett,Collins,ddouglas@example.com,19,"1676 Nicholas Hollow
+New Evanmouth, PW 57375",None,93
+72,Karen,Pruitt,hunterpeter@example.com,18,"Unit 2416 Box 4125
+DPO AA 65169",Tennis,112
+73,David,Walls,wwilliams@example.org,30,"8387 Wilson Drives Apt. 866
+Powellton, CT 28727",Basketball,55
+74,Alison,Wong,thompsonjohn@example.net,23,"Unit 7256 Box 4764
+DPO AP 70507",Tennis,25
+75,James,Warren,gerald66@example.net,26,"76746 Barron Station Apt. 543
+New Janetland, MN 61177",Basketball,55
+76,Angela,Mitchell,ellissarah@example.com,21,"188 Molina Tunnel Apt. 154
+Medinaside, CO 21008",None,13
+77,Helen,Jones,turnerkelsey@example.com,29,"38569 Lucas Road
+Ryanshire, WV 50593",Basketball,113
+78,Brianna,Gray,ashleyhughes@example.org,26,"PSC 0422, Box 1008
+APO AP 24105",Soccer,8
+79,Christopher,Turner,antonioflores@example.org,25,"02511 Joshua Mill
+Lake Sean, IA 53285",Tennis,37
+80,Brandon,Terrell,kaitlyn41@example.net,25,"33646 Avila Vista
+Cohentown, NV 12594",Basketball,1
+81,John,Nguyen,ashepherd@example.net,25,"USCGC Bradley
+FPO AE 85863",Swimming,22
+82,Robin,Cuevas,bherring@example.net,26,"8769 Cody Harbors
+Michaelland, NH 21781",Tennis,23
+83,Ian,Burton,leonardamber@example.net,21,"0965 Lisa Cliffs Apt. 445
+Dixonchester, AR 81347",Soccer,113
+84,Ronald,Thomas,bruceroger@example.org,24,"880 Michelle Valley Suite 705
+Gillhaven, CT 61214",None,90
+85,Kathryn,Pollard,lori55@example.net,21,"283 Jacqueline Street Suite 820
+Christopherfurt, HI 92533",Soccer,23
+86,Paul,Howard,vblackburn@example.com,29,"804 Edwards Vista
+New Phillip, VA 79666",Tennis,73
+87,Rose,Brown,ucarter@example.com,28,"02623 Julie Ways
+New Christopher, RI 73076",None,80
+88,Brianna,Pratt,djones@example.com,29,"07429 Caitlin Divide
+North Brian, NY 15815",Tennis,71
+89,Barbara,Smith,vjohnson@example.net,23,"4874 Mark Meadow Apt. 046
+Acostachester, AL 93164",Soccer,15
+90,Molly,Baker,kevin25@example.org,20,"555 Daniel Shores Apt. 582
+West Kevin, ME 37578",Swimming,73
+91,Erin,Pena,michelle97@example.org,27,"306 Jodi Union
+West Johnny, VA 52352",None,100
+92,Andre,Dyer,wolfamy@example.org,24,"6058 Keller Plains
+New Joshuamouth, TN 00736",Basketball,30
+93,Tyler,James,xbaker@example.com,20,"9008 Randall Views
+Lauratown, ID 91552",Soccer,116
+94,Brianna,Allen,mjohnson@example.net,30,"8840 Martinez Inlet
+Wadechester, WI 49019",None,73
+95,Victoria,Henry,hancocklaura@example.net,20,"127 Rose Trail Apt. 545
+Zacharyberg, TX 02500",Soccer,95
+96,Autumn,Lewis,lhill@example.net,27,"Unit 0527 Box 7502
+DPO AE 36141",Tennis,148
+97,Chad,Young,obenson@example.com,27,"USS Perez
+FPO AE 62532",Tennis,117
+98,Christian,Johnson,bobbailey@example.org,20,"820 Holly Center Suite 706
+Flemingshire, WI 92284",Swimming,127
+99,Dana,Cannon,ibuchanan@example.com,23,"514 Brady Crossroad Suite 765
+Jacobtown, GA 94208",Swimming,150
+100,Cindy,Gonzalez,patricksmith@example.com,21,"9991 Valdez Lodge Suite 536
+East Blakemouth, IA 61021",None,144
+101,Paul,Lee,leahwilliams@example.org,25,"997 Scott Port
+Moonhaven, OK 28796",None,61
+102,Jill,Reese,salassusan@example.org,18,"81326 Johnathan Court Apt. 117
+South Matthew, PA 81074",Tennis,30
+103,Brad,Frank,alan12@example.org,25,"USCGC Davidson
+FPO AP 53870",Soccer,128
+104,Veronica,Baker,john53@example.com,23,"259 Nelson Plaza
+East Debbie, AZ 22985",Soccer,124
+105,Michael,Mcgee,jameskent@example.net,18,"87867 Mills Extension Suite 399
+Lake Elizabethport, WA 26211",Swimming,85
+106,Brittney,Howard,zanderson@example.net,27,"87992 Courtney Manor Suite 875
+Annhaven, DC 18797",Swimming,49
+107,Amber,Berry,jmccormick@example.net,29,"43385 Joseph Falls Apt. 605
+Port Selena, LA 02854",None,70
+108,Matthew,Compton,john44@example.com,29,"15111 Robles Prairie
+East David, MT 01114",None,36
+109,Shelly,Williams,katiearellano@example.net,28,"8947 Sarah Isle Apt. 361
+West Jamesstad, AR 45628",Tennis,65
+110,Eric,Carney,jgray@example.org,21,"9333 Max Hill
+Howellstad, SD 45803",None,52
+111,Albert,Smith,taylortony@example.com,25,"75374 Patricia Station Apt. 454
+New Robertview, SC 77874",Soccer,58
+112,Jennifer,Green,carriekennedy@example.net,23,"860 Thomas Ramp
+Evansburgh, VT 78743",Swimming,60
+113,Heather,Chaney,hartemily@example.com,18,"265 Jacqueline Union
+North Michelle, ID 16428",Swimming,10
+114,Kimberly,Lee,hannah72@example.org,29,"201 Timothy Crossing Suite 033
+New Andreaview, NE 32159",Soccer,34
+115,Jessica,Sanchez,pittmandenise@example.org,23,"887 Maxwell Pines Suite 625
+West Joelport, AK 95119",Soccer,80
+116,Samuel,Jones,oowens@example.com,22,"206 Roberts Glens
+Jasontown, OH 18827",None,62
+117,Hailey,Palmer,mindyatkins@example.org,26,"70190 Jeffrey Course Suite 907
+Port Angela, CT 81457",None,26
+118,Monique,Bailey,lambertbarbara@example.org,26,"9385 Donna Parks
+Baldwinstad, NC 38948",Soccer,120
+119,Victoria,Fitzgerald,stonebrian@example.net,18,"06297 Snyder Trafficway Apt. 903
+West Stacy, VI 14724",Basketball,38
+120,Cynthia,Welch,qbrady@example.net,20,"9150 Haas Fields Apt. 696
+Robertsstad, ME 13662",Basketball,63
+121,Natalie,Spears,meyeralexis@example.org,30,"71592 James Wells Suite 186
+North Christophermouth, NE 93998",Basketball,13
+122,Julian,Zuniga,pattersontamara@example.org,29,"977 Cannon Manors
+East Jorge, VA 89318",None,61
+123,Anthony,Perkins,grayheather@example.com,22,"040 John Court
+Kennethberg, DC 84439",Basketball,73
+124,Alexander,Smith,lauren98@example.com,25,"657 Judy Path Apt. 979
+Lake Cynthiachester, WA 69767",None,117
+125,Marilyn,Sanchez,grahamronald@example.com,29,"68456 Beck Rapid Suite 495
+West Colleen, RI 74408",Tennis,35
+126,Dawn,Brown,amanda41@example.net,18,"026 Coleman Fork
+New Bonnie, CT 99679",None,21
+127,Laurie,Fleming,harrisbeverly@example.net,24,"90398 Jessica Lakes
+Eddiehaven, ME 97778",Basketball,101
+128,Charles,Miller,rsantana@example.com,18,"4779 Caitlin Course
+Levinemouth, WI 55515",None,112
+129,Juan,Pierce,qdickerson@example.org,24,"644 Adams Stravenue
+Lake Deborah, RI 54652",Swimming,39
+130,Regina,Horton,jstevens@example.com,25,"0383 Patterson Views Suite 819
+South Brian, GA 53468",Basketball,43
+131,Dylan,Richardson,ryanhardin@example.com,28,"Unit 4056 Box 8815
+DPO AP 46419",Tennis,10
+132,Stacy,Smith,zbowers@example.com,20,"567 Smith Grove Apt. 173
+Lake Tracyberg, IN 92700",Swimming,104
+133,Nicole,Gomez,tfrancis@example.com,23,"55244 Melissa Place
+South Kevin, WI 37594",None,129
+134,Stephanie,Thornton,christopher86@example.org,28,"32502 Kim Camp Apt. 419
+New Anthonyfurt, MD 15128",Tennis,121
+135,Latoya,Hutchinson,emily08@example.org,29,"5797 Michael Underpass
+Nelsonhaven, WV 19350",Tennis,16
+136,Adam,Gutierrez,tanya27@example.net,20,"067 Anthony Burg
+Jonathanhaven, KY 01294",Basketball,84
+137,Mary,Franco,brandonsimpson@example.org,22,"6375 Knight Road
+Robertville, AR 87996",Swimming,104
+138,Jeremy,Harper,josephmiller@example.net,21,"8623 Brown Summit Apt. 639
+West Nathanbury, MA 43170",Swimming,50
+139,Nicholas,Thompson,sharon60@example.org,30,"96567 Johnson Keys Suite 265
+Kleinmouth, MI 13555",Basketball,65
+140,Kyle,Young,potterglenn@example.net,28,"8708 Mclaughlin Via
+Port Christina, PW 32326",None,29
+141,Pamela,Scott,rachel53@example.net,23,"USNV Peterson
+FPO AP 80807",Tennis,15
+142,Robert,Sanders,zswanson@example.com,22,"Unit 2926 Box 8058
+DPO AE 08821",Tennis,110
+143,Andrew,Kelly,lindsaybauer@example.net,30,"95632 Stafford Stravenue
+Andersonfort, MS 89090",Basketball,77
+144,Stanley,Schultz,sarahcombs@example.org,20,"93202 Anthony Crossroad
+North Monicastad, SD 63225",Tennis,14
+145,Sara,Young,michael98@example.com,26,"62280 Stephanie Port
+East Jeanfort, SD 37178",Basketball,35
+146,Allen,Morris,helensmith@example.net,29,"20334 Barnes Well Apt. 785
+Keithstad, PW 88496",Tennis,83
+147,Nancy,Rollins,barkersusan@example.com,21,"579 William Wall Suite 820
+Lake Michaelfort, LA 42056",Swimming,33
+148,Christopher,Powell,rossrebecca@example.com,19,"9981 Miguel Lakes
+North Nataliemouth, NH 75749",Basketball,46
+149,James,Mayo,rojasbrandon@example.net,23,"3166 Jennifer Lakes
+Stanleyton, VI 61574",Soccer,132
+150,Matthew,Roman,jeffaguilar@example.org,19,"PSC 9193, Box 9893
+APO AP 58668",Soccer,97
